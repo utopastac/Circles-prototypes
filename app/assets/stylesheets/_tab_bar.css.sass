@@ -10,8 +10,24 @@
 
   ul
     display: flex
-    justify-content: space-between
 
   li
-    width: 25%
-    text-align: center
+    flex: 1
+
+    a
+      display: block
+      position: relative
+      text-align: center
+      height: 100%
+      height: $tab-bar-height
+      @extend .tiny
+
+      img
+        height: $space-5
+        width: auto
+
+      span
+        position: absolute
+        bottom: 2px
+        left: 0
+        right: 0

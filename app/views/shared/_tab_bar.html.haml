@@ -1,10 +1,22 @@
 #tab-bar
   %ul
     %li
-      LOL
+      = link_to circles_path do
+        = image_tag "tab-bar/circles.png"
+        %span Circles
     %li
-      LOL
+      = link_to circles_path do
+        = image_tag "tab-bar/community.png"
+        %span Community
     %li
-      LOL
+      = link_to circles_path do
+        = image_tag "tab-bar/saved.png"
+        %span Saved
     %li
-      LOL
+      = link_to circles_path do
+        = image_tag "tab-bar/notifications.png"
+        %span Notifications
+    %li
+      = link_to circles_path do
+        = image_tag "tab-bar/account.png"
+        %span Account

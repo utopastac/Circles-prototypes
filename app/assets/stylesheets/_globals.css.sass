@@ -23,6 +23,7 @@ html
   font-size: 62.5%
 
 body
+  margin: 0
   padding: 0 0 $tab-bar-height
   position: static
   overflow-y: auto
@@ -34,8 +35,18 @@ body
 
 .outer-wrapper
   position: relative
-  padding: 0
+  padding: $space-3
+
+.overwide
+  width: calc(100% + #{$space-3})
 
 .wrapper
   @extend .outer-wrapper
   position: relative
+
+
+.circle-image
+  border-radius: 50%
+  overflow: hidden
+  background-size: cover
+  background-position: center center

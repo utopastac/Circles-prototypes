@@ -1,0 +1,27 @@
+ul.iconed-list
+  @extend .overwide
+
+  li
+    display: flex
+    align-items: center
+
+    .image
+      width: $space-7
+      height: $space-7
+      @extend .circle-image
+
+    > div:not(.image)
+      width: calc(100% - #{$space-7})
+      margin-right: -$space-3
+      padding: $space-1 $space-2
+      border-bottom: 1px solid $grey-light
+
+ul.contact-list
+  display: flex
+
+  li
+    width: $space-5
+    height: $space-5
+    margin-right: $space-1
+    border: 3px solid green
+    @extend .circle-image

@@ -18,10 +18,57 @@ i
 
 a
   cursor: pointer
-  text-decoration: underline
-  color: black
-  &:visited
-    color: inherit 
+  text-decoration: none
+  color: inherit
+
+.display-3
+  font-size: 42px
+  font-weight: 400
+
+.display-2
+  font-size: 36px
+  font-weight: 400
+
+.display-1
+  font-size: 24px
+  font-weight: 500
+
+.display-0
+  font-size: 18px
+  font-weight: 500
+
+.body
+  font-size: 16px
+  font-weight: 400
+
+.caption
+  font-size: 12px
+  font-weight: 500
+
+.tiny
+  font-size: 10px
+  font-weight: 500
+
+h1 
+  @extend .display-3
+
+h2 
+  @extend .display-2
+
+h3 
+  @extend .display-3
+
+h4 
+  @extend .display-0
+
+h5
+  @extend .body
+
+h6
+  @extend .caption
+
+p
+  @extend .body
 
 
 @mixin text-link

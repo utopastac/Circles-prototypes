@@ -1,0 +1,10 @@
+%li{:class => classes}
+  .image{:style => "background-image: url(#{image_path "#{image}"})"}
+    //= image_tag image, :class => "offer-link"
+  %div
+    %h4
+      = title
+
+    %ul.contact-list
+      - members.each do |member|
+        %li{:style => "background-image: url(#{image_path "#{member[:image]}"})"}
