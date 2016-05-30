@@ -1,0 +1,33 @@
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  padding: 0
+  font-weight: 400
+
+body
+  font-family: "Avenir Next", sans
+  -webkit-font-smoothing: antialiased
+  font-size: 16px
+  color: $grey-dark
+
+p, li
+  line-height: 1.6
+
+i
+  &.fa
+    font-size: 1.2em
+
+a
+  cursor: pointer
+  text-decoration: underline
+  color: black
+  &:visited
+    color: inherit 
+
+
+@mixin text-link
+  a
+    color: black
+    text-decoration: underline
+
+.underline
+  text-decoration: underline

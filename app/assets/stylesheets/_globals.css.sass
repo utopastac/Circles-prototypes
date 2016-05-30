@@ -1,0 +1,40 @@
+@import "utilz"
+@import "variables"
+@import "typography"
+@import "modal"
+@import "lists"
+@import "tables"
+@import "buttons"
+@import "forms"
+@import "tab_bar"
+
+*, *:before, *:after
+  box-sizing: border-box
+
+ul
+  margin: 0
+  padding: 0
+
+li
+  list-style-type: none
+
+html
+  overflow-x: hidden
+  font-size: 62.5%
+
+body
+  padding: 0 0 $tab-bar-height
+  position: static
+  overflow-y:auto
+  width: 100%
+  &.inactive
+    position: fixed
+    overflow-y: scroll
+
+.outer-wrapper
+  position: relative
+  padding: 0
+
+.wrapper
+  @extend .outer-wrapper
+  position: relative

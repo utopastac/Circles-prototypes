@@ -1,0 +1,49 @@
+fieldset
+  border: none
+  padding: 0
+
+label
+  display: block
+
+textarea, input[type="text"], select
+  border: 1px solid $grey-medium
+  background: white
+  display: block
+  width: 100%
+
+input[type="text"]
+  color: $grey-dark !important
+
+input[type="checkbox"]
+  display: none
+
+  + label
+    display: block
+
+    span
+      display: inline-block
+      border-radius: 0px
+      border: 1px solid $grey-medium
+      box-shadow: none
+      background: white
+      outline: none
+
+  &:checked
+    + label
+      span
+        box-shadow: inset 0 0 0 3px white
+        background: black
+
+select
+  outline: none
+  display: inline-block
+  -webkit-appearance: none
+  appearance: none
+  cursor: pointer
+
+.search-input
+
+  
+.go-button
+
+
