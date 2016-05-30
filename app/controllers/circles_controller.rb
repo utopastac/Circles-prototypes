@@ -1,3 +1,3 @@
-class SparksController < PublicController
+class CirclesController < PublicController
   layout "circles"
 end
