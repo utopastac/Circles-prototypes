@@ -1,0 +1,48 @@
+#chat
+  overflow: hidden
+  margin-top: $space-3
+
+  .alert
+    border: 2px solid purple
+    padding: $space-3
+    color: purple
+    border-radius: 3px
+
+  .bubble
+    border-radius: 3px
+    background: rgba(green, 0.2)
+    padding: $space-1
+    max-width: 28rem
+    margin-bottom: 3px
+    float: left
+
+  .them, .you, .alert
+    clear: both
+    margin-bottom: $space-2
+    vertical-align: top
+    overflow: hidden
+
+  .them
+    float: left
+
+  .you
+    float: right
+
+    .bubble
+      float: right
+      background: rgba(blue, 0.1)
+
+    .time
+      text-align: right
+
+  .time
+    @extend .caption
+    color: $grey-medium
+    clear: both
+
+  .face
+    float: left
+    width: $space-5
+    height: $space-5
+    margin-right: $space-1
+    @extend .circle-image

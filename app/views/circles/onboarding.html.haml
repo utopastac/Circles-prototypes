@@ -1,0 +1,22 @@
+- content_for :title, "Onboarding"
+- @no_tab_bar = true
+- @body_id = "onboarding"
+
+%h1
+
+#question-holder
+  %section{:id => "phone-number"}
+    %h1 Hoho
+    %button{:class => "next"} Next
+
+  %section{:id => "location"}
+    %h1 Hoho
+    %button{:class => "next"} Next
+
+  %section{:id => "activity"}
+    %h1 Hoho
+    %button{:class => "next"} Next
+
+  %section{:id => "contacts"}
+    %h1 Hoho
+    = button_to "Continue", circles_path, :method => "get"

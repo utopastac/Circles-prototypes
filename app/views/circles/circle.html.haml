@@ -1,0 +1,38 @@
+- content_for :title, "Group name"
+- @body_id = "nav-bar-present"
+
+#nav-bar
+  = link_to circles_path do
+    #back-button
+
+  .title
+    %h5 Group name
+
+  .actions
+
+.centered
+  %ul.tabs
+    %li.active Full circle
+    %li Private
+
+#chat
+  .them
+    .face{:style => "background-image: url(#{image_path "faces/1.jpg"})"}
+    .bubble Words that were said by ahuman
+    .time 2.30pm 12/10
+
+  .them
+    .face{:style => "background-image: url(#{image_path "faces/1.jpg"})"}
+    .bubble Human says word
+    .time 2.30pm 12/10
+
+  .alert Thing has happened plz reactions
+
+  .you
+    .bubble woof
+    .time 2.30pm 12/10
+
+  .them
+    .face{:style => "background-image: url(#{image_path "faces/1.jpg"})"}
+    .bubble Human says word not woof you strang buoy
+    .time 2.30pm 12/10
