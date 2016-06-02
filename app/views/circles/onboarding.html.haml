@@ -12,6 +12,28 @@
     %input{:type => "text", :pattern => "\d*"}
     %button{:class => "next"} Next
 
+  %section{:id => "contacts"}
+    %h3 Your inner circle
+    %p Your inner circle should be the people you can talk to most. They get a super-powered chat which will help them help you in the best possible way.
+    %p Add up to 3 people from your contacts to your inner circle
+    %button{:class => "next"} Choose from contacts
+
+  %section{:id => "contacts-b"}
+    %header
+      %h4 Choose your circle
+      = button_to "save", circles_path, :method => "get", :class => "inline"
+    .scroll-content
+      %ul.block-list
+        %li Pedro Amour
+        %li Bastardo Balthazar
+        %li Henri Smithson
+        %li Beast of Bodmin
+        %li Goat 1
+        %li Goat herder
+        %li James
+        %li Beth
+    
+
   %section{:id => "location"}
     %h3 Where's home?
     %p So we can give your circle the context they need.
@@ -30,12 +52,4 @@
     %p We think you generally get up at 8.30am. Is that right?
     %button{:class => "next"} Next
 
-  %section{:id => "contacts"}
-    %h3 Your inner circle
-    %p Add up to 3 people from your contacts to your inner circle
-    %button{:class => "next"} Next
-
-  %section{:id => "contacts-b"}
-    %h3 Choose your circle
-    %p Contacts list
-    = button_to "Continue", circles_path, :method => "get"
+  

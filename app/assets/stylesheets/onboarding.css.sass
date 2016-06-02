@@ -6,6 +6,18 @@
 
   section
     position: absolute
+    min-height: 100%
     top: 0
     left: 0
     width: 100%
+
+    header
+      border-bottom: 1px solid $grey-light
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding-bottom: $space-2
+
+  .scroll-content
+    overflow-y: scroll
+    max-height: 80vh

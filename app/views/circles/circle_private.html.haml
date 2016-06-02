@@ -1,0 +1,28 @@
+- content_for :title, "Group name"
+- @body_id = "circle-private"
+- @body_class = "nav-bar-present"
+
+#nav-bar
+  = link_to circles_path do
+    #back
+
+  .title
+    %h5 Group name
+
+  .actions
+
+.centered
+  %ul.tabs
+    = link_to circle_path do
+      %li Full circle
+    %li.active  Private
+
+#chat
+  .alert Peter hasn't left his house in 28 hours
+
+  = render "shared/chat_message_us", :message => "Guys i'm worried about him", :time => "2.30pm 12/10", :reaction => " "
+  = render "shared/chat_message_us", :message => "He's becomming a bit of a problem", :time => "2.30pm 12/10", :reaction => " "
+
+  = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "What do you think we should do?", :time => "2.30pm 12/10", :name => "Jack"
+
+  = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "I think we all know the answer", :time => "2.30pm 12/10", :name => "Beth"

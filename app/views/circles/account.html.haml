@@ -1,11 +1,16 @@
 - content_for :title, "Circles Home"
+- @body_id = "account"
+- @body_class = "nav-bar-present"
 
-%h1
-  Your circles
+#nav-bar
+  = link_to circles_path do
+    #back
 
-%ul.iconed-list
-  = render "shared/circle_row", :image => "default/1.jpg", :classes => ["in-store", "new"], :title => "Group name", :members => [{name: "Barry", image: "faces/1.jpg"}, {name: "Keith", image: "faces/1.jpg"}]
+  .title
+    %h5 Notebook
 
-  = render "shared/circle_row", :image => "default/3.jpg", :classes => ["in-store", "new"], :title => "Group name 2", :members => [{name: "Barry", image: "faces/1.jpg"}, {name: "Keith", image: "faces/1.jpg"}]
+  .actions
+    #profile-link{"data-page-target" => "#profile"}
 
-  = render "shared/circle_row", :image => "default/7.jpg", :classes => ["in-store", "new"], :title => "Group name 3", :members => [{name: "Barry", image: "faces/1.jpg"}, {name: "Keith", image: "faces/1.jpg"}]
+%section{:id => "notebook"}
+  %h2 A space to save you things

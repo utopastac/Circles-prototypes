@@ -1,5 +1,6 @@
 - content_for :title, "Group name"
-- @body_id = "nav-bar-present"
+- @body_id = "circle"
+- @body_class = "nav-bar-present"
 
 #nav-bar
   = link_to circles_path do
@@ -13,36 +14,16 @@
 .centered
   %ul.tabs
     %li.active Full circle
-    %li Private
+    = link_to circle_private_path do
+      %li Private
 
 #chat
-  .them
-    .name
-      Peter Coolman
-      %span.time 2.30pm 12/10
-    .face{:style => "background-image: url(#{image_path "faces/1.jpg"})"}
-    .bubble Words that were said by ahuman
-    
+  = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Words that were said by ahuman", :time => "2.30pm 12/10", :name => "Peter Coolman"
 
-  .them
-    .name
-      Peter Coolman
-      %span.time 2.30pm 12/10
-    .face{:style => "background-image: url(#{image_path "faces/1.jpg"})"}
-    .bubble Human says word
+  = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word", :time => "2.30pm 12/10", :name => "Peter Coolman"
 
   .alert Peter hasn't left his house in 28 hours
 
-  .you
-    .name
-      %span.time 2.30pm 12/10
-    .bubble woof
-    .reaction Aidan, Cosi & Beth agree with this
+  = render "shared/chat_message_us", :message => "woof", :time => "2.30pm 12/10", :reaction => "Aidan, Cosi & Beth agree with this"
 
-  .them
-    .name
-      Beth Bullock
-      %span.time 2.30pm 12/10
-    .face{:style => "background-image: url(#{image_path "faces/1.jpg"})"}
-    .bubble Human says word not woof you strang buoy
-    
+  = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word not woof you strang buoy", :time => "2.30pm 12/10", :name => "Beth Bullock"

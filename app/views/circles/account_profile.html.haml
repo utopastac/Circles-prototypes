@@ -1,0 +1,25 @@
+- content_for :title, "Circles Home"
+- @body_id = "account"
+- @body_class = "nav-bar-present"
+
+#nav-bar
+  = link_to circles_path do
+    #back
+
+  .title
+    %h5 Notebook
+
+  .actions
+    #profile-link{"data-page-target" => "#profile"}
+
+.paged-content
+  %section{:id => "notebook"}
+
+  %section{:id => "profile"}
+    %header#profile
+      .face{:style => "background-image: url(#{image_path "faces/1.jpg"})"}
+      %h1.name Peter Wright
+
+    %ul.block-list
+      %li Readme
+      %li Settings

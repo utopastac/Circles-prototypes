@@ -11,6 +11,7 @@
 @import "onboarding"
 @import "circle"
 @import "account"
+@import "profile"
 @import "nav_bar"
 @import "chat"
 
@@ -36,7 +37,6 @@ body
   overflow-y: auto
   width: 100%
   //background: url(image-path("bg.png")) no-repeat
-  background-color: $grey-bg
   background-size: cover
   background-position: center center
 
@@ -44,12 +44,23 @@ body
     position: fixed
     overflow-y: scroll
 
-  &#nav-bar-present
+  &.nav-bar-present
     padding-top: $space-6
+
+  &#circle
+    background-color: $grey-bg
+
+  &#circle-private
+    background-color: $grey-dark
 
 .outer-wrapper
   position: relative
   padding: $space-3
+
+.full-size-header
+  margin-left: -$space-3
+  margin-top: -$space-3
+  width: calc(100% + #{$space-3 * 2})
 
 .overwide
   width: calc(100% + #{$space-3})

@@ -11,7 +11,7 @@
 
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
 
-  %body{:id => (@body_id if @body_id)}
+  %body{:id => (@body_id if @body_id), :class => (@body_class if @body_class)}
 
     .outer-wrapper
       = yield

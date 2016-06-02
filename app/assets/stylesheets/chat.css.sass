@@ -9,6 +9,7 @@
     border-radius: 3px
     @extend .bolder
     text-align: center
+    background: white
 
   .name
     @extend .caption
@@ -18,7 +19,7 @@
 
   .bubble
     border-radius: 3px
-    background: rgba(green, 0.2)
+    background: lighten(green, 60%)
     padding: $space-1
     max-width: 28rem
     margin-bottom: 3px
@@ -33,13 +34,13 @@
   .them
     float: left
 
-  .you
+  .us
     float: right
 
     .bubble
       clear: both
       float: right
-      background: rgba(blue, 0.1)
+      background: lighten(blue, 40%)
 
     .name
       text-align: right
@@ -52,6 +53,7 @@
     clear: both
     @extend .caption
     color: $grey-medium
+    margin-bottom: $space-1
 
   .face
     float: left
@@ -59,3 +61,7 @@
     height: $space-5
     margin-right: $space-1
     @extend .circle-image
+
+#circle-private
+  .name
+    color: white

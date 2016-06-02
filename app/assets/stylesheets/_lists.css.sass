@@ -24,6 +24,9 @@ ul.block-list
     line-height: $space-6
     border-bottom: 1px solid $grey-light
     @extend .display-0
+    background: url(image-path("icons//arrow.png")) no-repeat
+    background-size: auto $space-4
+    background-position: right $space-2 center
 
 ul.contact-list
   display: flex
@@ -38,10 +41,11 @@ ul.contact-list
     
 ul.tabs
   position: relative
-  border: 1px solid $grey-dark
+  border: 1px solid $black
   border-radius: 3px
   padding: 0
   display: inline-block
+  font-size: 0
 
   li 
     display: inline-block
@@ -49,8 +53,11 @@ ul.tabs
     height: 27px
     line-height: 27px
     text-decoration: none
+    background: white
+    @extend .body
 
     &.active 
-      background: $grey-dark
+      background: $black
       color: white
+      @extend .bolder
       
