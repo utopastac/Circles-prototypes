@@ -3,7 +3,7 @@
 
 #nav-bar
   = link_to circles_path do
-    #back-button
+    #back
 
   .title
     %h5 Group name
@@ -17,22 +17,32 @@
 
 #chat
   .them
+    .name
+      Peter Coolman
+      %span.time 2.30pm 12/10
     .face{:style => "background-image: url(#{image_path "faces/1.jpg"})"}
     .bubble Words that were said by ahuman
-    .time 2.30pm 12/10
+    
 
   .them
+    .name
+      Peter Coolman
+      %span.time 2.30pm 12/10
     .face{:style => "background-image: url(#{image_path "faces/1.jpg"})"}
     .bubble Human says word
-    .time 2.30pm 12/10
 
-  .alert Thing has happened plz reactions
+  .alert Peter hasn't left his house in 28 hours
 
   .you
+    .name
+      %span.time 2.30pm 12/10
     .bubble woof
-    .time 2.30pm 12/10
+    .reaction Aidan, Cosi & Beth agree with this
 
   .them
+    .name
+      Beth Bullock
+      %span.time 2.30pm 12/10
     .face{:style => "background-image: url(#{image_path "faces/1.jpg"})"}
     .bubble Human says word not woof you strang buoy
-    .time 2.30pm 12/10
+    

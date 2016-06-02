@@ -4,12 +4,17 @@ fieldset
 
 label
   display: block
+  @extend .bolder
+  margin-bottom: $space-1
 
 textarea, input[type="text"], select
   border: 1px solid $grey-medium
   background: white
+  min-height: $space-6
+  @extend .body
+  padding: 0 $space-2
   display: block
-  width: 100%
+
 
 input[type="text"]
   color: $grey-dark !important

@@ -14,7 +14,7 @@ $(function(){
 
   function showQuestion(target){
     TweenMax.to(questions.eq(current), 0.4, {autoAlpha:0, x: -150, display: "none", ease:Power2.easeOut});
-    TweenMax.to(questions.eq(target), 0.5, {autoAlpha:1, x: 0, display: "block", ease:Power2.easeInOut});
+    TweenMax.to(questions.eq(target), 0.4, {autoAlpha:1, x: 0, display: "block", ease:Power2.easeOut});
     current = target;
   }
 
