@@ -11,8 +11,12 @@ h1, h2, h3, h4, h5, h6
   font-family: "HKGroteskPro-Medium"
   font-weight: normal
 
-.body-bold 
+.body-semi 
   font-family: "HKGroteskPro-SemiBold"
+  font-weight: normal
+
+.body-bold 
+  font-family: "HKGroteskPro-Bold"
   font-weight: normal
 
 .headline-regular 
@@ -31,11 +35,10 @@ body
   @extend .body-regular
   -webkit-font-smoothing: antialiased
   letter-spacing: -0.01em
-  font-size: 16px
-  color: $grey-dark
+  font-size: 17px
+  color: $blue
 
-h1
-  @extend .headline-medium
+  
 
 p, li
   line-height: 1.6
@@ -50,35 +53,61 @@ a
   color: inherit
 
 .display-3
-  font-size: 42px
+  @extend .headline-medium
+  font-size: 43px
   letter-spacing: -0.01em
 
 .display-2
-  font-size: 36px
+  @extend .body-medium
+  font-size: 28px
   letter-spacing: -0.01em
 
 .display-1
-  font-size: 24px
+  @extend .body-medium
+  font-size: 22px
   letter-spacing: -0.01em
 
 .display-0
-  font-size: 18px
+  @extend .body-medium
+  font-size: 19px
+  letter-spacing: -0.01em
+
+.title
+  @extend .body-semi
+  font-size: 17px
   letter-spacing: -0.01em
 
 .body
+  @extend .body-medium
   font-size: 16px
   letter-spacing: -0.01em
 
+.chat
+  @extend .body-regular
+  font-size: 16px
+  letter-spacing: -0.01em
+
+.body-small
+  @extend .body-medium
+  font-size: 15px
+  letter-spacing: -0.01em
+
 .caption
-  font-size: 12px
+  @extend .body-medium
+  font-size: 13px
   letter-spacing: -0.01em
 
 .tiny
-  font-size: 10px
+  @extend .body-medium
+  font-size: 12px
   letter-spacing: -0.01em
 
-.bolder
+.button
   @extend .body-bold
+  text-transform: uppercase
+  font-size: 14px
+  letter-spacing: 0.08em
+
 
 h1 
   @extend .display-3
@@ -94,12 +123,16 @@ h4
 
 h5
   @extend .body
+  @extend .body-bold
 
 h6
   @extend .caption
 
 p
   @extend .body
+
+  &.sub
+    opacity: 0.7
 
 
 @mixin text-link

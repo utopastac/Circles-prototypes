@@ -1,6 +1,7 @@
 @import "utilz"
 @import "fonts"
 @import "variables"
+@import "mixins"
 @import "typography"
 @import "modal"
 @import "lists"
@@ -32,27 +33,29 @@ html
 
 body
   margin: 0
-  padding: 0 0 $tab-bar-height
+  padding: $space-6 0 $tab-bar-height
   min-height: 100vh
   position: static
   overflow-y: auto
   width: 100%
-  //background: url(image-path("bg.png")) no-repeat
-  background-size: cover
-  background-position: center center
 
   &.inactive
     position: fixed
     overflow-y: scroll
 
-  &.nav-bar-present
-    padding-top: $space-6
+  &.no-nav-bar
+    padding-top: 0
 
   &#circle
-    background-color: $grey-bg
 
   &#circle-private
-    background-color: $grey-dark
+
+  &.blue
+    background-color: $blue-bg
+  &.peach
+    background-color: $peach
+  &.green
+    background-color: $green
 
 .outer-wrapper
   position: relative

@@ -1,20 +1,28 @@
 - content_for :title, "Onboarding"
 - @no_tab_bar = true
 - @body_id = "onboarding"
+- @body_class = "blue"
 
-%h1
+#nav-bar
+  = link_to circles_path do
+    #back
+  .title Notebook
+  .actions
+    #next-button{:class => "next"} Next
 
 #question-holder
   %section{:id => "phone-number"}
-    %h3 Register
-    %p We will pair your account to your phone number and device so that it's always kept safe.
-    %label Phone number
-    %input{:type => "text", :pattern => "\d*"}
-    %button{:class => "next"} Next
+    .question
+      .question-title
+        %h4 Please confirm your country code and enter your mobile number
+      .question-content
+        %a.button-row United Kingdom
+        %input{:type => "text", :pattern => "\d*"}
+        //%button{:class => "next"} Next
 
   %section{:id => "contacts"}
     %h3 Your inner circle
-    %p Your inner circle should be the people you can talk to most. They get a super-powered chat which will help them help you in the best possible way.
+    %p.sub Your inner circle should be the people you can talk to most. They get a super-powered chat which will help them help you in the best possible way.
     %p Add up to 3 people from your contacts to your inner circle
     %button{:class => "next"} Choose from contacts
 

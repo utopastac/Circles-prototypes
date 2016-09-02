@@ -6,17 +6,40 @@
   right: 0
   padding: 0 $space-2
   height: $space-6
-  border-bottom: 1px solid $grey-light
   display: flex
   justify-content: space-between
   align-items: center
 
+  .title
+    @extend .title
+
   #back
     background: url(image-path("icons/navigation-arrow.png")) no-repeat
     background-size: auto 100%
-    height: $space-4
+    height: $space-3
     width: 4rem
 
   .actions
-    height: 3rem
-    width: 4rem
+
+  #next-button
+    border-radius: 500px
+    color: $blue
+    height: $space-30
+    line-height: $space-30
+    padding: 0 $space-2
+    width: auto
+    opacity: 0.3
+    border: 1px solid $blue
+    @extend .title
+
+    &.active
+      background: $blue
+      opacity: 1
+      color: white
+
+.blue #nav-bar
+  background: $blue-bg
+.green #nav-bar
+  background: $green-bg
+.peach #nav-bar
+  background: $peach-bg

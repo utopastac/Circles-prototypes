@@ -1,12 +1,28 @@
 #question-holder
-  position: relative
+  position: absolute
+  text-align: center
+  width: 100%
+  height: calc(100vh - #{$space-6})
+
+  .question
+    display: flex
+    flex-direction: column
+    height: calc(100vh - #{$space-6})
+
+    .question-title
+      flex-grow: 1
+
+    .question-content
+
+  h4
+    margin-bottom: $space-6
 
   button
     margin-top: $space-2
 
   section
     position: absolute
-    min-height: 100%
+    height: calc(100vh - #{$space-6})
     top: 0
     left: 0
     width: 100%

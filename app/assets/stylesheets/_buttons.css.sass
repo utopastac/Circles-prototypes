@@ -5,13 +5,19 @@ button, input[type="submit"], a.button
   outline: none
   cursor: pointer
   border-radius: 500px
+  min-width: 18rem
+  text-align: center
   background: $blue
-  height: $space-5
-  line-height: $space-5
+  height: $space-6
+  line-height: $space-6
   padding: 0 $space-2
   color: white
-  @extend .body
-  @extend .bolder
+  @extend .button
+
+  &.small
+    @extend .caption
+    height: $space-5
+    line-height: $space-5
 
   &.fixed-bottom
     width: calc(100% - #{$space-2})
@@ -19,3 +25,12 @@ button, input[type="submit"], a.button
     left: $space-1
     bottom: $space-7
 
+a.button-row
+  @extend .full-width
+  @extend .input-row
+  border-bottom: none
+  line-height: $space-6
+  padding: 0 $space-3
+  display: block
+  background: white url(image-path("icons/arrow.png")) no-repeat center right $space-3
+  background-size: auto $space-3
