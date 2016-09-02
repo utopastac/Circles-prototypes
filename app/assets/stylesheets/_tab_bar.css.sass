@@ -16,19 +16,25 @@
     flex: 1
 
     a
-      display: block
+      display: flex
+      align-items: center
       position: relative
       text-align: center
+      justify-content: center
       height: 100%
       height: $tab-bar-height
       @extend .tiny
+      opacity: 0.5
+
+      &.active
+        opacity: 1
 
       img
         height: $space-4
         width: auto
-        margin-top: $space-1
 
       span
+        display: none
         position: absolute
         bottom: 2px
         left: 0

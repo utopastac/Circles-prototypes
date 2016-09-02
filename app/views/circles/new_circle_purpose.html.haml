@@ -1,7 +1,7 @@
 - content_for :title, "Onboarding"
 - @no_tab_bar = true
 - @body_id = "onboarding"
-- @body_class = "blue"
+- @body_class = "peach"
 
 #nav-bar
   = link_to :back do
@@ -14,9 +14,7 @@
   %section{:id => "phone-number-confirmation"}
     .question
       .question-title
-        %h4 We have sent you an SMS with a code to the number above
-        %p.sub To complete your phone number verification, please enter the 6-digit activation code
-        = link_to "No SMS?", ob_double_confirm_path, :class => "small-link"
+        %h4 What do you want your circle to help you with?
       .question-content
-        %input{:type => "text", :pattern => "\d*"}
+        %input{:type => "text"}
         = image_tag "illustrations/6.png", :style => "right: 30px; top: -7.5rem;"

@@ -1,13 +1,12 @@
 #question-holder
-  position: absolute
-  top: 0
-  left: $space-3
+  position: static
   text-align: center
-  width: calc(100% - #{$space-3 * 2})
   height: calc(100vh - #{$space-6})
 
   img
     pointer-events: none
+    position: absolute
+    width: 9rem
 
   .age-question
     margin-bottom: $space-6
@@ -42,8 +41,6 @@
       position: relative
 
       img
-        position: absolute
-        width: 9rem
         top: -8.5rem
 
   h4
@@ -53,19 +50,19 @@
     margin-top: $space-2
 
   section
-    position: absolute
+    position: static
     height: calc(100vh - #{$space-6})
-    top: 0
-    left: 0
-    width: 100%
 
-    header
-      border-bottom: 1px solid $grey-light
-      display: flex
-      justify-content: space-between
-      align-items: center
-      padding-bottom: $space-2
+.page-content
+  text-align: center
+  width: 80%
+  margin: 0 auto
 
-  .scroll-content
-    overflow-y: scroll
-    max-height: 80vh
+  h1
+    margin-bottom: $space-2
+
+  h4
+    margin-bottom: $space-3
+
+  button, input[type="submit"], a.button
+    margin-top: $space-3

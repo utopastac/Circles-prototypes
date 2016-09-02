@@ -4,17 +4,18 @@
 - @body_class = "blue"
 
 #nav-bar
-  = link_to circles_path do
+  = link_to :back do
     #back
   .title Notebook
   .actions
-    = button_to "Next", ob_age_path, :id => "next-button", :method => "get"
+    = button_to "Next", new_circle_path, :id => "next-button", :method => "get"
 
 #question-holder
   %section{:id => "age"}
     .age-question
       %h4 Your name
       %input{:type => "text"}
+      = image_tag "illustrations/7.png", :style => "right: -2.2rem; top: -2.5rem;"
     .age-question
       %h4 Your gender
       %ul.tabs
@@ -26,6 +27,3 @@
       %h4 Your age
       %input{:type => "text"}
       .optional optional
-
-
-    = image_tag "illustrations/6.png", :style => "right: 30px; top: -7.5rem;"

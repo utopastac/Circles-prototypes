@@ -2,17 +2,21 @@
   %ul
     %li
       = link_to circles_path do
-        = image_tag "tab-bar/circles.png"
+        = image_tag "tab-bar/circles-icon.png"
+        %span Circles
+    %li
+      = link_to notifications_path do
+        = image_tag "tab-bar/bookmark-icon.png"
+        %span Notifications
+    %li
+      = link_to circles_path do
+        = image_tag "tab-bar/new-post-icon.png"
         %span Circles
     %li
       = link_to network_path do
-        = image_tag "tab-bar/community.png"
+        = image_tag "tab-bar/network-icon.png"
         %span Community
     %li
-      = link_to notifications_path do
-        = image_tag "tab-bar/notifications.png"
-        %span Notifications
-    %li
       = link_to account_path do
-        = image_tag "tab-bar/account.png"
+        = image_tag "tab-bar/account-icon.png"
         %span Account

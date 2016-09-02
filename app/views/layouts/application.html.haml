@@ -2,7 +2,7 @@
 %html{:lang => "en"}
   %head
     %title= content_for?(:title) ? yield(:title) : "Circles"
-    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, height=device-height,  maximum-scale=1.0, target-densityDpi=device-dpi"}
     %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
 
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true

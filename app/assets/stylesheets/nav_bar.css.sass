@@ -9,6 +9,7 @@
   display: flex
   justify-content: space-between
   align-items: center
+  z-index: $z-overlay-nav-bar
 
   .title
     @extend .title
@@ -47,3 +48,20 @@
   background: $green-bg
 .peach #nav-bar
   background: $peach-bg
+
+.dk-blue #nav-bar
+  color: white
+  background: $blue
+
+  #back
+    background-image: url(image-path("icons/navigation-arrow-white.png"))
+
+  #next-button
+    color: $peach
+    border-color: $peach-bg
+    opacity: 0.4
+
+    &.active
+      background: $peach-bg
+      color: $blue
+      opacity: 1

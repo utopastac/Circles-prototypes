@@ -1,0 +1,17 @@
+- content_for :title, "New Circle - who to invite"
+- @no_tab_bar = true
+- @body_id = "onboarding"
+- @body_class = "dk-blue"
+
+#nav-bar
+  = link_to :back do
+    #back
+  .title Notebook
+  .actions
+    = button_to "Next", new_circle_add_path, :id => "next-button", :method => "get", :class => "active"
+
+.page-content
+  %h1 Who to invite
+  %h4 Make sure you're comfortable talking to them about yourself.
+  %h4 Choose people who understand you best and really want to help you.
+  = button_to "Got it", new_circle_add_path, :method => "get"

@@ -10,6 +10,7 @@
 @import "forms"
 @import "tab_bar"
 
+@import "home"
 @import "onboarding"
 @import "circle"
 @import "account"
@@ -50,12 +51,22 @@ body
 
   &#circle-private
 
+  &.dk-blue
+    background-color: $blue
+
+    h1, h2, h3, h4, h5, h6 p, .title
+      color: $peach-bg
+
+    button, input[type="submit"], a.button
+      background: $peach-bg
+      color: $blue
+
   &.blue
     background-color: $blue-bg
   &.peach
-    background-color: $peach
+    background-color: $peach-bg
   &.green
-    background-color: $green
+    background-color: $green-bg
 
 .outer-wrapper
   position: relative
