@@ -1,0 +1,47 @@
+/*
+W01 = Basic Latin
+W03 = Basic Latin + OT features / some additional characters outside of Basic Latin
+*/
+
+@font-face{
+font-family:"NeueHansKendrick-Regular";
+src:font-url("NeueHansKendrick-Regular.eot?#iefix");
+src:font-url("NeueHansKendrick-Regular.eot?#iefix") format("eot"),font-url("NeueHansKendrick-Regular.woff2") format("woff2"),font-url("NeueHansKendrick-Regular.woff") format("woff"),font-url("NeueHansKendrick-Regular.ttf") format("truetype"),font-url("NeueHansKendrick-Regular.svg#NeueHansKendrick-Regular") format("svg");
+}
+
+@font-face{
+font-family:"NeueHansKendrick-Medium";
+src:font-url("NeueHansKendrick-Medium.eot?#iefix");
+src:font-url("NeueHansKendrick-Medium.eot?#iefix") format("eot"),font-url("NeueHansKendrick-Medium.woff2") format("woff2"),font-url("NeueHansKendrick-Medium.woff") format("woff"),font-url("NeueHansKendrick-Medium.ttf") format("truetype"),font-url("NeueHansKendrick-Medium.svg#NeueHansKendrick-Medium") format("svg");
+}
+
+@font-face{
+font-family:"NeueHansKendrick-Bold";
+src:font-url("NeueHansKendrick-Bold.eot?#iefix");
+src:font-url("NeueHansKendrick-Bold.eot?#iefix") format("eot"),font-url("NeueHansKendrick-Bold.woff2") format("woff2"),font-url("NeueHansKendrick-Bold.woff") format("woff"),font-url("NeueHansKendrick-Bold.ttf") format("truetype"),font-url("NeueHansKendrick-Bold.svg#NeueHansKendrick-Bold") format("svg");
+}
+
+
+@font-face{
+font-family:"HKGroteskPro-Regular";
+src:font-url("HKGroteskPro-Regular.eot?#iefix");
+src:font-url("HKGroteskPro-Regular.eot?#iefix") format("eot"),font-url("HKGroteskPro-Regular.woff2") format("woff2"),font-url("HKGroteskPro-Regular.woff") format("woff"),font-url("HKGroteskPro-Regular.ttf") format("truetype"),font-url("HKGroteskPro-Regular.svg#HKGroteskPro-Regular") format("svg");
+}
+
+@font-face{
+font-family:"HKGroteskPro-Medium";
+src:font-url("HKGroteskPro-Medium.eot?#iefix");
+src:font-url("HKGroteskPro-Medium.eot?#iefix") format("eot"),font-url("HKGroteskPro-Medium.woff2") format("woff2"),font-url("HKGroteskPro-Medium.woff") format("woff"),font-url("HKGroteskPro-Medium.ttf") format("truetype"),font-url("HKGroteskPro-Medium.svg#HKGroteskPro-Medium") format("svg");
+}
+
+@font-face{
+font-family:"HKGroteskPro-SemiBold";
+src:font-url("HKGroteskPro-SemiBold.eot?#iefix");
+src:font-url("HKGroteskPro-SemiBold.eot?#iefix") format("eot"),font-url("HKGroteskPro-SemiBold.woff2") format("woff2"),font-url("HKGroteskPro-SemiBold.woff") format("woff"),font-url("HKGroteskPro-SemiBold.ttf") format("truetype"),font-url("HKGroteskPro-SemiBold.svg#HKGroteskPro-SemiBold") format("svg");
+}
+
+@font-face{
+font-family:"HKGroteskPro-Bold";
+src:font-url("HKGroteskPro-Bold.eot?#iefix");
+src:font-url("HKGroteskPro-Bold.eot?#iefix") format("eot"),font-url("HKGroteskPro-Bold.woff2") format("woff2"),font-url("HKGroteskPro-Bold.woff") format("woff"),font-url("HKGroteskPro-Bold.ttf") format("truetype"),font-url("HKGroteskPro-Bold.svg#HKGroteskPro-Bold") format("svg");
+}

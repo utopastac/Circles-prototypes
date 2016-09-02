@@ -3,11 +3,39 @@ h1, h2, h3, h4, h5, h6
   padding: 0
   font-weight: 400
 
+.body-regular 
+  font-family: "HKGroteskPro-Regular"
+  font-weight: normal
+
+.body-medium 
+  font-family: "HKGroteskPro-Medium"
+  font-weight: normal
+
+.body-bold 
+  font-family: "HKGroteskPro-SemiBold"
+  font-weight: normal
+
+.headline-regular 
+  font-family: "NeueHansKendrick-Regular"
+  font-weight: normal
+
+.headline-medium 
+  font-family: "NeueHansKendrick-Medium"
+  font-weight: normal
+
+.headline-bold 
+  font-family: "NeueHansKendrick-SemiBold"
+  font-weight: normal
+
 body
-  font-family: "Avenir Next", sans
+  @extend .body-regular
   -webkit-font-smoothing: antialiased
+  letter-spacing: -0.01em
   font-size: 16px
   color: $grey-dark
+
+h1
+  @extend .headline-medium
 
 p, li
   line-height: 1.6
@@ -23,33 +51,34 @@ a
 
 .display-3
   font-size: 42px
-  font-weight: 400
+  letter-spacing: -0.01em
 
 .display-2
   font-size: 36px
-  font-weight: 400
+  letter-spacing: -0.01em
 
 .display-1
   font-size: 24px
-  font-weight: 500
+  letter-spacing: -0.01em
 
 .display-0
   font-size: 18px
-  font-weight: 500
+  letter-spacing: -0.01em
 
 .body
   font-size: 16px
-  font-weight: 400
+  letter-spacing: -0.01em
 
 .caption
   font-size: 12px
+  letter-spacing: -0.01em
 
 .tiny
   font-size: 10px
-  font-weight: 500
+  letter-spacing: -0.01em
 
 .bolder
-  font-weight: 500
+  @extend .body-bold
 
 h1 
   @extend .display-3
