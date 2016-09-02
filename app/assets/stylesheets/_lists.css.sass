@@ -41,22 +41,28 @@ ul.contact-list
     
 ul.tabs
   position: relative
-  border: 1px solid $black
-  border-radius: 3px
-  padding: 0
-  display: inline-block
-  font-size: 0
+  display: flex
+  @extend .full-width
+  @extend .input-row
+  border-bottom: none
+  text-align: center
+  align-items: stretch
 
   li 
-    display: inline-block
-    padding: 0 24px
-    height: 27px
-    line-height: 27px
-    text-decoration: none
-    background: white
+    flex: 1
+    display: flex
+    align-items: center
+    text-align: center
+    justify-content: center
     @extend .body
 
+    &:not(:first-child)
+      border-left: 1px solid $grey-light
+
     &.active 
-      background: $black
+      background: $blue
       color: white
+
+      &:not(:first-child)
+        border-left: 1px solid $blue
       

@@ -1,0 +1,24 @@
+- content_for :title, "Onboarding"
+- @no_tab_bar = true
+- @body_id = "onboarding"
+- @body_class = "blue"
+
+#nav-bar
+  = link_to circles_path do
+    #back
+  .title Notebook
+  .actions
+    = button_to "Next", ob_confirm_path, :id => "next-button", :method => "get"
+
+#question-holder
+  %section{:id => "phone-number"}
+    .question
+      .question-title
+        %h4 Please confirm your country code and enter your mobile number
+      .question-content
+        %a.button-row United Kingdom
+        %input{:type => "text", :pattern => "\d*", :id => "phone"}
+        = image_tag "illustrations/2.png", :style => "left: 20px;"
+
+:javascript
+  document.getElementById("phone").focus();

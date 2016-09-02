@@ -20,6 +20,15 @@
         %input{:type => "text", :pattern => "\d*"}
         //%button{:class => "next"} Next
 
+  %section{:id => "phone-number-confirmation"}
+    .question
+      .question-title
+        %h4 We have sent you an SMS with a code to the number above
+        %p.sub To complete your phone number verification, please enter the 6-digit activation code
+      .question-content
+        %input{:type => "text", :pattern => "\d*"}
+        //%button{:class => "next"} Next
+
   %section{:id => "contacts"}
     %h3 Your inner circle
     %p.sub Your inner circle should be the people you can talk to most. They get a super-powered chat which will help them help you in the best possible way.

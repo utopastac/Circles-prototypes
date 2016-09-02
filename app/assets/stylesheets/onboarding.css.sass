@@ -1,21 +1,53 @@
 #question-holder
   position: absolute
+  top: 0
+  left: $space-3
   text-align: center
-  width: 100%
+  width: calc(100% - #{$space-3 * 2})
   height: calc(100vh - #{$space-6})
+
+  img
+    pointer-events: none
+
+  .age-question
+    margin-bottom: $space-6
+    position: relative
+
+    &:first-child
+      margin-top: $space-4
+
+    .optional
+      @extend .caption
+      opacity: 0.7
+      position: absolute
+      top: 0.5rem
+      right: 0
 
   .question
     display: flex
     flex-direction: column
     height: calc(100vh - #{$space-6})
+    position: relative
 
     .question-title
       flex-grow: 1
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: $space-3
+      flex-direction: column
+      position: relative
 
     .question-content
+      position: relative
+
+      img
+        position: absolute
+        width: 9rem
+        top: -8.5rem
 
   h4
-    margin-bottom: $space-6
+    margin-bottom: $space-2
 
   button
     margin-top: $space-2

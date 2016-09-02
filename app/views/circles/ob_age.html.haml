@@ -1,0 +1,31 @@
+- content_for :title, "Onboarding"
+- @no_tab_bar = true
+- @body_id = "onboarding"
+- @body_class = "blue"
+
+#nav-bar
+  = link_to circles_path do
+    #back
+  .title Notebook
+  .actions
+    = button_to "Next", ob_age_path, :id => "next-button", :method => "get"
+
+#question-holder
+  %section{:id => "age"}
+    .age-question
+      %h4 Your name
+      %input{:type => "text"}
+    .age-question
+      %h4 Your gender
+      %ul.tabs
+        %li Male
+        %li Female
+      %input{:type => "text", :placeholder => "Or enter your gender identity"}
+      .optional optional
+    .age-question
+      %h4 Your age
+      %input{:type => "text"}
+      .optional optional
+
+
+    = image_tag "illustrations/6.png", :style => "right: 30px; top: -7.5rem;"
