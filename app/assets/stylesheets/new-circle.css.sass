@@ -1,0 +1,140 @@
+#new-circle-confirm
+  padding: 0
+  .outer-wrapper
+    position: relative
+    overflow: hidden
+    height: 100vh
+
+#new-circle-overview
+  background-image: url(image-path("icons/circle-diagram.png"))
+  background-position: center center
+  background-size: 11rem auto
+  background-repeat: no-repeat
+  height: 19rem
+  position: relative
+  margin-top: 8rem
+
+  .person
+    position: absolute
+    width: 15rem
+    text-align: center
+    opacity: 0.7
+
+  #you
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+  #person-1
+    top: -1rem
+    left: 50%
+    transform: translateX(-50%)
+
+  #person-2
+    bottom: 2rem
+    left: 0
+
+  #person-3
+    bottom: 2rem
+    right: 0
+
+#new-circle-description
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  text-align: center
+  background: white
+  border-top: $light-border
+  padding: $space-4 $space-6 $space-6
+
+  h4
+    margin-bottom: $space-3
+
+#new-circle-search
+  border-top: 1px solid rgba($blue, 0.2)
+  @extend .full-width
+  margin-top: -$space-3
+  padding: 0.8rem
+
+  #search-bar
+    background: white
+    border-radius: 4px
+    text-align: center
+    color: $grey-medium
+    height: $space-30
+    line-height: $space-30
+
+#new-circle-progress
+  background: $blue
+  color: white
+  text-align: center
+  padding: 1rem
+  @extend .full-width
+
+  p
+    margin: 0 0 $space-1 0
+
+  ul
+
+  li
+    display: inline-block
+    border: 1px dotted white
+    opacity: 0.7
+    width: $space-30
+    height: $space-30
+    border-radius: 3rem
+
+    &:not(:last-child)
+      margin-right: 0.8rem
+
+    &.active
+      background: white
+      border-style: solid
+      opacity: 1
+      background-image: url(image-path("icons/tick-blue.png"))
+      background-position: center center
+      background-size: auto $space-3
+      background-repeat: no-repeat
+
+#new-circle-people-list
+  background: white
+  @extend .full-width
+  padding: 0 $space-3
+
+  ul
+
+  li
+    text-align: left
+    min-height: $space-6
+    line-height: $space-6
+    @extend .body-medium
+    position: relative
+
+    &:not(:last-child)
+      border-bottom: 1px solid $grey-light
+
+    &:after
+      content: "add"
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      height: $space-30
+      border: 1px solid $blue
+      border-radius: 500px
+      width: $space-6
+      text-align: center
+      line-height: $space-30
+      @extend .caption
+
+    &.active
+      &:after
+        background: $blue
+        color: white
+        content: ""
+        background-image: url(image-path("icons/tick-white.png"))
+        background-position: center center
+        background-size: auto $space-2
+        background-repeat: no-repeat
+    

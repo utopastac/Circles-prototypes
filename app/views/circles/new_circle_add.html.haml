@@ -1,0 +1,28 @@
+- content_for :title, "New Circle - add people"
+- @no_tab_bar = true
+- @body_id = "new-circle-add"
+- @body_class = "blue"
+
+#nav-bar
+  = link_to :back do
+    #back
+  .title Add people
+  .actions
+    = button_to "Next", new_circle_confirm_path, :id => "next-button", :method => "get"
+
+#new-circle-search
+  #search-bar Search
+
+#new-circle-progress
+  %p.tiny You must add at least 2 people
+  %ul
+    %li
+    %li
+    %li
+    %li
+
+#new-circle-people-list
+  %ul
+    - 20.times do |x|
+      %li
+        = CirclesController::PEOPLE[x]
