@@ -64,10 +64,16 @@
     margin-bottom: $space-3
 
 #new-circle-search
+  position: absolute
   border-top: 1px solid rgba($blue, 0.2)
-  @extend .full-width
-  margin-top: -$space-3
+  top: 6.8rem
+  left: 0
+  right: 0
   padding: 0.8rem
+  z-index: 10000
+  background: $blue-bg
+  height: 12rem
+  overflow: hidden
 
   #search-bar
     background: white
@@ -106,7 +112,7 @@
       opacity: 1
       background-image: url(image-path("icons/tick-blue.png"))
       background-position: center center
-      background-size: auto $space-3
+      background-size: auto $space-2
       background-repeat: no-repeat
 
 #new-circle-people-list
@@ -122,6 +128,7 @@
     line-height: $space-6
     @extend .body-medium
     position: relative
+    cursor: pointer
 
     &:not(:last-child)
       border-bottom: 1px solid $grey-light

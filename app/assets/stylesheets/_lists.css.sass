@@ -21,6 +21,8 @@ ul.block-list
   li
     @extend .row-with-arrow
 
+
+
 ul.checkbox-list
   margin-bottom: 2rem
 
@@ -30,6 +32,7 @@ ul.checkbox-list
     border-bottom: none
     line-height: $space-6
     padding: 0 $space-3 0 $space-6
+    cursor: pointer
 
     &:after
       content: ""
@@ -37,17 +40,56 @@ ul.checkbox-list
       top: 50%
       transform: translateY(-50%)
       left: $space-3
-      width: 1.8rem
-      height: 1.8rem
+      width: 2rem
+      height: 2rem
       border: 1px solid $blue
+      border-radius: 2px
 
     &.active
       &:after
         background-color: $blue
         background-image: url(image-path("icons/tick-white.png"))
         background-position: center center
-        background-size: auto $space-3
+        background-size: auto $space-2
         background-repeat: no-repeat
+
+
+
+ul.radio-list
+  margin-bottom: 2rem
+
+  li
+    @extend .full-width
+    @extend .input-row
+    border-bottom: none
+    line-height: $space-6
+    padding: 0 $space-3 0 $space-6
+    cursor: pointer
+
+    &:before
+      content: ""
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: $space-3
+      width: 2rem
+      height: 2rem
+      border: 1px solid $blue
+      border-radius: 50%
+
+    &.active
+      &:after
+        content: ""
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: $space-3 + 0.2rem
+        width: 1.8rem
+        height: 1.8rem
+        border-radius: 50%
+        background-color: $blue
+
+
 
 ul.contact-list
   display: flex
