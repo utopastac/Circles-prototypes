@@ -2,27 +2,34 @@
   background: white
   position: fixed
   top: 0
-  left: 0
-  right: 0
+  left: 50%
+  transform: translateX(-50%)
   padding: 0 $space-2
   height: $space-6
-  display: flex
-  justify-content: space-between
-  align-items: center
+  width: 100%
+  max-width: 375px
   z-index: $z-overlay-nav-bar
 
   .title
-    @extend .title
+    @extend .title-text
+    position: absolute
+    top: 1.2rem
+    left: 50%
+    transform: translateX(-50%)
 
   #back
+    position: absolute
+    top: 1.2rem
+    left: 1.2rem
     background: url(image-path("icons/navigation-arrow.png")) no-repeat
     background-size: auto 100%
     height: $space-3
     width: 4rem
 
-  .actions
-
   #next-button
+    position: absolute
+    right: 1.2rem
+    top: 0.9rem
     border-radius: 500px
     color: $blue
     min-width: auto
@@ -35,7 +42,7 @@
     width: auto
     opacity: 0.3
     border: 1px solid $blue
-    @extend .title
+    @extend .title-text
 
     &.active
       background: $blue

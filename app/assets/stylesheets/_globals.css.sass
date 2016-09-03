@@ -30,15 +30,15 @@ li
   list-style-type: none
 
 html
-  overflow-x: hidden
+  overflow: hidden
   font-size: 62.5%
 
 body
   margin: 0
   padding: $space-6 0 $tab-bar-height
-  min-height: 100vh
   position: static
-  overflow-y: auto
+  overflow-y: hidden
+  background-color: $grey-dark
   width: 100%
 
   &.inactive
@@ -48,12 +48,17 @@ body
   &.no-nav-bar
     padding-top: 0
 
+    .outer-wrapper
+      height: 667px
+      max-height: 667px
+
   &#circle
 
   &#circle-private
 
   &.dk-blue
-    background-color: $blue
+    .outer-wrapper
+      background-color: $blue
 
     h1, h2, h3, h4, h5, h6 p, .title
       color: $peach-bg
@@ -63,14 +68,26 @@ body
       color: $blue
 
   &.blue
-    background-color: $blue-bg
+    .outer-wrapper
+      background-color: $blue-bg
   &.peach
-    background-color: $peach-bg
+    .outer-wrapper
+      background-color: $peach-bg
   &.green
-    background-color: $green-bg
+    .outer-wrapper
+      background-color: $green-bg
 
 .outer-wrapper
+  width: 100%
+  height: 100%
+  max-width: 375px
+  height: calc(667px - #{$space-6})
+  max-height: calc(667px - #{$space-6})
+  overflow-y: scroll
+  overflow-x: hidden
+  -webkit-overflow-scrolling: touch
   position: relative
+  margin: 0 auto
   padding: $space-3
 
 .full-size-header
