@@ -1,0 +1,30 @@
+- content_for :title, "Onboarding"
+- @no_tab_bar = true
+- @body_id = "onboarding"
+- @body_class = "blue"
+- @inner_class = "nav-bar"
+
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title Invitation
+
+#question-holder
+  %section
+    .profile-image
+      = image_tag "faces/1.jpg"
+    %h4 Hey April! You’ve been invited by Peter Wright to join his inner circle
+    %p.sub How do you know Peter?
+
+%ul.block-list
+  = link_to invite_double_path do
+    %li Family
+  = link_to invite_double_path do
+    %li Friend
+  = link_to invite_double_path do
+    %li Peer
+  = link_to invite_double_path do
+    %li Partner
+
+= link_to "I don't know Peter", invite_dont_know_path, :class => "link row"

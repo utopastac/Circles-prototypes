@@ -1,0 +1,17 @@
+- content_for :title, "Onboarding"
+- @no_tab_bar = true
+- @body_id = "onboarding"
+- @body_class = "blue"
+- @inner_class = "nav-bar"
+
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title +44 07810356032
+    .actions
+      = button_to "Next", invite_relationship_path, :id => "next-button", :method => "get"
+
+#question-holder
+  .success-toast You have an invitation waiting
+  = render "shared/confirm_mobile"

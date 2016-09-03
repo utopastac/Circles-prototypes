@@ -1,0 +1,23 @@
+- content_for :title, "Onboarding"
+- @no_tab_bar = true
+- @body_id = "onboarding"
+- @body_class = "blue"
+- @inner_class = "nav-bar"
+
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title Invitation
+
+#question-holder
+  %section
+    .profile-image
+      = image_tag "faces/1.jpg"
+    %h4 You are about to join Peter’s inner circle about anxiety
+
+#new-circle-description
+  %h4 Are you happy and willing to help Peter?
+  = button_to "Yes - join circle", new_circle_photo_path, :method => "get"
+
+  = link_to "Do not want to join", invite_refuse_path, :class => "link row"

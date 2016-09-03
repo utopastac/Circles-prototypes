@@ -1,0 +1,25 @@
+- content_for :title, "Onboarding"
+- @no_tab_bar = true
+- @body_id = "onboarding"
+- @body_class = "peach"
+- @inner_class = "nav-bar"
+
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title Invitation
+
+#question-holder
+  %section
+    %h4 Thanks, we’ll let Peter know
+    %p.sub To help us improve Circles, can you tell us why you do not want to join Peter’s circle? 
+
+  %ul.checkbox-list
+    %li Reason 1
+    %li Reason 2
+    %li Reason 3
+    %li Reason 4
+    %li Reason 5
+
+  = button_to "Submit", home_path, :method => "get"

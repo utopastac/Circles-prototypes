@@ -21,6 +21,34 @@ ul.block-list
   li
     @extend .row-with-arrow
 
+ul.checkbox-list
+  margin-bottom: 2rem
+
+  li
+    @extend .full-width
+    @extend .input-row
+    border-bottom: none
+    line-height: $space-6
+    padding: 0 $space-3 0 $space-6
+
+    &:after
+      content: ""
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: $space-3
+      width: 1.8rem
+      height: 1.8rem
+      border: 1px solid $blue
+
+    &.active
+      &:after
+        background-color: $blue
+        background-image: url(image-path("icons/tick-white.png"))
+        background-position: center center
+        background-size: auto $space-3
+        background-repeat: no-repeat
+
 ul.contact-list
   display: flex
 

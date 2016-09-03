@@ -1,0 +1,15 @@
+- content_for :title, "Onboarding"
+- @no_tab_bar = true
+- @body_id = "onboarding"
+- @body_class = "blue"
+- @inner_class = "nav-bar"
+
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title Your account
+    .actions
+      = button_to "Next", invite_confirm_path, :id => "next-button", :method => "get"
+
+= render "shared/create_account"

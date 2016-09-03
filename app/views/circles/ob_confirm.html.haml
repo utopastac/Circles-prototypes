@@ -14,22 +14,4 @@
 
 #question-holder
   %section{:id => "phone-number-confirmation"}
-    .question
-      .question-title
-        %h4 We have sent you an SMS with a code to the number above
-        %p.sub To complete your phone number verification, please enter the 6-digit activation code
-        = link_to "No SMS?", ob_double_confirm_path, :class => "small-link"
-      .question-content
-        %input{:type => "text", :pattern => "[0-9]*", :id => "phone", :maxlength => "6", :style => "text-align: center; letter-spacing: 1em;"}
-        = image_tag "illustrations/6.png", :style => "right: 30px; top: -7.5rem;"
-
-
-:javascript
-  var input = document.getElementById("phone");
-  var next = document.getElementById("next-button");
-  input.focus();
-  input.addEventListener("input", function(){
-    if(!next.classList.contains("active")){
-      next.classList.add("active");
-    }
-  });
+    = render "shared/confirm_mobile"

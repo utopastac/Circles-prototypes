@@ -12,22 +12,4 @@
     .actions
       = button_to "Next", ob_confirm_path, :id => "next-button", :method => "get"
 
-#question-holder
-  %section{:id => "phone-number"}
-    .question
-      .question-title
-        %h4 Please confirm your country code and enter your mobile number
-      .question-content
-        %a.button-row United Kingdom
-        %input{:type => "text", :pattern => "[0-9]*", :id => "phone", :maxlength => "10"}
-        = image_tag "illustrations/2.png", :style => "left: -30px;"
-
-:javascript
-  var input = document.getElementById("phone");
-  var next = document.getElementById("next-button");
-  input.focus();
-  input.addEventListener("input", function(){
-    if(!next.classList.contains("active")){
-      next.classList.add("active");
-    }
-  });
+= render "shared/create_account"

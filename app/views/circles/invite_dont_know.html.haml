@@ -1,0 +1,20 @@
+- content_for :title, "Onboarding"
+- @no_tab_bar = true
+- @body_id = "onboarding"
+- @body_class = "peach"
+- @inner_class = "nav-bar"
+
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title Invitation
+
+#question-holder
+  %section
+    %h4 Sorry to hear that. Do you want to learn more about Circles?
+
+#new-circle-description
+  = button_to "Yes please", home_path, :method => "get"
+
+  = link_to "No thanks", home_path, :class => "link row"

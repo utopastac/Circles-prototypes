@@ -1,0 +1,33 @@
+#carousel
+  %div{"data-touch-slide" => '{"drag":true, "navSelector":"#carousel-nav li"}'}
+    .slide
+      .content
+        %h3 Care from those you care about.
+      = image_tag "illustrations/4.png", :style => "left: -20px;", :class => "illustration"
+      = image_tag "illustrations/5.png", :style => "left: 35px;", :class => "illustration"
+      = image_tag "illustrations/8.png", :style => "right: -40px;", :class => "illustration"
+    .slide
+      .content
+        %h2 Communication
+        %h4 Something about something
+      = image_tag "illustrations/1.png", :style => "left: -20px;", :class => "illustration"
+      = image_tag "illustrations/2.png", :style => "left: 50px;", :class => "illustration"
+      = image_tag "illustrations/3.png", :style => "right: -10px;", :class => "illustration"
+    .slide
+      .content
+        %h2 Collaboration
+        %h4 Collaboration is really good fun trust me buddy
+      = image_tag "illustrations/6.png", :style => "left: 0px; bottom: -25px", :class => "illustration"
+      = image_tag "illustrations/9.png", :style => "right: -20px; width: 10rem;", :class => "illustration"
+    .slide
+      .content
+        %h2 Connection
+        %h4 You'll love to connect with those peoples
+      = image_tag "illustrations/10.png", :style => "left: 10px;", :class => "illustration"
+      = image_tag "illustrations/14.png", :style => "right: 0px; bottom: -50px;", :class => "illustration"
+  %ul#carousel-nav
+    %li
+    %li
+    %li
+    %li
+  = image_tag "circles-logo-vertical-white.png", :id => "home-logo"
