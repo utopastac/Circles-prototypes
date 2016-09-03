@@ -2,13 +2,15 @@
 - @no_tab_bar = true
 - @body_id = "onboarding"
 - @body_class = "peach"
+- @inner_class = "nav-bar"
 
-#nav-bar
-  = link_to :back do
-    #back
-  .title New Circle
-  .actions
-    = button_to "Next", new_circle_who_path, :id => "next-button", :method => "get"
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title New Circle
+    .actions
+      = button_to "Next", new_circle_who_path, :id => "next-button", :method => "get"
 
 #question-holder
   %section{:id => "phone-number-confirmation"}

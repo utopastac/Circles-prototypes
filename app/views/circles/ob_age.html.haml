@@ -2,19 +2,21 @@
 - @no_tab_bar = true
 - @body_id = "onboarding"
 - @body_class = "blue"
+- @inner_class = "nav-bar"
 
-#nav-bar
-  = link_to :back do
-    #back
-  .title Notebook
-  .actions
-    = button_to "Next", new_circle_path, :id => "next-button", :method => "get"
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title About you
+    .actions
+      = button_to "Next", new_circle_path, :id => "next-button", :method => "get"
 
 #question-holder
   %section{:id => "age"}
     .age-question
       %h4 Your name
-      %input{:type => "text"}
+      %input{:type => "text", :id => "name"}
       = image_tag "illustrations/7.png", :style => "right: -2.2rem; top: -2.5rem;"
     .age-question
       %h4 Your gender
@@ -27,3 +29,6 @@
       %h4 Your age
       %input{:type => "text"}
       .optional optional
+
+:javascript
+  document.getElementById("name").focus();

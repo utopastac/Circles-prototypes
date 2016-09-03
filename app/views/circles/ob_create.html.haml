@@ -2,13 +2,15 @@
 - @no_tab_bar = true
 - @body_id = "onboarding"
 - @body_class = "blue"
+- @inner_class = "nav-bar"
 
-#nav-bar
-  = link_to :back do
-    #back
-  .title Notebook
-  .actions
-    = button_to "Next", ob_confirm_path, :id => "next-button", :method => "get"
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title Your account
+    .actions
+      = button_to "Next", ob_confirm_path, :id => "next-button", :method => "get"
 
 #question-holder
   %section{:id => "phone-number"}
@@ -18,7 +20,7 @@
       .question-content
         %a.button-row United Kingdom
         %input{:type => "text", :pattern => "\d*", :id => "phone"}
-        = image_tag "illustrations/2.png", :style => "left: 20px;"
+        = image_tag "illustrations/2.png", :style => "left: -30px;"
 
 :javascript
   document.getElementById("phone").focus();

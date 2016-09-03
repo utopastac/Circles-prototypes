@@ -2,13 +2,15 @@
 - @no_tab_bar = true
 - @body_id = "onboarding"
 - @body_class = "dk-blue"
+- @inner_class = "nav-bar"
 
-#nav-bar
-  = link_to :back do
-    #back
-  .title Circle members
-  .actions
-    = button_to "Next", new_circle_add_path, :id => "next-button", :method => "get", :class => "active"
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title Circle members
+    .actions
+      = button_to "Next", new_circle_add_path, :id => "next-button", :method => "get", :class => "active"
 
 .page-content
   %h1 Who to invite

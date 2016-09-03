@@ -2,11 +2,13 @@
 - @no_tab_bar = true
 - @body_id = "new-circle-confirm"
 - @body_class = "peach"
+- @inner_class = "nav-bar"
 
-#nav-bar
-  = link_to :back do
-    #back
-  .title Your circle
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title Your circle
 
 #new-circle-overview
   .person#you You

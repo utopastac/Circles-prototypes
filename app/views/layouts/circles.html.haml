@@ -14,9 +14,14 @@
   %body{:id => (@body_id if @body_id), :class => (@body_class if @body_class)}
 
     .outer-wrapper
-      = yield
 
-      - if !@no_tab_bar
-        = render "shared/tab_bar"
+      .inner-wrapper
+        = yield :nav_bar
+
+        .page-content{:class => (@inner_class if @inner_class)}
+          = yield
+
+        - if !@no_tab_bar
+          = render "shared/tab_bar"
 
     = javascript_include_tag "application", "data-turbolinks-track" => true

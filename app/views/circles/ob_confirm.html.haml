@@ -2,13 +2,15 @@
 - @no_tab_bar = true
 - @body_id = "onboarding"
 - @body_class = "blue"
+- @inner_class = "nav-bar"
 
-#nav-bar
-  = link_to :back do
-    #back
-  .title Notebook
-  .actions
-    = button_to "Next", ob_age_path, :id => "next-button", :method => "get"
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title +44 07810356032
+    .actions
+      = button_to "Next", ob_age_path, :id => "next-button", :method => "get"
 
 #question-holder
   %section{:id => "phone-number-confirmation"}
@@ -18,5 +20,9 @@
         %p.sub To complete your phone number verification, please enter the 6-digit activation code
         = link_to "No SMS?", ob_double_confirm_path, :class => "small-link"
       .question-content
-        %input{:type => "text", :pattern => "\d*"}
+        %input{:type => "text", :pattern => "\d*", :id => "phone"}
         = image_tag "illustrations/6.png", :style => "right: 30px; top: -7.5rem;"
+
+
+:javascript
+  document.getElementById("phone").focus();
