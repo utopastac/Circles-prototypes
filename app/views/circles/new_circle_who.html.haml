@@ -12,8 +12,9 @@
     .actions
       = button_to "Next", new_circle_add_path, :id => "next-button", :method => "get", :class => "active"
 
-.page-content
-  %h1 Who to invite
+.onboarding-content
+  %h1 Circle members
+  %h4 You can invite between 2 and 4 people to your circle.
   %h4 Make sure you're comfortable talking to them about yourself.
   %h4 Choose people who understand you best and really want to help you.
-  = button_to "Got it", new_circle_add_path, :method => "get"
+  = button_to "Invite members", new_circle_add_path, :method => "get"
