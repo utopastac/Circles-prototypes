@@ -1,6 +1,22 @@
 #new-circle-confirm
   padding: 0
 
+#purpose-suggestions
+  opacity: 0
+  transition: all 0.7s
+
+  ul
+
+  li
+    @extend .row-with-arrow
+    opacity: 0.8
+
+    &:not(:last-child)
+      border-bottom: none
+
+  &.active
+    opacity: 1
+
 #new-circle-overview
   background-image: url(image-path("icons/circle-diagram.png"))
   background-position: center center

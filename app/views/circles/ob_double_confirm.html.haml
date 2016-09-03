@@ -17,7 +17,7 @@
         %h4 Are you sure your mobile number and country code are correct?
       .question-content
         %a.button-row United Kingdom
-        %input{:type => "text", :pattern => "\d*", :id => "phone"}
+        %input{:type => "text", :pattern => "[0-9]*", :id => "phone"}
         = image_tag "illustrations/2.png", :style => "left: 20px;"
 
 :javascript

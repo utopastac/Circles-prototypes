@@ -19,8 +19,15 @@
         %h4 Please confirm your country code and enter your mobile number
       .question-content
         %a.button-row United Kingdom
-        %input{:type => "text", :pattern => "\d*", :id => "phone"}
+        %input{:type => "text", :pattern => "[0-9]*", :id => "phone"}
         = image_tag "illustrations/2.png", :style => "left: -30px;"
 
 :javascript
-  document.getElementById("phone").focus();
+  var input = document.getElementById("phone");
+  var next = document.getElementById("next-button");
+  input.focus();
+  input.addEventListener("input", function(){
+    if(!next.classList.contains("active")){
+      next.classList.add("active");
+    }
+  });

@@ -1,6 +1,6 @@
-- content_for :title, "Onboarding"
+- content_for :title, "New Circle"
 - @no_tab_bar = true
-- @body_id = "onboarding"
+- @body_id = "new-circle-purpose"
 - @body_class = "peach"
 - @inner_class = "nav-bar"
 
@@ -18,5 +18,23 @@
       .question-title
         %h4 What do you want your circle to help you with?
       .question-content
-        %input{:type => "text"}
+        %input{:type => "text", :id => "purpose"}
+        #purpose-suggestions
+          = link_to new_circle_who_path do
+            %ul
+              %li Lorem Ipsum
+              %li Dolor sit
+              %li Amet consiquter
         = image_tag "illustrations/6.png", :style => "right: 30px; top: -7.5rem;"
+
+
+:javascript
+  var input = document.getElementById("purpose");
+  var next = document.getElementById("next-button");
+  input.focus();
+  input.addEventListener("input", function(){
+    if(!next.classList.contains("active")){
+      next.classList.add("active");
+      document.getElementById("purpose-suggestions").classList.add("active");
+    }
+  });

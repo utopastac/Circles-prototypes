@@ -1,3 +1,5 @@
+$top-offset: 3.2rem
+
 #nav-bar
   background: white
   position: fixed
@@ -12,13 +14,13 @@
   .title
     @extend .title-text
     position: absolute
-    top: 1.2rem
+    top: $top-offset
     left: 50%
     transform: translateX(-50%)
 
   #back
     position: absolute
-    top: 1.2rem
+    top: $top-offset
     left: 1.2rem
     background: url(image-path("icons/navigation-arrow.png")) no-repeat
     background-size: auto 100%
@@ -28,7 +30,7 @@
   #next-button
     position: absolute
     right: 1.2rem
-    top: 0.9rem
+    top: $top-offset - 0.3rem
     border-radius: 500px
     color: $blue
     min-width: auto

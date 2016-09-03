@@ -13,6 +13,7 @@ button, input[type="submit"], a.button
   color: $peach-bg
   @extend .button
   -webkit-appearance: none
+  transition: all 0.7s
 
   &.small
     @extend .caption
@@ -26,11 +27,4 @@ button, input[type="submit"], a.button
     bottom: $space-7
 
 a.button-row
-  @extend .full-width
-  @extend .input-row
-  border-bottom: none
-  line-height: $space-6
-  padding: 0 $space-3
-  display: block
-  background: white url(image-path("icons/arrow.png")) no-repeat center right $space-3
-  background-size: auto $space-3
+  @extend .row-with-arrow

@@ -31,4 +31,11 @@
       .optional optional
 
 :javascript
-  document.getElementById("name").focus();
+  var input = document.getElementById("name");
+  var next = document.getElementById("next-button");
+  input.focus();
+  input.addEventListener("input", function(){
+    if(!next.classList.contains("active")){
+      next.classList.add("active");
+    }
+  });
