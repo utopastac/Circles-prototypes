@@ -1,14 +1,14 @@
 - content_for :title, "Circles Prototypes"
+- @body_id = "sitemap"
+- @body_class = "green"
 
-%h1 Welcome to Circles prototyping!
+%h5{:style => "margin: 2rem 0 3rem 0;"} Welcome to Circles prototyping!
 
-
-= link_to "Intro", circles_path
-= link_to "Onboarding", circles_path
-= link_to "Onboarding (supporter)", circles_path
-
-= link_to "Circles", circles_path
-= link_to "Circle", circles_path
-= link_to "Account", circles_path
-= link_to "Network", circles_path
-= link_to "Notifications", circles_path
+%ul.block-list
+  = link_to home_path do
+    %li New User
+  = link_to new_circle_path do
+    %li New Circle
+  = link_to invite_home_path do
+    %li New Invitation
+    

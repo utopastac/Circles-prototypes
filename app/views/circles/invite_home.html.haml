@@ -1,0 +1,18 @@
+- content_for :title, "Home"
+- @no_tab_bar = true
+- @body_id = "home"
+- @body_class = "green no-nav-bar"
+
+
+= image_tag "circles-logo-vertical-white.png", :id => "home-logo"
+
+#home-content
+  %h4 Care from those you care about.
+  = button_to "Get started", invite_create_path, :method => "get"
+  = link_to "Terms & conditions", terms_and_conditions_path, :class => "small-link"
+
+  = image_tag "illustrations/1.png", :style => "left: -20px;"
+  = image_tag "illustrations/4.png", :style => "left: 100px;"
+  = image_tag "illustrations/5.png", :style => "right: 90px;"
+  = image_tag "illustrations/8.png", :style => "right: -40px;"
+

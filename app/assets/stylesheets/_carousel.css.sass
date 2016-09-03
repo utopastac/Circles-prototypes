@@ -1,0 +1,80 @@
+#carousel
+  height: 70vh
+  max-height: $max-height * 0.7
+  position: relative
+  cursor: -webkit-grab
+  @extend .full-width
+  margin-top: -$space-3
+  -webkit-user-select: none
+  user-select: none
+
+  &:active 
+    cursor: -webkit-grabbing
+
+  > div 
+    position: absolute
+
+  .slide 
+    display: block
+    height: 70vh
+    max-height: $max-height * 0.7
+    position: absolute
+    text-align: center
+    padding-top: 4rem
+    width: 100%
+
+    .content
+      position: absolute
+      top: 21rem
+      left: 50%
+      transform: translateX(-50%)
+      text-align: center
+
+      h2
+        margin-bottom: 1rem
+
+      h4
+        opacity: 0.7
+      
+
+    > img
+      pointer-events: none
+      position: absolute
+      width: 12rem
+      bottom: -1rem
+      z-index: 10000
+
+    background: $green-bg
+
+    &:nth-child(2) 
+      background: $blue-bg
+    
+    &:nth-child(3) 
+      background: $peach-bg
+
+    &:nth-child(4) 
+      background: $green-bg
+        
+    
+
+#carousel-nav 
+  position: absolute
+  width: 100%
+  bottom: 2rem
+  text-align: center
+  z-index: 10001
+
+  li 
+    cursor: pointer
+    display: inline-block
+    border-radius: 50%
+    width: 1rem
+    height: 1rem
+    margin-right: 0.4rem
+    border: 1px solid $blue
+
+    &.active 
+      background: $blue
+            
+        
+    

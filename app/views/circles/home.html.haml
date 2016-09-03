@@ -3,16 +3,45 @@
 - @body_id = "home"
 - @body_class = "green no-nav-bar"
 
-
-= image_tag "circles-logo-vertical-white.png", :id => "home-logo"
+#carousel
+  %div{"data-touch-slide" => '{"drag":true, "navSelector":"#carousel-nav li"}'}
+    .slide
+      .content
+        %h3 Care from those you care about.
+      = image_tag "illustrations/4.png", :style => "left: -20px;"
+      = image_tag "illustrations/5.png", :style => "left: 35px;"
+      = image_tag "illustrations/8.png", :style => "right: -40px;"
+    .slide
+      .content
+        %h2 Communication
+        %h4 Something about something
+      = image_tag "illustrations/4.png", :style => "left: -20px;"
+      = image_tag "illustrations/5.png", :style => "left: 35px;"
+      = image_tag "illustrations/8.png", :style => "right: -40px;"
+    .slide
+      .content
+        %h2 Collaboration
+        %h4 Collaboration is really good fun trust me buddy
+      = image_tag "illustrations/4.png", :style => "left: -20px;"
+      = image_tag "illustrations/5.png", :style => "left: 35px;"
+      = image_tag "illustrations/8.png", :style => "right: -40px;"
+    .slide
+      .content
+        %h2 Connection
+        %h4 You'll love to connect with those peoples
+      = image_tag "illustrations/4.png", :style => "left: -20px;"
+      = image_tag "illustrations/5.png", :style => "left: 35px;"
+      = image_tag "illustrations/8.png", :style => "right: -40px;"
+  %ul#carousel-nav
+    %li
+    %li
+    %li
+    %li
+  = image_tag "circles-logo-vertical-white.png", :id => "home-logo"
 
 #home-content
-  %h4 Care from those you care about.
   = button_to "Get started", ob_create_path, :method => "get"
   = link_to "Terms & conditions", terms_and_conditions_path, :class => "small-link"
 
-  = image_tag "illustrations/1.png", :style => "left: -20px;"
-  = image_tag "illustrations/4.png", :style => "left: 100px;"
-  = image_tag "illustrations/5.png", :style => "right: 90px;"
-  = image_tag "illustrations/8.png", :style => "right: -40px;"
+  
 

@@ -17,16 +17,9 @@ ul.iconed-list
       border-bottom: 1px solid $grey-light
 
 ul.block-list
-  @extend .overwide
 
   li
-    height: $space-6
-    line-height: $space-6
-    border-bottom: 1px solid $grey-light
-    @extend .display-0
-    background: url(image-path("icons//arrow.png")) no-repeat
-    background-size: auto $space-4
-    background-position: right $space-2 center
+    @extend .row-with-arrow
 
 ul.contact-list
   display: flex

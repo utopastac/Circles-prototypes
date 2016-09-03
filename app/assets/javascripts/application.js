@@ -18,3 +18,8 @@
 //= require 'greensock/utils/Draggable'
 //= require 'greensock/plugins/ScrollToPlugin'
 //= require_tree .
+
+
+$(function(){ 
+  $.window = $(window);
+});

@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/new_circle_confirm', to: 'circles#new_circle_confirm', as: 'new_circle_confirm'
   get '/new_circle_photo', to: 'circles#new_circle_photo', as: 'new_circle_photo'
 
+  get '/invite_home', to: 'circles#invite_home', as: 'invite_home'
   get '/invite_create', to: 'circles#invite_create', as: 'invite_create'
   get '/invite_confirm', to: 'circles#invite_confirm', as: 'invite_confirm'
   get '/invite_relationship', to: 'circles#invite_relationship', as: 'invite_relationship'

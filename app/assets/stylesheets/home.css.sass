@@ -11,26 +11,24 @@
 
 #home-logo
   position: absolute
-  top: 7rem
+  top: 0
   left: 50%
   transform: translateX(-50%)
+  text-align: center
   width: 20rem
+  pointer-events: none
 
 #home-content
   position: absolute
   bottom: 0
+  height: 30%
+  max-height: $max-height * 0.3
   left: 0
   right: 0
   text-align: center
   background: white
   border-top: $light-border
-  padding: $space-6
-
-  img
-    pointer-events: none
-    position: absolute
-    width: 12rem
-    top: -10.5rem
+  padding: $space-2
 
   h4
     max-width: 18rem
