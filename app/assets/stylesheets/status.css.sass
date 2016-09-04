@@ -5,7 +5,7 @@
   transform: translateX(-50%)
   width: 20rem
 
-  &:after
+  &:before
     content: ""
     width: 100%
     height: 2px
@@ -15,16 +15,27 @@
 
 #dragger
   position: absolute
-  width: 50px
-  height: 50px
-  background: $blue
+  width: 8rem
+  height: 8rem
   left: 50%
-  margin-left: -25px
+  margin-left: -4rem
   transform: translateY(-50%)
+
+  #drag-center
+    width: 4rem
+    height: 4rem
+    border-radius: 50%
+    top: 2rem
+    left: 2rem
+    background: $blue
+    position: absolute
+    text-align: center
+    font-size: 30px
+    z-index: 1000
 
 #status-display
   position: absolute
   top: 3rem
   left: 50%
   transform: translateX(-50%)
-  font-size: 80px
+  font-size: 80px !important

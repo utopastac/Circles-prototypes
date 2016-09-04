@@ -6,11 +6,9 @@
 
 - content_for :nav_bar do
   #nav-bar
-    = link_to :back do
-      #back
     .title Set status
     .actions
-      = button_to "Next", new_circle_who_path, :id => "next-button", :method => "get"
+      = link_to "Cancel", new_circle_who_path
 
 .colour#neutral-colour
 .colour#sad-colour
@@ -20,3 +18,5 @@
 
 #slider
   #dragger
+    #drag-center &#129300;
+
