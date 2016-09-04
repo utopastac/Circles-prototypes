@@ -8,7 +8,7 @@
   #nav-bar
     .title Set status
     .actions
-      = link_to "Cancel", new_circle_who_path
+      = link_to "Cancel", :back
 
 
 
@@ -22,5 +22,5 @@
   #dragger
     #drag-center
 
-= button_to "Save", invite_relationship_path, :method => "get"
+= button_to "Save", setup_status_path, :method => "get"
 

@@ -66,3 +66,51 @@
   img
     height: 100%
 
+#status-setup-circles
+  display: flex
+  justify-content: space-between
+  margin-top: 2rem
+
+  li
+    width: 9rem
+
+    .status-setup-circle
+      width: 9rem
+      height: 9rem
+      border-radius: 50%
+      border: 2px solid $blue
+      overflow: hidden
+      position: relative
+      margin-bottom: 0.8rem
+
+    .fill
+      background: $peach
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      height: 0
+      transition: all 0.3s
+
+    .lines
+      hr
+        border: none
+        opacity: 0.4
+        border-top: 1px dashed $blue
+        position: absolute
+        left: 0
+        right: 0
+        margin: 0
+
+        &:first-child
+          top: 24%
+
+        &:nth-child(2)
+          top: 49%
+
+        &:nth-child(3)
+          top: 74%
+
+#status-texts
+  margin: 3rem 0 2rem 0
+

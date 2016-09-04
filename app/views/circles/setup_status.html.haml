@@ -1,0 +1,52 @@
+- content_for :title, "Set status"
+- @no_tab_bar = true
+- @body_id = "set-status"
+- @body_class = "peach"
+- @inner_class = "nav-bar"
+
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title Setup status
+
+
+#status-display
+  = image_tag "icons/neutral-face.png"
+
+%h4 What do you feel like doing with others?
+
+%ul#status-setup-circles
+  %li
+    .status-setup-circle
+      .fill
+      .lines
+        %hr
+        %hr
+        %hr
+    %h6 Talking
+
+  %li
+    .status-setup-circle
+      .fill
+      .lines
+        %hr
+        %hr
+        %hr
+    %h6 Meeting up
+
+  %li
+    .status-setup-circle
+      .fill
+      .lines
+        %hr
+        %hr
+        %hr
+    %h6 Activity
+
+#status-texts
+  .status-text-element#status-talking <span>No</span> talking
+  .status-text-element#status-meeting <span>No</span> meeting up
+  .status-text-element#status-activity <span>No</span> activity
+
+= button_to "Save", status_path, :method => "get"
