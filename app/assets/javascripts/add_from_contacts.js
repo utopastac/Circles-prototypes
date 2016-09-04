@@ -5,7 +5,7 @@ $(function(){
   var message = $("#progress-message");
   var total = 0;
 
-  contacts.click(function(event){
+  contacts.on("tap", function(event){
     if($(this).hasClass("active")){
       total --;
     } else {
