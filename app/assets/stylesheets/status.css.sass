@@ -1,17 +1,39 @@
-#slider
-  position: absolute
-  top: 20rem
-  left: 50%
-  transform: translateX(-50%)
-  width: 20rem
+#set-status
+  text-align: center
 
-  &:before
+  h2
+    margin-top: 2rem
+
+#slider
+  width: 30rem
+  margin: 5rem auto 10rem auto
+  position: relative
+
+  #track
     content: ""
     width: 100%
     height: 2px
     background: $blue
     position: absolute
+    top: 0
+    left: 0
     opacity: 0.4
+
+    &:before, &:after
+      content: ""
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      width: 1.2rem
+      height: 1.2rem
+      border-radius: 50%
+      background: $blue
+
+    &:before
+      left: 0
+
+    &:after
+      right: 0
 
 #dragger
   position: absolute
@@ -27,15 +49,20 @@
     border-radius: 50%
     top: 2rem
     left: 2rem
-    background: $blue
+    border: 4px solid $blue
+    background: white
     position: absolute
     text-align: center
     font-size: 30px
     z-index: 1000
+    box-shadow: 0 2px 2px rgba(0,0,0,0.3)
 
 #status-display
-  position: absolute
-  top: 3rem
-  left: 50%
-  transform: translateX(-50%)
-  font-size: 80px !important
+  position: relative
+  width: 8rem
+  height: 8rem
+  margin: 3rem auto
+
+  img
+    height: 100%
+

@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root 'homepage#index'
 
   get '/intro', to: 'circles#intro', as: 'intro'
+
+  get '/setup-status', to: 'circles#setup-status', as: 'setup-status'
   get '/status', to: 'circles#status', as: 'status'
 
   get '/home', to: 'circles#home', as: 'home'

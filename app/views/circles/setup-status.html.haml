@@ -10,17 +10,13 @@
     .actions
       = link_to "Cancel", new_circle_who_path
 
-
-
-%h2 How are you at the moment?
+.colour#neutral-colour
+.colour#sad-colour
+.colour#happy-colour
 
 #status-display
-  = image_tag "icons/neutral-face.png"
 
 #slider
-  #track
   #dragger
-    #drag-center
-
-= button_to "Save", invite_relationship_path, :method => "get"
+    #drag-center &#129300;
 

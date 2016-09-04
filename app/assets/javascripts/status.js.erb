@@ -1,9 +1,10 @@
 $(function(){   
 
-  var statusDisplay = $("#status-display");
+  var statusDisplay = $("#status-display img");
   var dragger = $("#dragger");
-  var min = -100;
-  var max = 100;
+  var offset = 150;
+  var min = -offset;
+  var max = offset;
   var wrapper = $(".outer-wrapper");
 
   Draggable.create(dragger, {
@@ -27,16 +28,16 @@ $(function(){
 
   function dragTest(event){
     var rt = (draggable.x) / 14;
-    var st = 1 + Math.abs(rt/20);
+    var st = 1 + Math.abs(rt/30);
     TweenMax.to(dragger, 0.5, {rotation: rt, scale: st});
     if(draggable.x < min/2){
-      statusDisplay.html("&#128532;");
+      statusDisplay.attr("src", "<%= image_path('icons/sad-face.png') %>");
     } else if(draggable.x > max/2){
-      statusDisplay.html("&#128516;");
+      statusDisplay.attr("src", "<%= image_path('icons/happy-face.png') %>");
     } else {
-      statusDisplay.html("&#128528;");
+      statusDisplay.attr("src", "<%= image_path('icons/neutral-face.png') %>");
     }
-    var percentage = ((draggable.x + 100) / 2);
+    var percentage = ((draggable.x + offset) / 3);
     var h = Math.floor((200 - percentage) * 170 / 100);
     var s = Math.abs(percentage - 50)/50;
     var v = 1;
