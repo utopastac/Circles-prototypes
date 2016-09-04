@@ -1,7 +1,22 @@
-- content_for :title, "Your status"
+- content_for :title, "Set status"
 - @no_tab_bar = true
+- @body_id = "set-status"
+- @body_class = "peach"
+- @inner_class = "nav-bar"
 
-%h1 Your mood lol
-%p could make this like a rorsarch test to begin with - how do these pictures make you feel?
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title Set status
+    .actions
+      = button_to "Next", new_circle_who_path, :id => "next-button", :method => "get"
 
-= button_to "Continue", onboarding_path, :method => "get"
+.colour#neutral-colour
+.colour#sad-colour
+.colour#happy-colour
+
+#status-display
+
+#slider
+  #dragger

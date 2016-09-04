@@ -5,7 +5,8 @@
         %h4 Please confirm your country code and enter your mobile number
       .question-content
         %a.button-row United Kingdom
-        %input{:type => "text", :pattern => "[0-9]*", :id => "phone", :maxlength => "10"}
+        %input{:type => "text", :pattern => "[0-9]*", :id => "phone", :maxlength => "10", :style => "padding-left: 10rem;"}
+        #country-code +44
         = image_tag "illustrations/2.png", :style => "left: -30px;", :class => "illustration"
 
 :javascript
