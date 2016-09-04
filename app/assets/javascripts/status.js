@@ -16,8 +16,10 @@ $(function(){
   });        
 
   var draggable = Draggable.get(dragger);
-  draggable.applyBounds({minX:min, maxX: max});
-  dragTest()
+  if(draggable){
+    draggable.applyBounds({minX:min, maxX: max});
+    dragTest()
+  }
 
   function dragStart(event){
 
