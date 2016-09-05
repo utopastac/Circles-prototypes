@@ -1,9 +1,15 @@
 - content_for :title, "New Circle"
 - @body_id = "home"
-- @body_class = "peach no-nav-bar new-circle"
-- @inner_class = "tab-bar"
+- @body_class = "blue"
+- @inner_class = "tab-bar nav-bar"
 
-= image_tag "circles-logo-vertical-white.png", :id => "home-logo"
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title Peter's Circle
+    .actions
+      = button_to "Next", new_circle_confirm_path, :id => "next-button", :method => "get"
 
 .docked-to-base
   %h4 Welcome in! Start by creating a circle.

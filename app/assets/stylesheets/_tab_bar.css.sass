@@ -23,8 +23,7 @@
       justify-content: center
       height: 100%
       height: $tab-bar-height
-      @extend .tiny
-      opacity: 0.5
+      opacity: 0.7
 
       &.active
         opacity: 1
@@ -32,10 +31,13 @@
       img
         height: $space-4
         width: auto
+        margin-top: -1rem
 
       span
-        display: none
+        //display: none
         position: absolute
         bottom: 2px
         left: 0
         right: 0
+        font-size: 10px
+        letter-spacing: -0.01em

@@ -4,7 +4,7 @@ $(function(){
 
   tabs.on("tap", function(event){
     tabs.removeClass("active");
-    $(this).addClass("active")
+    $(this).addClass("active");
   })
 
 });

@@ -2,8 +2,9 @@
   .question-title
     %h4 Do you want to add a photo so that people can recognise you?
     
-.white-panel
-  = image_tag "icons/photo-icon.png", :id => "choose-a-photo", :class => "sheet-launcher"
+.white-panel.sheet-launcher
+  = image_tag "icons/photo-icon.png", :id => "choose-a-photo"
+  = image_tag "illustrations/1.png", :style => "left: -20px;", :class => "illustration"
 
 - content_for :bottom_sheet do
   %ul

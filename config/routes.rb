@@ -29,16 +29,19 @@ Rails.application.routes.draw do
   get '/invite_dont_know', to: 'circles#invite_dont_know', as: 'invite_dont_know'
   get '/invite_your_photo', to: 'circles#invite_your_photo', as: 'invite_your_photo'
 
-  get '/onboarding-support', to: 'circles#onboarding-support', as: 'onboarding-support'
-
+  get '/network_empty', to: 'circles#network_empty', as: 'network_empty'
   get '/network', to: 'circles#network', as: 'network'
+  get '/account_empty', to: 'circles#account_empty', as: 'account_empty'
   get '/account', to: 'circles#account', as: 'account'
+  get '/bookmarks_empty', to: 'circles#bookmarks_empty', as: 'bookmarks_empty'
   get '/bookmarks', to: 'circles#bookmarks', as: 'bookmarks'
 
   get '/account_readme', to: 'circles#account_readme', as: 'account_readme'
   get '/notifications', to: 'circles#notifications', as: 'notifications'
 
   get '/circles', to: 'circles#circles', as: 'circles'
+  get '/circle_first_time', to: 'circles#circle_first_time', as: 'circle_first_time'
+  get '/circle_first_time_invite', to: 'circles#circle_first_time_invite', as: 'circle_first_time_invite'
   get '/circle', to: 'circles#circle', as: 'circle'
   get '/circle_private', to: 'circles#circle_private', as: 'circle_private'
 

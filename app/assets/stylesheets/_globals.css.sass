@@ -13,6 +13,7 @@
 
 @import "home"
 @import "onboarding"
+@import "fixed_to_base"
 @import "circle"
 @import "new-circle"
 @import "status"
@@ -155,3 +156,10 @@ body
     display: block
     opacity: 0.7
     margin-top: $space-3
+
+img.illustration
+  pointer-events: none
+  position: absolute
+  width: 10rem
+  top: -9.5rem
+  z-index: 10000

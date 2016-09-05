@@ -24,7 +24,7 @@
   background-repeat: no-repeat
   height: 19rem
   position: relative
-  margin-top: 8rem
+  margin-top: 3rem
 
   .person
     position: absolute
@@ -51,22 +51,22 @@
     right: 0
 
 #new-circle-description
-  position: absolute
-  bottom: 0
-  left: 0
-  right: 0
-  text-align: center
-  background: white
-  border-top: $light-border
-  padding: $space-4 $space-6 $space-6
+  @extend .docked-to-base
+  padding: $space-4 $space-6 $space-6 $space-6 !important
 
   h4
-    margin-bottom: $space-3
+    margin: 0 0 $space-3 0 !important
+    max-width: none !important
+
+  .illustration
+    width: 11rem
+    top: -10rem
+
 
 #new-circle-search
   position: absolute
   border-top: 1px solid rgba($blue, 0.2)
-  top: 6.8rem
+  top: 4.8rem
   left: 0
   right: 0
   padding: 0.8rem
