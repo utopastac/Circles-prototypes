@@ -117,17 +117,41 @@ body
     margin: ($nav-bar-height + 12rem) 0 0 0
     padding-top: 0
 
-.full-size-header
-  margin-left: -$space-3
-  margin-top: -$space-3
-  width: calc(100% + #{$space-3 * 2})
+.explanation-page
+  section
+    margin-bottom: $space-5
+  p
+    margin-top: 0
+  h2
+    margin-bottom: 0.5rem
 
-.overwide
-  width: calc(100% + #{$space-3})
-
-.wrapper
-  @extend .outer-wrapper
-  position: relative
-
-.centered
+.white-panel
+  background: white
+  border-top: $light-border
+  border-bottom: $light-border
+  padding: $space-5
   text-align: center
+  @extend .full-width
+
+.docked-to-base
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  text-align: center
+  background: white
+  border-top: $light-border
+  padding: $space-3
+
+  &.padded
+    padding: $space-5
+
+  h4
+    max-width: 18rem
+    margin: 0 auto $space-3
+
+  a
+    @extend .caption
+    display: block
+    opacity: 0.7
+    margin-top: $space-3

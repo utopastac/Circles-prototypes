@@ -2,7 +2,7 @@
 - @no_tab_bar = true
 - @body_id = "what-is-a-circle"
 - @body_class = "peach"
-- @inner_class = "nav-bar"
+- @inner_class = "nav-bar explanation-page"
 
 - content_for :nav_bar do
   #nav-bar
@@ -10,12 +10,15 @@
     .actions
       = link_to "Close", :back
 
-%h2 What is a circle?
-%p A circle is a safe, private space for collaborating with someone to help them manage a problem.
-%p One person owns the circle and invites up to 4 people to help them.
+%section
+  %h2 What is a circle?
+  %p A circle is a safe, private space for collaborating with someone to help them manage a problem.
+  %p One person owns the circle and invites up to 4 people to help them.
 
-%h2 Who is a circle for?
-%p Anyone who has a problem they want help with and would like a new way of expressing themselves.
+%section
+  %h2 Who is a circle for?
+  %p Anyone who has a problem they want help with and would like a new way of expressing themselves.
 
-%h2 Who are the members?
-%p The circle members are invited to collaberate to try and improve the circle owners problem. They have a private space to co-ordinate care and are given useful and timely prompts to make it as easy as possible to offer help.
+%section
+  %h2 Who are the members?
+  %p Circle members are invited to collaberate to try and improve the circle owners problem. They have a private space to co-ordinate care and are given useful and timely prompts to make it as easy as possible to offer help.

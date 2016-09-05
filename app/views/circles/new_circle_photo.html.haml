@@ -1,6 +1,6 @@
-- content_for :title, "New Circle - confirm"
+- content_for :title, "New Circle - add a photo"
 - @no_tab_bar = true
-- @body_id = "new-circle-confirm"
+- @body_id = "new-circle-photo"
 - @body_class = "blue"
 - @inner_class = "nav-bar"
 
@@ -12,21 +12,17 @@
     .actions
       = button_to "Skip", ob_age_path, :id => "next-button", :method => "get", :class => "active"
 
-#new-circle-overview
-  .person#you You
-  .person#person-1 
-    Blanche 
-    %br
-    Saunders
-  .person#person-2
-    Alan
-    %br
-    Avery
-  .person#person-3
-    Sam
-    %br
-    Lucas
 
-#new-circle-description
-  %h4 Are you comfortable talking to these 3 about yourself? Do they understand you best and really want to help you?
-  = button_to "Yes - create circle", new_circle_photo_path, :method => "get"
+#question-holder
+  .success-toast Circle created!
+  .question
+    .question-title
+      %h4 Do you want to add a photo so that people can recognise you?
+      
+.white-panel
+  = image_tag "icons/photo-icon.png", :id => "choose-a-photo", :class => "sheet-launcher"
+
+- content_for :bottom_sheet do
+  %ul
+    %li Add from Facebook
+    %li Choose from photo library

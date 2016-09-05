@@ -50,3 +50,29 @@
   padding: 0.4rem 0.8rem
   opacity: 0.58
   border-radius: 2px
+
+#bottom-sheet
+  position: fixed
+  bottom: 0
+  left: 0
+  background: rgba(black, 0.4)
+  width: 100%
+  height: $max-height
+  z-index: $z-bottom-sheet
+  opacity: 0
+
+  ul
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    background: white
+    border-top: $light-border
+
+  li
+    height: $space-6
+    line-height: $space-6
+    padding: 0 $space-3
+
+    &:not(:last-child)
+      border-bottom: $light-border

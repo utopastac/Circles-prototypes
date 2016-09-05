@@ -24,4 +24,7 @@
         - if !@no_tab_bar
           = render "shared/tab_bar"
 
+        #bottom-sheet
+          = yield :bottom_sheet
+
     = javascript_include_tag "application", "data-turbolinks-track" => true
