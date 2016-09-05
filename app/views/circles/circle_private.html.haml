@@ -26,14 +26,16 @@
         = link_to "Member chat", circle_private_path
 
 #chat
-  .alert Peter hasn't left his house in 28 hours
+  /.alert Peter hasn't left his house in 28 hours
 
-  = render "shared/chat_message_us", :message => "Guys i'm worried about him", :time => "2.30pm 12/10", :reaction => " "
-  = render "shared/chat_message_us", :message => "He's becomming a bit of a problem", :time => "2.30pm 12/10", :reaction => " "
+  = render "shared/chat_message_us", :message => "Guys i'm worried about him", :time => "2.30", :reaction => " "
+  = render "shared/chat_message_us", :message => "He's becomming a bit of a problem", :time => "2.30", :reaction => " "
 
-  = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "What do you think we should do?", :time => "2.30pm 12/10", :name => "Jack"
+  .gap
 
-  = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "I think we all know the answer", :time => "2.30pm 12/10", :name => "Beth"
+  = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "What do you think we should do?", :time => "10.30", :name => "Jack"
+
+  = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "I think we all know the answer", :time => "10.40", :name => "Beth"
 
 
 
