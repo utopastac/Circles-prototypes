@@ -1,21 +1,29 @@
-- content_for :title, "Group name"
-- @body_id = "circle-private"
-- @body_class = "nav-bar-present"
+- content_for :title, "Your circle"
+- @body_id = "your-circle"
+- @body_class = "blue"
+- @inner_class = "nav-bar tab-bar circle-tabs"
+- @tab_highlight = "circles-tab expression-tab"
 
-#nav-bar
-  = link_to circles_path do
-    #back
+- content_for :nav_bar do
+  #nav-bar
+    = link_to circle_switcher_path do
+      #circle-switcher-control Your circle
+    .title
+      = link_to status_path do
+        = image_tag "icons/thinking-face.png"
+    .actions
+      = link_to circle_switcher_path do
+        = image_tag "icons/activity-icon.png"
 
-  .title
-    %h5 Group name
+      = link_to circle_switcher_path do
+        = image_tag "icons/dots-icon.png"
 
-  .actions
-
-.centered
-  %ul.tabs
-    = link_to circle_path do
-      %li Full circle
-    %li.active  Private
+  #circle-nav-tabs
+    %ul
+      %li
+        = link_to "Feed", circle_first_time_path
+      %li.active 
+        = link_to "Member chat", circle_private_path
 
 #chat
   .alert Peter hasn't left his house in 28 hours
@@ -26,3 +34,36 @@
   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "What do you think we should do?", :time => "2.30pm 12/10", :name => "Jack"
 
   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "I think we all know the answer", :time => "2.30pm 12/10", :name => "Beth"
+
+
+
+/ #chat
+/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Words that were said by ahuman", :time => "2.30pm 12/10", :name => "Peter Coolman"
+
+/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word", :time => "2.30pm 12/10", :name => "Peter Coolman"
+
+/   .alert Peter hasn't left his house in 28 hours
+
+/   = render "shared/chat_message_us", :message => "woof", :time => "2.30pm 12/10", :reaction => "Aidan, Cosi & Beth agree with this"
+
+/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word not woof you strang buoy", :time => "2.30pm 12/10", :name => "Beth Bullock"
+
+/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Words that were said by ahuman", :time => "2.30pm 12/10", :name => "Peter Coolman"
+
+/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word", :time => "2.30pm 12/10", :name => "Peter Coolman"
+
+/   .alert Peter hasn't left his house in 28 hours
+
+/   = render "shared/chat_message_us", :message => "woof", :time => "2.30pm 12/10", :reaction => "Aidan, Cosi & Beth agree with this"
+
+/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word not woof you strang buoy", :time => "2.30pm 12/10", :name => "Beth Bullock"
+
+/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Words that were said by ahuman", :time => "2.30pm 12/10", :name => "Peter Coolman"
+
+/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word", :time => "2.30pm 12/10", :name => "Peter Coolman"
+
+/   .alert Peter hasn't left his house in 28 hours
+
+/   = render "shared/chat_message_us", :message => "woof", :time => "2.30pm 12/10", :reaction => "Aidan, Cosi & Beth agree with this"
+
+/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word not woof you strang buoy", :time => "2.30pm 12/10", :name => "Beth Bullock"

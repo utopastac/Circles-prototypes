@@ -19,38 +19,29 @@
         = image_tag "icons/dots-icon.png"
 
   #circle-nav-tabs
-    %ul.tab-behaviour
-      %li.active Feed
-      %li Member chat
+    %ul
+      %li.active 
+        = link_to "Feed", circle_first_time_path
+      %li
+        = link_to "Member chat", circle_private_path
 
+#feed
+  .feed-post
+    %header
+      %h5 Julia
+      %p.sub Jun 10
+    .image
+      = image_tag "view.jpg"
+    .content
+      %h3 The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person.
+    %footer
+      .reactions
+        .reaction-button
+          = image_tag "icons/reaction-icon.png"
+      .like-actions
+        .replies 2 replies
+        .bookmark-button
+          = image_tag "icons/post-bookmark-icon.png"
+        
 
-#chat
-  = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Words that were said by ahuman", :time => "2.30pm 12/10", :name => "Peter Coolman"
-
-  = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word", :time => "2.30pm 12/10", :name => "Peter Coolman"
-
-  .alert Peter hasn't left his house in 28 hours
-
-  = render "shared/chat_message_us", :message => "woof", :time => "2.30pm 12/10", :reaction => "Aidan, Cosi & Beth agree with this"
-
-  = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word not woof you strang buoy", :time => "2.30pm 12/10", :name => "Beth Bullock"
-
-  = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Words that were said by ahuman", :time => "2.30pm 12/10", :name => "Peter Coolman"
-
-  = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word", :time => "2.30pm 12/10", :name => "Peter Coolman"
-
-  .alert Peter hasn't left his house in 28 hours
-
-  = render "shared/chat_message_us", :message => "woof", :time => "2.30pm 12/10", :reaction => "Aidan, Cosi & Beth agree with this"
-
-  = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word not woof you strang buoy", :time => "2.30pm 12/10", :name => "Beth Bullock"
-
-  = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Words that were said by ahuman", :time => "2.30pm 12/10", :name => "Peter Coolman"
-
-  = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word", :time => "2.30pm 12/10", :name => "Peter Coolman"
-
-  .alert Peter hasn't left his house in 28 hours
-
-  = render "shared/chat_message_us", :message => "woof", :time => "2.30pm 12/10", :reaction => "Aidan, Cosi & Beth agree with this"
-
-  = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word not woof you strang buoy", :time => "2.30pm 12/10", :name => "Beth Bullock"
+  .feed-post

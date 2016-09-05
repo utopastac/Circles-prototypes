@@ -11,3 +11,54 @@
 
   ul
     @extend .basic-tabs
+
+#feed
+  padding-top: $space-2
+  color: $black
+
+.feed-post
+  @extend .full-width
+  background: white
+  box-shadow: 0px 1px 0px rgba(0,0,0,0.15)
+  margin-bottom: $space-2
+
+  .image
+    img
+      width: 100%
+
+  .content
+    padding: $space-2 $space-3 $space-3 $space-3
+
+    h3
+      @extend .title-text
+
+  header
+    display: flex
+    justify-content: space-between
+    padding: $space-2 $space-2 $space-2 $space-2
+
+    p
+      @extend .tiny
+      margin: 0 0 0 auto
+      opacity: 0.5
+
+  footer
+    display: flex
+    justify-content: space-between
+    padding: $space-1 $space-2 $space-1 $space-2
+
+    .bookmark-button, .replies
+      @extend .body-small
+      display: inline-block
+      vertical-align: middle
+
+    .replies
+      margin-right: $space-1
+
+    img
+      width: 3rem
+
+    .like-actions
+      margin-left: auto
+
+    .reactions
