@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   var statusDisplay = $("#status-display img");
   var dragger = $("#dragger");
+  var trackOverlay = $("#track-overlay");
   var offset = 150;
   var min = -offset;
   var max = offset;
@@ -28,15 +29,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   function dragTest(event){
     var rt = (draggable.x) / 14;
-    var st = 1 + Math.abs(rt/30);
+    var st = 1;// + Math.abs(rt/30);
     TweenMax.to(dragger, 0.5, {rotation: rt, scale: st});
-    if(draggable.x < min/2){
-      statusDisplay.attr("src", "<%= image_path('icons/sad-face.png') %>");
-    } else if(draggable.x > max/2){
-      statusDisplay.attr("src", "<%= image_path('icons/happy-face.png') %>");
-    } else {
-      statusDisplay.attr("src", "<%= image_path('icons/neutral-face.png') %>");
-    }
+    
     var percentage = ((draggable.x + offset) / 3);
     var h = Math.floor((percentage - 100) * 100 / 100) + 100;
     var s = 0.2;//Math.abs(percentage - 50)/50;
@@ -45,6 +40,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
     console.log(h);
     
     wrapper.css({backgroundColor: hsv2rgb(h, s, 1)});
+
+    if(percentage < 20){
+      statusDisplay.attr("src", "<%= image_path('icons/very-sad-face.png') %>");
+    } else if(percentage >= 20 && percentage < 40){
+      statusDisplay.attr("src", "<%= image_path('icons/sad-face.png') %>");
+    } else if(percentage >= 40 && percentage <= 60){
+      statusDisplay.attr("src", "<%= image_path('icons/neutral-face.png') %>");
+    } else if(percentage > 60 && percentage <= 80){
+      statusDisplay.attr("src", "<%= image_path('icons/happy-face.png') %>");
+    } else {
+      statusDisplay.attr("src", "<%= image_path('icons/very-happy-face.png') %>");
+    }
+
+    TweenMax.to(trackOverlay, 0.2, {width: percentage + "%"})
   }
 
   function dragEnd(event){
