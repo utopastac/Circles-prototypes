@@ -1,22 +1,20 @@
-- content_for :title, "New Circle"
-- @body_id = "home"
+- content_for :title, "Your circle"
+- @body_id = "your-circle"
 - @body_class = "blue"
-- @inner_class = "tab-bar nav-bar"
+- @inner_class = "nav-bar"
+- @tab_highlight = "circles-tab"
 
 - content_for :nav_bar do
   #nav-bar
-    = link_to :back do
-      #back
-    .title Peter's Circle
+    = link_to circle_switcher_path do
+      #circle-switcher-control Your circle
+    .title
+      = image_tag "icons/thinking-face.png"
     .actions
-      = button_to "Next", new_circle_confirm_path, :id => "next-button", :method => "get"
+      = link_to circle_switcher_path do
+        = image_tag "icons/activity-icon.png"
 
-.docked-to-base
-  %h4 Welcome in! Start by creating a circle.
-  = button_to "Create circle", new_circle_purpose_path, :method => "get"
-  = link_to "What is a circle?", what_is_a_circle_path, :class => "small-link"
+      = link_to circle_switcher_path do
+        = image_tag "icons/dots-icon.png"
 
-  = image_tag "illustrations/1.png", :style => "left: -20px;", :class => "illustration"
-  = image_tag "illustrations/4.png", :style => "left: 100px;", :class => "illustration"
-  = image_tag "illustrations/5.png", :style => "right: 90px;", :class => "illustration"
-  = image_tag "illustrations/8.png", :style => "right: -40px;", :class => "illustration"
+

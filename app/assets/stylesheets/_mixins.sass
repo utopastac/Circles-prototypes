@@ -26,3 +26,20 @@
   border-radius: 50%
   overflow: hidden
   border: 3px solid white
+
+.arrow-link
+  border-bottom: 1px solid $blue
+  display: inline-block
+  position: relative
+  @extend .body-semi
+
+  &:after
+    content: ""
+    position: absolute
+    right: -1.5rem
+    top: 50%
+    width: $space-2
+    height: $space-2
+    transform: translateY(-50%)
+    background: url(image-path("icons/link-arrow-down.png")) no-repeat center center
+    background-size: auto $space-2

@@ -1,0 +1,17 @@
+- content_for :title, "Choose a Circle"
+- @no_tab_bar = true
+- @body_id = "circle-switcher"
+- @body_class = "dk-blue"
+- @inner_class = "nav-bar"
+
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title Circle members
+    .actions
+      = button_to "Next", new_circle_add_path, :id => "next-button", :method => "get", :class => "active"
+
+#choose-a-circle
+  %ul
+    %li

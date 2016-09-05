@@ -42,6 +42,7 @@ Rails.application.routes.draw do
   get '/circles', to: 'circles#circles', as: 'circles'
   get '/circle_first_time', to: 'circles#circle_first_time', as: 'circle_first_time'
   get '/circle_first_time_invite', to: 'circles#circle_first_time_invite', as: 'circle_first_time_invite'
+  get '/circle_switcher', to: 'circles#circle_switcher', as: 'circle_switcher'
   get '/circle', to: 'circles#circle', as: 'circle'
   get '/circle_private', to: 'circles#circle_private', as: 'circle_private'
 

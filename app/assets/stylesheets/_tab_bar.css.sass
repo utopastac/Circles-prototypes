@@ -9,6 +9,33 @@
   height: $tab-bar-height
   border-top: 1px solid $grey-light
 
+  &.filled
+    background: none
+    li
+      opacity: 0
+      a
+        opacity: 1
+        
+  &.filled.circles-tab
+    #tab-circles
+      opacity: 1
+
+  &.filled.bookmarks-tab
+    #tab-bookmarks
+      opacity: 1
+
+  &.filled.expression-tab
+    #tab-expression
+      opacity: 1
+
+  &.filled.network-tab
+    #tab-network
+      opacity: 1
+
+  &.filled.account-tab
+    #tab-account
+      opacity: 1
+
   ul
     display: flex
 
@@ -41,3 +68,14 @@
         right: 0
         font-size: 10px
         letter-spacing: -0.01em
+
+
+.tab-highlight
+  position: absolute
+  top: 0.8rem
+
+  img
+    height: $space-4
+
+#circles-tab
+  left: 1rem
