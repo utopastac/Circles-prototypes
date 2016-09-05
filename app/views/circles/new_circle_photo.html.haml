@@ -15,14 +15,4 @@
 
 #question-holder
   .success-toast Circle created!
-  .question
-    .question-title
-      %h4 Do you want to add a photo so that people can recognise you?
-      
-.white-panel
-  = image_tag "icons/photo-icon.png", :id => "choose-a-photo", :class => "sheet-launcher"
-
-- content_for :bottom_sheet do
-  %ul
-    %li Add from Facebook
-    %li Choose from photo library
+  = render "shared/photo_chooser"
