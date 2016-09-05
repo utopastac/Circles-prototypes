@@ -8,6 +8,7 @@
 #home-content.padded
   %h4 Welcome in! Start by creating a circle.
   = button_to "Create circle", new_circle_purpose_path, :method => "get"
+  = link_to "What is a circle?", what_is_a_circle_path, :class => "small-link"
 
   = image_tag "illustrations/1.png", :style => "left: -20px;"
   = image_tag "illustrations/4.png", :style => "left: 100px;"

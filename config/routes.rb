@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'homepage#index'
 
   get '/intro', to: 'circles#intro', as: 'intro'
+  get '/what_is_a_circle', to: 'circles#what_is_a_circle', as: 'what_is_a_circle'
 
   get '/setup_status', to: 'circles#setup_status', as: 'setup_status'
   get '/status', to: 'circles#status', as: 'status'
