@@ -21,6 +21,29 @@ ul.block-list
   li
     @extend .row-with-arrow
 
+.basic-tabs
+  border: 1px solid $blue
+  border-radius: 4px
+  display: flex
+
+  li
+    flex: 1
+    height: 3.2rem
+    line-height: 3.2rem
+    text-align: center
+    @extend .caption
+    text-transform: uppercase
+    letter-spacing: 0.03em
+    cursor: pointer
+
+    &:not(:first-child)
+      border-left: 1px solid $blue
+
+    &.active
+      color: white
+      background: $blue
+
+
 
 
 ul.checkbox-list

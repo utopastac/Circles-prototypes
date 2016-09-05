@@ -36,6 +36,8 @@ Rails.application.routes.draw do
   get '/bookmarks_empty', to: 'circles#bookmarks_empty', as: 'bookmarks_empty'
   get '/bookmarks', to: 'circles#bookmarks', as: 'bookmarks'
 
+  get '/expression', to: 'circles#expression', as: 'expression'
+
   get '/account_readme', to: 'circles#account_readme', as: 'account_readme'
   get '/notifications', to: 'circles#notifications', as: 'notifications'
 

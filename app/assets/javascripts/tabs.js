@@ -1,6 +1,6 @@
 $(function(){ 
-  var tabHolder = $(".tabs");
-  var tabs = $(".tabs li");
+  var tabHolder = $(".tab-behaviour");
+  var tabs = $(".tab-behaviour li");
 
   tabs.on("tap", function(event){
     tabs.removeClass("active");
