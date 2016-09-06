@@ -1,0 +1,24 @@
+.feed-post.event
+  %header
+    %h5 Jack
+    %p.sub Jun 08
+  .content
+    %h3 Let’s all go surfing next weekend! I can drive us down to West Wittering.
+    .details
+      %ul
+        %li
+          = image_tag "icons/calendar-icon.png"
+          %h4 Saturday 12th July
+          %p 2pm - 5pm
+
+        %li
+          = image_tag "icons/map-icon.png"
+          %h4 West Wittering Beach
+          %p TN242BY
+    .actions
+      %button.ghost.small
+        Accept
+      %button.blank.small
+        Reject
+    
+  = render "shared/feed_post_footer"

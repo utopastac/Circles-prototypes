@@ -19,12 +19,22 @@ button, input[type="submit"], a.button
     @extend .caption
     height: $space-5
     line-height: $space-5
+    letter-spacing: 0.02em
 
   &.fixed-bottom
     width: calc(100% - #{$space-2})
     position: absolute
     left: $space-1
     bottom: $space-7
+
+  &.ghost
+    background: none
+    border: 1px solid $blue
+    color: $blue
+
+  &.blank
+    background: none
+    color: $blue
 
 a.button-row
   @extend .row-with-arrow

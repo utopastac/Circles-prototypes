@@ -17,6 +17,8 @@
   padding-top: $space-2
   color: $black
 
+$post-padding: $space-2
+
 .feed-post
   @extend .full-width
   background: white
@@ -28,15 +30,21 @@
       width: 100%
 
   .content
-    padding: $space-2 $space-3 $space-3 $space-3
+    padding: $space-2 $post-padding $space-1 $post-padding
 
     h3
       @extend .title-text
+      @extend .body-medium
+
+    p.sub
+      margin: 0.4rem 0 0 0
+      opacity: 0.5
+      @extend .caption
 
   header
     display: flex
     justify-content: space-between
-    padding: $space-2 $space-2 $space-2 $space-2
+    padding: $space-2 $post-padding $space-2 $post-padding
 
     p
       @extend .tiny
@@ -46,7 +54,7 @@
   footer
     display: flex
     justify-content: space-between
-    padding: $space-1 $space-2 $space-1 $space-2
+    padding: $space-1 $post-padding $space-1 $post-padding
 
     .bookmark-button, .replies
       @extend .body-small
@@ -63,3 +71,42 @@
       margin-left: auto
 
     .reactions
+
+  &.event
+    .content
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+      h3
+        display: block
+        width: 100%
+        margin-bottom: $space-4
+
+      .details
+        flex: 2
+        ul
+          li
+            overflow: hidden
+            margin-bottom: $space-3
+            &:last-child
+              margin-bottom: $space-2
+
+            img
+              float: left
+              margin-right: $space-2
+              width: 2.5rem
+            h4
+              @extend .body-small
+
+            p
+              @extend .caption
+              opacity: 0.5
+              margin: 0
+
+      .actions
+        flex: 1
+        text-align: right
+
+        button
+          margin-bottom: $space-2

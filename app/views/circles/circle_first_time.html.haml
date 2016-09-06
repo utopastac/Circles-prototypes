@@ -26,22 +26,10 @@
       = link_to "Member chat", circle_private_path
 
 #feed
-  .feed-post
-    %header
-      %h5 Julia
-      %p.sub Jun 10
-    .image
-      = image_tag "view.jpg"
-    .content
-      %h3 The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person.
-    %footer
-      .reactions
-        .reaction-button
-          = image_tag "icons/reaction-icon.png"
-      .like-actions
-        .replies 2 replies
-        .bookmark-button
-          = image_tag "icons/post-bookmark-icon.png"
+  = render "shared/image_post_feed"
+  = render "shared/event_post_feed"
+  = render "shared/text_post_feed"
+  = render "shared/blog_post_feed"
         
 
   .feed-post
