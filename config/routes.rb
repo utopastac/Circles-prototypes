@@ -41,11 +41,12 @@ Rails.application.routes.draw do
   get '/account_readme', to: 'circles#account_readme', as: 'account_readme'
   get '/notifications', to: 'circles#notifications', as: 'notifications'
 
-  get '/circles', to: 'circles#circles', as: 'circles'
   get '/circle_first_time', to: 'circles#circle_first_time', as: 'circle_first_time'
-  get '/circle_first_time_invite', to: 'circles#circle_first_time_invite', as: 'circle_first_time_invite'
+  get '/circle_first_time_inner', to: 'circles#circle_first_time_invite', as: 'circle_first_time_invite'
+  get '/circle_private_first_time', to: 'circles#circle_private_first_time', as: 'circle_private_first_time'
   get '/circle_switcher', to: 'circles#circle_switcher', as: 'circle_switcher'
   get '/circle', to: 'circles#circle', as: 'circle'
+  get '/circle_inner', to: 'circles#circle_inner', as: 'circle_inner'
   get '/circle_private', to: 'circles#circle_private', as: 'circle_private'
 
   get '/terms_and_conditions', to: 'circles#terms_and_conditions', as: 'terms_and_conditions'
