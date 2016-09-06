@@ -1,7 +1,7 @@
 - content_for :title, "Your circle"
 - @body_id = "your-circle"
 - @body_class = "blue"
-- @inner_class = "nav-bar tab-bar circle-tabs"
+- @inner_class = "nav-bar tab-bar"
 - @tab_highlight = "circles-tab expression-tab"
 
 - content_for :nav_bar do
@@ -18,12 +18,12 @@
       = link_to circle_switcher_path do
         = image_tag "icons/dots-icon.png"
 
-  #circle-nav-tabs
-    %ul
-      %li.active 
-        = link_to "Feed", circle_first_time_path
-      %li
-        = link_to "Member chat", circle_private_path
+#circle-nav-tabs
+  %ul
+    %li.active 
+      = link_to "Feed", circle_first_time_path
+    %li
+      = link_to "Member chat", circle_private_path
 
 #feed
   .feed-post
