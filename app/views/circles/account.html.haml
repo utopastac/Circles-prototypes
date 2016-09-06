@@ -1,17 +1,11 @@
-- content_for :title, "Circles Home"
-- @body_id = "account"
-- @body_class = "nav-bar-present"
+- content_for :title, "Account"
+- @body_id = "home"
+- @body_class = "blue no-nav-bar account"
+- @inner_class = "tab-bar"
 - @tab_highlight = "account-tab"
 
-#nav-bar
-  = link_to circles_path do
-    #back
+#page-header
+  %h1 Account
 
-  .title
-    %h5 Notebook
-
-  .actions
-    #profile-link{"data-page-target" => "#profile"}
-
-%section{:id => "notebook"}
-  %h2 A space to save you things
+.white-panel
+  %h4 Coming Soon.

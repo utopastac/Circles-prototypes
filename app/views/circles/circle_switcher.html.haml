@@ -6,25 +6,23 @@
 
 - content_for :nav_bar do
   #nav-bar
-    = link_to :back do
-      #back
     .title Circle members
     .actions
-      = button_to "Next", new_circle_add_path, :id => "next-button", :method => "get", :class => "active"
+      = link_to "Cancel", :back
 
 #choose-a-circle
   %ul.circles
     %h2 Owned circles
     %li.neutral
       %div
-        %h3 Peter's circle
+        %h3 Peter W
         %p 1 new
       %div
         .members
           .profile-picture
-            = image_tag "faces/2.jpg"
+            = image_tag "faces/1.jpg"
           .profile-picture
-            = image_tag "faces/4.jpg"
+            = image_tag "faces/5.jpg"
           .profile-picture
             = image_tag "faces/3.jpg"
         .status
@@ -34,32 +32,32 @@
     %h2 Other people's circles
     %li.happy
       %div
-        %h3 Peter's circle
+        %h3 Pip K
         %p 1 new
       %div
         .members
           .profile-picture
-            = image_tag "faces/2.jpg"
-          .profile-picture
-            = image_tag "faces/4.jpg"
-          .profile-picture
             = image_tag "faces/3.jpg"
+          .profile-picture
+            = image_tag "faces/5.jpg"
+          .profile-picture
+            = image_tag "faces/2.jpg"
         .status
-          = image_tag "icons/neutral-face.png"
+          = image_tag "icons/happy-face.png"
     %li.sad
       %div
-        %h3 Peter's circle
+        %h3 Jack F
         %p 1 new
       %div
         .members
           .profile-picture
-            = image_tag "faces/2.jpg"
+            = image_tag "faces/5.png"
+          .profile-picture
+            = image_tag "faces/1.jpg"
           .profile-picture
             = image_tag "faces/4.jpg"
-          .profile-picture
-            = image_tag "faces/3.jpg"
         .status
-          = image_tag "icons/neutral-face.png"
+          = image_tag "icons/sad-face.png"
 
   %ul.invitations
     %h2 Invitations
@@ -67,7 +65,7 @@
       .image
         = image_tag "faces/2.jpg"
       .content
-        %h3 Peter Wright
+        %h3 Jenna Bolsha
         %p 7 hours remaining
       .actions
         %button.ghost.small View
