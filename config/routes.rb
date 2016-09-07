@@ -36,6 +36,9 @@ Rails.application.routes.draw do
   get '/bookmarks_empty', to: 'circles#bookmarks_empty', as: 'bookmarks_empty'
   get '/bookmarks', to: 'circles#bookmarks', as: 'bookmarks'
 
+  get '/photo_chooser', to: 'circles#photo_chooser', as: 'photo_chooser'
+  get '/photo_confirm', to: 'circles#photo_confirm', as: 'photo_confirm'
+
   get '/expression', to: 'circles#expression', as: 'expression'
 
   get '/account_readme', to: 'circles#account_readme', as: 'account_readme'

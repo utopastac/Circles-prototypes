@@ -1,0 +1,23 @@
+- content_for :title, "Confirm photo"
+- @no_tab_bar = true
+- @body_id = "confirm-photo"
+- @body_class = "blue"
+- @inner_class = "nav-bar"
+
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title Confirm photo
+    .actions
+      = button_to "Save", circle_first_time_path, :id => "next-button", :method => "get", :class => "active"
+
+
+#question-holder
+  %section
+    .profile-image.large{:style => "background-image: url(#{image_path "faces/3.jpg"})"}
+
+.white-panel
+  %h4 Are you happy with this photo?
+  = button_to "Save photo", circle_first_time_path, :method => "get"
+  = button_to "Choose another", photo_chooser_path, :method => "get", :class => 'blank'

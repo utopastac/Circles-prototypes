@@ -1,0 +1,18 @@
+- content_for :title, "Choose a photo"
+- @no_tab_bar = true
+- @body_id = "photo-chooser"
+- @body_class = "blue"
+- @inner_class = "nav-bar"
+
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title Choose a photo
+    .actions
+      = button_to "Next", photo_confirm_path, :id => "next-button", :method => "get"
+
+
+#image-list
+  = link_to photo_confirm_path do
+    = image_tag "photo-list"

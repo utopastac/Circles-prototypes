@@ -1,27 +1,10 @@
-header#profile
-  background: $grey-bg
-  padding: $space-3 $space-2 $space-2 $space-2
-  text-align: center
-  border-bottom: 1px solid $grey-light
-  background-image: url(image-path("bg.png"))
-  background-size: cover
-  background-position: center center
-
-  .face
-    display: block
-    width: $space-10
-    height: $space-10
-    margin: 0 auto $space-2 auto
-    @extend .circle-image
-
-  .name
-    @extend h3
-
-  .readme
-
 .profile-image
   display: inline-block
   @extend .circle-image
   width: 10rem
   height: 10rem
   margin-bottom: 2rem
+
+  &.large
+    width: 20rem
+    height: 20rem
