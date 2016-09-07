@@ -45,10 +45,12 @@ Rails.application.routes.draw do
   get '/notifications', to: 'circles#notifications', as: 'notifications'
 
   get '/circle_first_time', to: 'circles#circle_first_time', as: 'circle_first_time'
+  get '/circle_first_time_status', to: 'circles#circle_first_time_status', as: 'circle_first_time_status'
   get '/circle_first_time_inner', to: 'circles#circle_first_time_inner', as: 'circle_first_time_inner'
   get '/circle_private_first_time', to: 'circles#circle_private_first_time', as: 'circle_private_first_time'
   get '/circle_switcher', to: 'circles#circle_switcher', as: 'circle_switcher'
   get '/circle', to: 'circles#circle', as: 'circle'
+  get '/circle_new_status', to: 'circles#circle_new_status', as: 'circle_new_status'
   get '/circle_inner', to: 'circles#circle_inner', as: 'circle_inner'
   get '/circle_private', to: 'circles#circle_private', as: 'circle_private'
 

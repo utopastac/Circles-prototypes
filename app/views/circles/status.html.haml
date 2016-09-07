@@ -4,6 +4,8 @@
 - @body_class = "peach"
 - @inner_class = "nav-bar"
 
+- link = session[:status_link] ? session[:status_link] : circle_new_status_path
+
 - content_for :nav_bar do
   #nav-bar
     .title Set status
@@ -23,4 +25,4 @@
   #dragger
     #drag-center
 
-= button_to "Save", setup_status_path, :method => "get"
+= button_to "Save", link, :method => "get"

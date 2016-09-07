@@ -3,6 +3,8 @@
 - @body_class = "blue"
 - @inner_class = "nav-bar tab-bar"
 - @tab_highlight = "circles-tab expression-tab"
+- session[:status_link] = setup_status_path
+- session[:status_setup_link] = circle_first_time_status_path
 
 - content_for :nav_bar do
   #nav-bar
@@ -18,11 +20,5 @@
       = link_to circle_switcher_path do
         = image_tag "icons/dots-icon.png"
 
-#circle-nav-tabs
-  %ul
-    %li.active 
-      = link_to "Feed", circle_first_time_path
-    %li
-      = link_to "Member chat", circle_private_path
-
 #feed
+  = render "shared/first_post_feed"

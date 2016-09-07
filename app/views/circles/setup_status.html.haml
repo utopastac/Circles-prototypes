@@ -4,6 +4,8 @@
 - @body_class = "peach"
 - @inner_class = "nav-bar"
 
+- link = session[:status_setup_link] ? session[:status_setup_link] : circle_new_status_path
+
 - content_for :nav_bar do
   #nav-bar
     = link_to :back do
@@ -49,4 +51,4 @@
   .status-text-element#status-meeting <span>No</span> meeting up
   .status-text-element#status-activity <span>No</span> activity
 
-= button_to "Save", status_path, :method => "get"
+= button_to "Save", link, :method => "get"

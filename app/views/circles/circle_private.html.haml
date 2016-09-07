@@ -10,7 +10,7 @@
       #circle-switcher-control Your circle
     .title
       = link_to status_path do
-        = image_tag "icons/thinking-face.png"
+        = image_tag "icons/happy-face.png"
     .actions
       = link_to circle_switcher_path do
         = image_tag "icons/activity-icon.png"
@@ -21,17 +21,22 @@
 #circle-nav-tabs
   %ul
     %li
-      = link_to "Feed", circle_first_time_path
+      = link_to "Feed", circle_path
     %li.active 
       = link_to "Member chat", circle_private_path
 
 #chat
   /.alert Peter hasn't left his house in 28 hours
 
+  .day
+    %p Yesterday
+
   = render "shared/chat_message_us", :message => "Guys i'm worried about him", :time => "2.30", :reaction => " "
   = render "shared/chat_message_us", :message => "He's becomming a bit of a problem", :time => "2.30", :reaction => " "
 
   .gap
+  .day
+    %p Today
 
   = render "shared/chat_message_them", :image => "faces/3.jpg", :message => "What do you think we should do?", :time => "10.30", :name => "Jack"
 

@@ -3,8 +3,7 @@
 - @body_class = "blue"
 - @inner_class = "nav-bar tab-bar"
 - @tab_highlight = "circles-tab expression-tab"
-- session[:status_link] = setup_status_path
-- session[:status_setup_link] = circle_first_time_status_path
+- session[:status_link] = circle_new_status_path
 
 - content_for :nav_bar do
   #nav-bar
@@ -12,7 +11,7 @@
       #circle-switcher-control Your circle
     .title
       = link_to status_path do
-        = image_tag "icons/neutral-face.png"
+        = image_tag "icons/thinking-face.png"
     .actions
       = link_to circle_switcher_path do
         = image_tag "icons/activity-icon.png"
@@ -23,9 +22,13 @@
 #circle-nav-tabs
   %ul
     %li.active 
-      = link_to "Feed", circle_first_time_inner_path
+      = link_to "Feed", circle_first_time_path
     %li
-      = link_to "Member chat", circle_private_first_time_path
+      = link_to "Member chat", circle_private_path
 
 #feed
-  = render "shared/first_post_feed"
+  = render "shared/new_status_feed"
+  = render "shared/image_post_feed"
+  = render "shared/event_post_feed"
+  = render "shared/text_post_feed"
+  = render "shared/blog_post_feed"

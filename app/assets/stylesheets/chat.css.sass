@@ -3,6 +3,22 @@
   padding: 2rem 0.8rem 0.8rem 0.8rem
   color: $black
 
+  .day
+    margin: $space-2 0 $space-3 0
+    display: block
+    text-align: center
+
+    p
+      opacity: 0.4
+      border: 1px solid $black
+      height: 2.4rem
+      line-height: 2.4rem
+      @extend .caption
+      @extend .body-semi
+      border-radius: 500px
+      padding: 0 $space-3
+      display: inline-block
+
   .gap
     height: 2rem
     clear: both
@@ -25,7 +41,7 @@
     @extend .tiny
     color: rgba(0,0,0, 0.4)
     position: absolute
-    right: -0.8rem
+    right: -$space-1
     bottom: 0
     transform: translateX(100%)
 
@@ -65,7 +81,7 @@
       height: 1.2rem
       width: 1.5rem
 
-  .them, .you, .alert
+  .them, .us, .alert
     clear: both
     margin-bottom: $space-2
     vertical-align: top
@@ -85,11 +101,12 @@
   .us
     float: right
     margin-right: 0.8rem
+    margin-bottom: $space-1
     .name
       display: none
     .time
       right: auto
-      left: -0.8rem
+      left: -$space-1
       transform: translateX(-100%)
     .bubble
       clear: both

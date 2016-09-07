@@ -1,0 +1,15 @@
+.feed-post
+  %header
+    %h5 Circles
+    %p.sub Jun 08
+  .content
+    %h3 Welcome to your circle, Peter! In your circle you can:
+    %ul
+      %li Express yourself
+      %li Update your status
+      %li Get updates from your circle members
+
+    %p First, set your status so that your members know how you are when they join.
+
+    = button_to "Set status", status_path, :method => "get", :class => "ghost small"
+  = render "shared/feed_post_footer"

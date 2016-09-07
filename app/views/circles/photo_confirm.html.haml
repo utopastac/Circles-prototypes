@@ -4,6 +4,8 @@
 - @body_class = "blue"
 - @inner_class = "nav-bar"
 
+- link = session[:photo_link] ? session[:photo_link] : circle_first_time_path
+
 - content_for :nav_bar do
   #nav-bar
     = link_to :back do
@@ -19,5 +21,5 @@
 
 .white-panel
   %h4 Are you happy with this photo?
-  = button_to "Save photo", circle_first_time_path, :method => "get"
+  = button_to "Save photo", link, :method => "get"
   = button_to "Choose another", photo_chooser_path, :method => "get", :class => 'blank'
