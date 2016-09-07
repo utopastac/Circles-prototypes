@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   get '/invite_double', to: 'circles#invite_double', as: 'invite_double'
   get '/invite_refuse', to: 'circles#invite_refuse', as: 'invite_refuse'
   get '/invite_dont_know', to: 'circles#invite_dont_know', as: 'invite_dont_know'
-  get '/invite_your_photo', to: 'circles#invite_your_photo', as: 'invite_your_photo'
+  get '/invite_photo', to: 'circles#invite_photo', as: 'invite_photo'
 
   get '/network_empty', to: 'circles#network_empty', as: 'network_empty'
   get '/network', to: 'circles#network', as: 'network'
