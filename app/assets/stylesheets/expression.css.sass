@@ -1,0 +1,52 @@
+#expression-home
+  text-align: center
+  padding-top: 7rem
+
+  ul
+    margin-top: $space-3
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+
+    li
+      margin: 0 $space-1
+
+      &#meeting, &#pledge
+        flex: 1
+      &#post
+        flex: 3
+
+      img
+        width: 100%
+
+#new-post
+  textarea
+    padding: $space-3
+    @extend .display-0
+    height: 14rem
+
+#new-post-controls
+  background: rgba($blue, 0.1)
+  @extend .full-width
+  padding: 0 $space-3
+  height: 5.4rem
+  line-height: 5.4rem
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  button
+    margin-left: auto
+
+  ul
+    display: flex
+    justify-content: flex-start
+
+    li
+      margin-right: 2rem
+      display: flex
+      align-items: center
+      cursor: pointer
+
+    img
+      height: 2.8rem

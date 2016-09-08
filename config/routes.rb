@@ -40,6 +40,9 @@ Rails.application.routes.draw do
   get '/photo_confirm', to: 'circles#photo_confirm', as: 'photo_confirm'
 
   get '/expression', to: 'circles#expression', as: 'expression'
+  get '/new_meeting', to: 'circles#new_meeting', as: 'new_meeting'
+  get '/new_post', to: 'circles#new_post', as: 'new_post'
+  get '/new_pledge', to: 'circles#new_pledge', as: 'new_pledge'
 
   get '/account_readme', to: 'circles#account_readme', as: 'account_readme'
   get '/notifications', to: 'circles#notifications', as: 'notifications'

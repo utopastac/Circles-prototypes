@@ -28,15 +28,17 @@ $post-padding: $space-2
   .image
     img
       width: 100%
+    & + .content
+      margin-top: $space-2
 
   .content
-    padding: $space-2 $post-padding $space-1 $post-padding
+    padding: 0 $post-padding $space-1 $post-padding
 
     h3
       @extend .title-text
       @extend .body-medium
 
-    ul
+    > ul
       margin-top: $space-2
       li
         @extend .body
@@ -55,6 +57,9 @@ $post-padding: $space-2
     display: flex
     justify-content: space-between
     padding: $space-2 $post-padding $space-2 $post-padding
+
+    h5
+      @extend .body-small
 
     p
       @extend .tiny

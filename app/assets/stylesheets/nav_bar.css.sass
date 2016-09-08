@@ -19,8 +19,8 @@ $top-offset: 1.4rem
     transform: translateX(-50%)
 
     img
-      width: 3.2rem
-      margin-top: -0.5rem
+      width: 3rem
+      margin-top: -0.65rem
 
   #back
     position: absolute
@@ -44,7 +44,7 @@ $top-offset: 1.4rem
       width: 2.5rem
 
   #next-button
-    margin-top: -0.3rem
+    margin-top: -0.4rem
     border-radius: 500px
     color: $blue
     background: none
@@ -77,8 +77,14 @@ $top-offset: 1.4rem
 #circle-switcher-control
   @extend .arrow-link
   position: absolute
-  top: $top-offset
-  left: 1.2rem
+  top: $top-offset - 0.5rem
+  left: 1rem
+  //border: 1px solid $blue
+  background: rgba($blue, 0.1)
+  height: $space-30
+  line-height: $space-30
+  padding: 0 2.4rem 0 1.2rem
+  border-radius: 500px
 
 .dk-blue #nav-bar
   color: white

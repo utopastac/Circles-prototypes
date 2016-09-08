@@ -16,10 +16,17 @@ button, input[type="submit"], a.button
   transition: all 0.7s
 
   &.small
-    @extend .caption
+    font-size: 14px
     height: $space-5
     line-height: $space-5
     letter-spacing: 0.02em
+
+  &.tiny
+    font-size: 17px
+    height: $space-30
+    line-height: $space-30
+    text-transform: none
+    padding: 0 $space-3
 
   &.fixed-bottom
     width: calc(100% - #{$space-2})
@@ -29,12 +36,12 @@ button, input[type="submit"], a.button
 
   &.ghost
     background: none !important
-    border: 1px solid $blue
-    color: $blue
+    border: 1px solid $cta
+    color: $cta
 
   &.blank
     background: none
-    color: $blue
+    color: $cta
 
 a.button-row
   @extend .row-with-arrow

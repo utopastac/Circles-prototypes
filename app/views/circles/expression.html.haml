@@ -1,0 +1,27 @@
+- content_for :title, "New Expression"
+- @no_tab_bar = true
+- @body_id = "new-expression"
+- @body_class = "blue"
+- @inner_class = "nav-bar"
+
+- content_for :nav_bar do
+  #nav-bar
+    .title New expression
+    .actions
+      = link_to "Cancel", :back
+
+#expression-home
+  %h2 Post on your circle
+  %ul
+    = link_to new_meeting_path do
+      %li#meeting
+        = image_tag "icons/new-meeting.png"
+        .title Meeting
+    = link_to new_post_path do
+      %li#post
+        = image_tag "icons/new-post.png"
+        .title Expression
+    = link_to new_pledge_path do
+      %li#pledge
+        = image_tag "icons/new-pledge.png"
+        .title Pledge

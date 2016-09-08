@@ -1,0 +1,37 @@
+- content_for :title, "New Expression"
+- @no_tab_bar = true
+- @body_id = "new-expression"
+- @body_class = "blue"
+- @inner_class = "nav-bar"
+
+- content_for :nav_bar do
+  #nav-bar
+    .title New expression
+    .actions
+      = link_to "Cancel", :back
+
+#new-post
+  %textarea{:placeholder => "Express yourself", :id => "main-text-area"}
+  #new-post-controls
+    %ul
+      %li#location
+        = image_tag "icons/post-controls/location.png"
+      %li#microphone
+        = image_tag "icons/post-controls/microphone.png"
+      %li#image
+        = image_tag "icons/post-controls/image.png"
+      %li#gif
+        = image_tag "icons/post-controls/gif.png"
+
+    %button.tiny#post-button Post
+
+
+:javascript
+  var input = document.getElementById("main-text-area");
+  var next = document.getElementById("post-button");
+  input.focus();
+  input.addEventListener("input", function(){
+    if(!next.classList.contains("active")){
+      next.classList.add("active");
+    }
+  });

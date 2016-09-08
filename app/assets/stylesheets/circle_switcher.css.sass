@@ -23,11 +23,19 @@
     opacity: 0.5
     margin: 0
 
+  a
+    display: block
+
   ul.invitations
+
     li
-      display: flex
-      justify-content: space-between
-      align-items: center
+      // display: flex
+      // justify-content: space-between
+      // align-items: center
+      a
+        display: flex
+        justify-content: space-between
+        align-items: center
 
       .image
         width: 6rem
@@ -50,29 +58,33 @@
     color: $black
 
     li
-      .profile-picture
-        width: 3.2rem
-        height: 3.2rem
-        @extend .circle-image
+      a
         display: block
-        border: none !important
-        margin-right: $space-1
+        width: 100%
+        
+        .profile-picture
+          width: 3.2rem
+          height: 3.2rem
+          @extend .circle-image
+          display: block
+          border: none !important
+          margin-right: $space-1
 
-      .members
-        display: flex
-        justify-content: flex-start
+        .members
+          display: flex
+          justify-content: flex-start
 
-      img
-        width: 3.2rem
-        display: block
+        img
+          width: 3.2rem
+          display: block
 
-      > div
-        display: flex
-        justify-content: space-between
+        > div
+          display: flex
+          justify-content: space-between
 
-        > *:last-child
-          margin-left: auto
-          text-align: right
+          > *:last-child
+            margin-left: auto
+            text-align: right
 
       &.happy
         background-color: $green-bg
