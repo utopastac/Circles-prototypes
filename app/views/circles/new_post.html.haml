@@ -11,19 +11,39 @@
       = link_to "Cancel", :back
 
 #new-post
-  %textarea{:placeholder => "Express yourself", :id => "main-text-area"}
+  #new-post-user-content
+    %textarea{:placeholder => "Express yourself", :id => "main-text-area"}
+    .images
+      .user-content#new-post-image-user-content
+        = image_tag "image-3.jpg"
+      .user-content#new-post-gif-user-content
+        = image_tag "image-1.jpg"
+    .location
+      .user-content#new-post-location-content
+        = image_tag "icons/location-icon-tiny.png"
+        Paddington, London
   #new-post-controls
     %ul
-      %li#location
+      %li#location{"data-content" => "#new-post-location-content"}
         = image_tag "icons/post-controls/location.png"
-      %li#microphone
+      %li#microphone{"data-content" => "#new-post-microphone-content"}
         = image_tag "icons/post-controls/microphone.png"
-      %li#image
+      %li#image{"data-content" => "#new-post-image-content"}
         = image_tag "icons/post-controls/image.png"
-      %li#gif
+      %li#gif{"data-content" => "#new-post-gif-content"}
         = image_tag "icons/post-controls/gif.png"
 
-    %button.tiny#post-button Post
+    = button_to "Post", circle_path, :class => "tiny", :id => "post-button", :method => "get"
+    //%button.tiny#post-button Post
+
+  .post-content#new-post-image-content
+    = image_tag "photo-list", :class => "full"
+
+  .post-content#new-post-gif-content
+    #gif-search
+      #search-bar Search
+    = image_tag "photo-list", :class => "full"
+  
 
 
 :javascript
