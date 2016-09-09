@@ -7,7 +7,7 @@
   background: $blue-bg
 
 .success-toast
-  //transform: translateY(-1.6rem)
+  transform: translateY(-1.6rem)
   display: inline-block
   @extend .caption
   border: 1px solid $blue
@@ -25,22 +25,23 @@
   z-index: $z-bottom-sheet
   opacity: 0
 
-  > ul
-    position: absolute
-    bottom: 0
-    left: 0
-    right: 0
-    background: white
-    border-top: $light-border
+  a
+    > ul
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      background: white
+      border-top: $light-border
 
-  > li
-    height: $space-6
-    line-height: $space-6
-    margin-left: $space-3
-    @extend .body-medium
+    li
+      height: $space-6
+      line-height: $space-6
+      margin-left: $space-3
+      @extend .body-medium
 
-    &:not(:last-child)
-      border-bottom: $light-border
+      &:not(:last-child)
+        border-bottom: $light-border
 
 .sheet-launcher
   cursor: pointer
