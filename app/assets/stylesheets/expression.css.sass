@@ -195,13 +195,15 @@
   opacity: 0.4
 
 #months
-  height: calc(100% - #{$nav-bar-height} - 4.5rem)
-  overflow-y: scroll
+  height: calc(100% - #{$nav-bar-height} - 7rem)
+  overflow: scroll
   -webkit-overflow-scrolling: touch
   position: absolute
-  left: $space-2
-  width: calc(100% - 3.2rem)
-  top: $nav-bar-height + 4.5rem
+  left: 0
+  //width: calc(100% - 3.2rem)
+  right: 0
+  padding: ($nav-bar-height + 4.5rem) $space-2 $space-2 $space-2
+  top: 0//$nav-bar-height + 4.5rem
 
 .month
   display: flex
