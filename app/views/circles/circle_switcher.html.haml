@@ -15,52 +15,61 @@
     %h2 Owned circles
     %li.neutral
       = link_to circle_path do
-        %div
-          %h3 Peter W
-          %p 1 new
-        %div
-          .members
-            .profile-picture
-              = image_tag "faces/1.jpg"
-            .profile-picture
-              = image_tag "faces/5.jpg"
-            .profile-picture
-              = image_tag "faces/3.jpg"
-          .status
-            = image_tag "icons/neutral-face.png"
+        .image
+          = image_tag "faces/4.jpg"
+        .content
+          %div
+            %h3 Peter W
+            %p 1 new
+          %div
+            .members
+              .profile-picture
+                = image_tag "faces/1.jpg"
+              .profile-picture
+                = image_tag "faces/5.jpg"
+              .profile-picture
+                = image_tag "faces/3.jpg"
+            .status
+              = image_tag "icons/neutral-face.png"
 
   %ul.circles
     %h2 Other people's circles
     %li.happy
       = link_to circle_path do
-        %div
-          %h3 Pip K
-          %p 1 new
-        %div
-          .members
-            .profile-picture
-              = image_tag "faces/3.jpg"
-            .profile-picture
-              = image_tag "faces/5.jpg"
-            .profile-picture
-              = image_tag "faces/2.jpg"
-          .status
-            = image_tag "icons/happy-face.png"
+        .image
+          = image_tag "faces/1.jpg"
+        .content
+          %div
+            %h3 Pip K
+            %p 1 new
+          %div
+            .members
+              .profile-picture
+                = image_tag "faces/3.jpg"
+              .profile-picture
+                = image_tag "faces/5.jpg"
+              .profile-picture
+                = image_tag "faces/2.jpg"
+            .status
+              = image_tag "icons/happy-face.png"
     %li.sad
       = link_to circle_path do
-        %div
-          %h3 Jack F
-          %p 1 new
-        %div
-          .members
-            .profile-picture
-              = image_tag "faces/5.png"
-            .profile-picture
-              = image_tag "faces/1.jpg"
-            .profile-picture
-              = image_tag "faces/4.jpg"
-          .status
-            = image_tag "icons/sad-face.png"
+        .image
+          = image_tag "faces/5.jpg"
+        .content
+          %div
+            %h3 Jack F
+            %p 1 new
+          %div
+            .members
+              .profile-picture
+                = image_tag "faces/5.png"
+              .profile-picture
+                = image_tag "faces/1.jpg"
+              .profile-picture
+                = image_tag "faces/4.jpg"
+            .status
+              = image_tag "icons/sad-face.png"
 
   %ul.invitations
 

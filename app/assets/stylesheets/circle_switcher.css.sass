@@ -27,6 +27,14 @@
   a
     display: block
 
+  .image
+    width: 6rem
+    height: 6rem
+    @extend .circle-image
+    display: block
+    border: none !important
+    margin-right: $space-2
+
   ul.invitations
 
     li
@@ -38,13 +46,7 @@
         justify-content: space-between
         align-items: center
 
-      .image
-        width: 6rem
-        height: 6rem
-        @extend .circle-image
-        display: block
-        border: none !important
-        margin-right: $space-2
+      
 
       .content
         h3
@@ -60,7 +62,8 @@
 
     li
       a
-        display: block
+        display: flex
+        //justify-content: flex-start
         width: 100%
         
         .profile-picture
@@ -75,17 +78,20 @@
           display: flex
           justify-content: flex-start
 
-        img
-          width: 3.2rem
-          display: block
+        .content
+          flex-grow: 1
+          
+          > div
+            display: flex
+            justify-content: space-between
 
-        > div
-          display: flex
-          justify-content: space-between
+            > *:last-child
+              margin-left: auto
+              text-align: right
 
-          > *:last-child
-            margin-left: auto
-            text-align: right
+            img
+              width: 3.2rem
+              display: block
 
       &.happy
         background-color: $green-bg
