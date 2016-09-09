@@ -43,6 +43,8 @@ Rails.application.routes.draw do
   get '/new_meeting', to: 'circles#new_meeting', as: 'new_meeting'
   get '/new_post', to: 'circles#new_post', as: 'new_post'
   get '/new_pledge', to: 'circles#new_pledge', as: 'new_pledge'
+  get '/choose_a_day', to: 'circles#choose_a_day', as: 'choose_a_day'
+  get '/choose_a_location', to: 'circles#choose_a_location', as: 'choose_a_location'
 
   get '/account_readme', to: 'circles#account_readme', as: 'account_readme'
   get '/notifications', to: 'circles#notifications', as: 'notifications'

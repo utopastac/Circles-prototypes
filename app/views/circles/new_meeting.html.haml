@@ -1,0 +1,106 @@
+- content_for :title, "New Meeting"
+- @no_tab_bar = true
+- @body_id = "new-expression"
+- @body_class = "blue"
+- @inner_class = "nav-bar"
+
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title New meeting
+    .actions
+      = button_to "Post", new_circle_path, :id => "next-button", :method => "get"
+
+#question-holder
+  %section
+    .age-question
+      %h4 What
+      %input{:type => "text", :id => "what"}
+      = image_tag "illustrations/7.png", :style => "right: -2.2rem; top: -2.5rem;", :class => "illustration"
+    .age-question
+      %h4 When
+      #data-time
+        .day.placeholder.sheet-launcher#day-picker{"data-content" => "#day-selection"}
+          .pre Choose a day
+          .post
+            %h3 August 11th
+        .time.placeholder#time-picker
+          .pre Choose a time
+          .post
+            %h3 7.30pm
+    .age-question
+      %h4 Where
+      #location-picker
+        %div.placeholder.sheet-launcher{"data-content" => "#location-selection"}
+          Choose a location
+        .post
+          = image_tag "map-small.png"
+          .meeting-location
+            %p Cineworld cinema
+            %p Southside shopping Centre
+            %p SW17 2BY
+
+  = button_to "Post meeting", circle_path, :method => "get"
+
+
+- content_for :bottom_sheet do
+  #overlay-panel
+    #day-selection.overlay-content
+      %header
+        #back.sheet-closer
+        .title Choose a date
+        .actions
+          %button.tiny.sheet-closer#date-selected Done
+
+      .content
+        #today-tomorrow
+          %ul.basic-tabs.tab-behaviour
+            %li Today
+            %li Tomorrow
+        #calendar
+          #weekdays.month
+            .day M
+            .day T
+            .day W
+            .day T
+            .day F
+            .day S
+            .day S
+          #months
+            %h3 August
+            .month.tab-behaviour
+              - 3.times do |i|
+                .day.off
+              - 30.times do |i|
+                .day #{i + 1}
+            %h3 September
+            .month.tab-behaviour
+              - 1.times do |i|
+                .day.off
+              - 31.times do |i|
+                .day #{i + 1}
+    #location-selection.overlay-content
+      %header
+        #back.sheet-closer
+        .title Choose a location
+        .actions
+          %button.tiny.sheet-closer#location-selected Done
+      .content
+        #gif-search
+          #search-bar Search
+        #map
+          = image_tag "map.png"
+    / #location-picker
+    /   %header
+
+
+:javascript
+  var input = document.getElementById("what");
+  var next = document.getElementById("next-button");
+  input.focus();
+  input.addEventListener("input", function(){
+    if(!next.classList.contains("active")){
+      next.classList.add("active");
+    }
+  });

@@ -73,6 +73,7 @@
 
 #gif-search
   padding: $space-1
+  background: $blue-bg
 
 #new-post-location-content
   padding: 0 $space-2
@@ -97,3 +98,176 @@
   
 #new-post-gif-user-content
   margin: $space-1 0 0 $space-1
+
+.white-input
+  background: white
+  border-top: $light-border
+  border-bottom: $light-border
+  @extend .full-width
+  display: flex
+
+  > .placeholder
+    height: 7.2rem
+    display: flex
+    align-items: center
+    justify-content: space-around
+    flex: 1
+
+    &:last-child
+      border-left: $light-border
+
+    .pre
+      display: block
+
+    .post
+      display: none
+
+    &.active
+      .pre
+        display: none
+      .post
+        display: block
+
+
+#location-picker
+  @extend .white-input
+
+  .post
+    display: none
+
+  &.active
+    padding: $space-2
+    display: block
+    .placeholder
+      display: none
+    .post
+      display: flex
+
+  .post
+    width: 100%
+    flex-align: flex-start
+
+    img
+      height: 12rem
+      margin-right: $space-4
+
+    .meeting-location
+      text-align: left
+      color: $black
+      position: relative
+
+      p
+        @extend .body-small
+        margin: 0
+        line-height: 1.2
+        opacity: 0.5
+
+      &:after
+        content: ""
+        position: absolute
+        top: 0
+        left: -1.5rem
+        width: 1.5rem
+        height: 1.5rem
+        background: url(image-path("icons/location-icon-tiny.png")) no-repeat top left
+        background-size: 1rem auto
+
+#data-time
+  @extend .white-input
+  
+
+#calendar
+  background: white
+
+#map
+  height: calc(100% - #{$nav-bar-height})
+  overflow: scroll
+  -webkit-overflow-scrolling: touch
+  position: absolute
+  left: 0
+  right: 0
+  img
+    position: relative
+    width: 75rem
+
+#weekdays
+  border-bottom: 1px solid $blue
+  opacity: 0.4
+
+#months
+  height: calc(100% - #{$nav-bar-height} - 4.5rem)
+  overflow-y: scroll
+  -webkit-overflow-scrolling: touch
+  position: absolute
+  left: $space-2
+  width: calc(100% - 3.2rem)
+  top: $nav-bar-height + 4.5rem
+
+.month
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: $space-3
+
+  .day
+    width: calc(100% / 7)
+    text-align: center
+    height: 4.4rem
+    line-height: 4.4rem
+    border-radius: 500px
+
+    &.off
+      opacity: 0.5
+
+    &.active
+      background: $blue
+      color: white
+  
+
+.overlay-content
+  overflow: hidden
+
+  h3
+    text-align: center
+    margin: $space-3 $space-3 $space-3 $space-3
+    opacity: 0.7
+
+  header
+    background: $blue-bg
+    padding: 0 $space-2
+    height: $nav-bar-height
+    width: 100%
+
+    .title
+      @extend .title-text
+      position: absolute
+      top: $top-offset
+      left: 50%
+      transform: translateX(-50%)
+
+    #back
+      position: absolute
+      top: $top-offset
+      left: 1.2rem
+      background: url(image-path("icons/navigation-arrow.png")) no-repeat
+      background-size: auto 100%
+      height: $space-3
+      width: 4rem
+
+    .actions
+      position: absolute
+      right: 1.2rem
+      top: $top-offset - 0.4rem
+      @extend .body-bold
+
+  .content
+    background: white
+    height: calc(100% - #{$nav-bar-height})
+    position: absolute
+    top: $nav-bar-height
+    left: 0
+    right: 0
+
+#day-selection .content
+  padding: $space-2
+
+
