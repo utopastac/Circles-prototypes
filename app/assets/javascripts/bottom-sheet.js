@@ -3,7 +3,7 @@ $(function(){
   var sheetContent = $("#bottom-sheet > *");
   var sheetLaunchers = $(".sheet-launcher");
   var sheetCloser = $(".sheet-closer");
-  var screenInnerContent = $(".overlay-content");
+  var screenInnerContent = $(".screen-inner-content");
   TweenMax.set(sheet, {autoAlpha: 0});
   TweenMax.set(sheetContent, {y: sheetContent.outerHeight()});
 

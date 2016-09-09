@@ -1,0 +1,61 @@
+- content_for :bottom_sheet do
+  #day-selection.overlay-content.screen-inner-content
+    #overlay-panel
+      %header
+        #back.sheet-closer
+        .title Choose a date
+        .actions
+          %button.tiny.sheet-closer#date-selected Done
+
+      .content
+        #today-tomorrow
+          %ul.basic-tabs.tab-behaviour
+            %li Today
+            %li Tomorrow
+        #calendar
+          #weekdays.month
+            .day M
+            .day T
+            .day W
+            .day T
+            .day F
+            .day S
+            .day S
+          #months
+            %h3 August
+            .month.tab-behaviour
+              - 3.times do |i|
+                .day.off
+              - 30.times do |i|
+                .day #{i + 1}
+            %h3 September
+            .month.tab-behaviour
+              - 1.times do |i|
+                .day.off
+              - 31.times do |i|
+                .day #{i + 1}
+  #location-selection.overlay-content.screen-inner-content
+    #overlay-panel
+      %header
+        #back.sheet-closer
+        .title Choose a location
+        .actions
+          %button.tiny.sheet-closer#location-selected Done
+      .content
+        #gif-search
+          #search-bar Search
+        #map
+          = image_tag "map.png"
+
+  #time-selection.screen-inner-content
+    %header
+      #back.sheet-closer
+      .title Choose a time
+      .actions
+        %button.tiny.sheet-closer#time-selected Done
+
+    .content
+      = image_tag "time-picker.jpg"
+
+    / #location-picker
+    /   %header

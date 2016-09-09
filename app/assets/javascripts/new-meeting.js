@@ -8,7 +8,7 @@ $(function(){
   function init(){
 
     timeSelector.on("tap", function(){
-      $("time-picker").addClass("active");
+      $("#time-picker").addClass("active");
     });
 
     dateSelector.on("tap", function(){

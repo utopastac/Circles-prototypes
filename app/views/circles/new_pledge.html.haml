@@ -1,0 +1,34 @@
+- content_for :title, "New Pledge"
+- @no_tab_bar = true
+- @body_id = "new-expression"
+- @body_class = "blue"
+- @inner_class = "nav-bar"
+
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title New meeting
+    .actions
+      = button_to "Post", circle_path, :id => "next-button", :method => "get"
+
+#question-holder
+  %section
+    = render "shared/day_time_picker", :what_title => "I will", :when_title => "By", :illustration => "illustrations/6.png"
+
+  = button_to "Post pledge", circle_path, :method => "get"
+
+= render "shared/day_time_picker_overlay"
+
+
+
+
+:javascript
+  var input = document.getElementById("what");
+  var next = document.getElementById("next-button");
+  input.focus();
+  input.addEventListener("input", function(){
+    if(!next.classList.contains("active")){
+      next.classList.add("active");
+    }
+  });

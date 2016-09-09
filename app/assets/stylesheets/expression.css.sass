@@ -221,43 +221,52 @@
     &.active
       background: $blue
       color: white
-  
 
-.overlay-content
-  overflow: hidden
-
-  h3
-    text-align: center
-    margin: $space-3 $space-3 $space-3 $space-3
-    opacity: 0.7
-
+.nav-header
   header
     background: $blue-bg
     padding: 0 $space-2
     height: $nav-bar-height
     width: 100%
 
-    .title
-      @extend .title-text
-      position: absolute
-      top: $top-offset
-      left: 50%
-      transform: translateX(-50%)
+  .title
+    @extend .title-text
+    position: absolute
+    top: $top-offset
+    left: 50%
+    transform: translateX(-50%)
 
-    #back
-      position: absolute
-      top: $top-offset
-      left: 1.2rem
-      background: url(image-path("icons/navigation-arrow.png")) no-repeat
-      background-size: auto 100%
-      height: $space-3
-      width: 4rem
+  #back
+    position: absolute
+    top: $top-offset
+    left: 1.2rem
+    background: url(image-path("icons/navigation-arrow.png")) no-repeat
+    background-size: auto 100%
+    height: $space-3
+    width: 4rem
 
-    .actions
-      position: absolute
-      right: 1.2rem
-      top: $top-offset - 0.4rem
-      @extend .body-bold
+  .actions
+    position: absolute
+    right: 1.2rem
+    top: $top-offset - 0.4rem
+    @extend .body-bold
+
+
+.overlay-content
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  //overflow: hidden
+  @extend .nav-header
+
+  h3
+    text-align: center
+    margin: $space-3 $space-3 $space-3 $space-3
+    opacity: 0.7
+
+  
 
   .content
     background: white
@@ -270,4 +279,20 @@
 #day-selection .content
   padding: $space-2
 
+#time-selection
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  background: white
+  border-top: $light-border
+  @extend .nav-header
+
+  header
+    border-bottom: $light-border
+    background: white
+
+  .content
+    img
+      width: 100%
 

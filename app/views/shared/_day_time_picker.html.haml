@@ -1,0 +1,17 @@
+.age-question
+  %h4
+    = what_title
+  %input{:type => "text", :id => "what"}
+  = image_tag illustration, :style => "right: -2.2rem; top: -2.5rem;", :class => "illustration"
+.age-question
+  %h4
+    = when_title
+  #data-time
+    .placeholder.sheet-launcher#day-picker{"data-content" => "#day-selection"}
+      .pre Choose a day
+      .post
+        %h3 August 11th
+    .placeholder.sheet-launcher#time-picker{"data-content" => "#time-selection"}
+      .pre Choose a time
+      .post
+        %h3 7.30pm

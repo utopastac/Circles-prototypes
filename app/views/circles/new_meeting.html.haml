@@ -14,21 +14,7 @@
 
 #question-holder
   %section
-    .age-question
-      %h4 What
-      %input{:type => "text", :id => "what"}
-      = image_tag "illustrations/7.png", :style => "right: -2.2rem; top: -2.5rem;", :class => "illustration"
-    .age-question
-      %h4 When
-      #data-time
-        .day.placeholder.sheet-launcher#day-picker{"data-content" => "#day-selection"}
-          .pre Choose a day
-          .post
-            %h3 August 11th
-        .time.placeholder#time-picker
-          .pre Choose a time
-          .post
-            %h3 7.30pm
+    = render "shared/day_time_picker", :what_title => "What", :when_title => "When", :illustration => "illustrations/7.png"
     .age-question
       %h4 Where
       #location-picker
@@ -43,56 +29,9 @@
 
   = button_to "Post meeting", circle_path, :method => "get"
 
+= render "shared/day_time_picker_overlay"
 
-- content_for :bottom_sheet do
-  #overlay-panel
-    #day-selection.overlay-content
-      %header
-        #back.sheet-closer
-        .title Choose a date
-        .actions
-          %button.tiny.sheet-closer#date-selected Done
 
-      .content
-        #today-tomorrow
-          %ul.basic-tabs.tab-behaviour
-            %li Today
-            %li Tomorrow
-        #calendar
-          #weekdays.month
-            .day M
-            .day T
-            .day W
-            .day T
-            .day F
-            .day S
-            .day S
-          #months
-            %h3 August
-            .month.tab-behaviour
-              - 3.times do |i|
-                .day.off
-              - 30.times do |i|
-                .day #{i + 1}
-            %h3 September
-            .month.tab-behaviour
-              - 1.times do |i|
-                .day.off
-              - 31.times do |i|
-                .day #{i + 1}
-    #location-selection.overlay-content
-      %header
-        #back.sheet-closer
-        .title Choose a location
-        .actions
-          %button.tiny.sheet-closer#location-selected Done
-      .content
-        #gif-search
-          #search-bar Search
-        #map
-          = image_tag "map.png"
-    / #location-picker
-    /   %header
 
 
 :javascript
