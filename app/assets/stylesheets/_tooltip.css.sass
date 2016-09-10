@@ -5,9 +5,12 @@
   background: $peach
   box-shadow: 0px 2px 1px rgba(0,0,0,0.15)
   z-index: $z-tooltip
-  width: 80%
+  width: 70%
   color: $black
   @extend .body-small
+
+  strong
+
 
   &:before
     content: ""
@@ -35,3 +38,13 @@
     transform: translateX(-50%)
     position: relative
     margin-top: 0.5rem
+
+  &.private-circle
+    left: 50%
+    transform: translateX(-50%)
+    position: relative
+    margin-top: $space-2
+    margin-bottom: -$space-2
+
+  &:before
+    left: 80%

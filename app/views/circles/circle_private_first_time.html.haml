@@ -25,6 +25,13 @@
     %li.active 
       = link_to "Member chat", circle_private_path
 
+.tooltip.private-circle
+  This is a private space away from Peter for you to co-ordinate with other circle members.
+  Important updates from the feed will also appear here.
+  %br
+  %br
+  %strong Peter can never read what is posted in here.
+
 #chat
   /.alert Peter hasn't left his house in 28 hours
 
@@ -41,3 +48,5 @@
   = render "shared/chat_message_them", :image => "faces/3.jpg", :message => "What do you think we should do?", :time => "10.30", :name => "Jack"
 
   = render "shared/chat_message_them", :image => "faces/2.jpg", :message => "I think we all know the answer", :time => "10.40", :name => "Beth"
+
+

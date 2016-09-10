@@ -1,0 +1,14 @@
+- content_for :title, "New user prototype"
+- @no_tab_bar = true
+- @body_id = "test_page"
+- @body_class = "blue"
+- @inner_class = ""
+- session[:status_setup_link] = test_end_path
+
+
+#testing
+  = image_tag "circles-logo-vertical-white.png"
+  .white-panel
+    %h1 Welcome to Circles!
+    %p This prototype is one of the features of the app - setting status. After you finish, please return to the survey and give us your honest feedback.
+    = button_to "Start", home_path, :method => "get"
