@@ -1,7 +1,7 @@
 - content_for :title, "New user prototype"
 - @no_tab_bar = true
 - @body_id = "test_page"
-- @body_class = "blue"
+- @body_class = "green"
 - @inner_class = ""
 - session[:status_setup_link] = test_end_path
 
@@ -11,4 +11,4 @@
   .white-panel
     %h1 Welcome to Circles!
     %p This prototype is one of the features of the app - setting status. After you finish, please return to the survey and give us your honest feedback.
-    = button_to "Start", home_path, :method => "get"
+    = button_to "Start", circle_first_time_path, :method => "get"

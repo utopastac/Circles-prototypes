@@ -4,7 +4,7 @@
 - @body_class = "blue"
 - @inner_class = "nav-bar"
 
-- session[:photo_link] = circle_first_time_path
+- session[:photo_link] ?  session[:photo_link] = session[:photo_link] : session[:photo_link] = circle_first_time_path
 
 - content_for :nav_bar do
   #nav-bar
@@ -12,7 +12,7 @@
       #back
     .title Add a photo
     .actions
-      = button_to "Skip", ob_age_path, :id => "next-button", :method => "get", :class => "active"
+      = button_to "Skip", photo_chooser_path, :id => "next-button", :method => "get", :class => "active"
 
 
 #question-holder

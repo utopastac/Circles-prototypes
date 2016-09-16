@@ -1,7 +1,7 @@
 - content_for :title, "New user prototype"
 - @no_tab_bar = true
 - @body_id = "test_page"
-- @body_class = "blue"
+- @body_class = "peach"
 - @inner_class = ""
 
 - session[:photo_link] = test_end_path
@@ -11,5 +11,5 @@
   = image_tag "circles-logo-vertical-white.png"
   .white-panel
     %h1 Welcome to Circles!
-    %p This prototype is for brand new users of the app. After you finish, please return to the survey and give us your honest feedback.
-    = button_to "Start", home_path, :method => "get"
+    %p This prototype is for people who have been invited to the app. After you finish, please return to the survey and give us your honest feedback.
+    = button_to "Start", invite_home_path, :method => "get"
