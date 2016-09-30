@@ -58,7 +58,7 @@ body
       background-color: $blue
 
     h1, h2, h3, h4, h5, h6 p, .title
-      color: $peach-bg
+      color: $peach-ultra
 
     button, input[type="submit"], a.button
       background: $peach-bg
@@ -66,13 +66,16 @@ body
 
   &.blue
     .outer-wrapper
-      background-color: $blue-bg
+      background-color: $blue-ultra
   &.peach
     .outer-wrapper
-      background-color: $peach-bg
+      background-color: $peach-ultra
   &.green
     .outer-wrapper
       background-color: $green-bg
+  &.brand-blue
+    .outer-wrapper
+      background-color: $brand-blue
 
 .outer-wrapper
   width: 100%
@@ -142,6 +145,8 @@ body
 .explanation-page
   section
     margin-bottom: $space-5
+    &:first-child
+      padding-top: $space-3
   p
     margin-top: 0
   h2
@@ -169,7 +174,7 @@ body
   text-align: center
   background: white
   border-top: $light-border
-  padding: $space-4 $space-3 $space-3 $space-3
+  padding: $space-30 $space-3 $space-30 $space-3
 
   &.padded
     padding: $space-5
@@ -190,3 +195,8 @@ img.illustration
   width: 10rem
   top: -9.5rem
   z-index: 10000
+
+#sitemap
+  text-align: center
+  img
+    width: 180px

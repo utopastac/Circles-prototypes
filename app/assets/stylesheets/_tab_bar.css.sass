@@ -15,39 +15,97 @@
       opacity: 0
       a
         opacity: 1
+
+  &.circles-tab
+    .circle-icon
+      opacity: 0
+
+  &.bookmarks-tab
+    .bookmark-icon
+      opacity: 0
+
+  &.expression-tab
+    .expression-icon
+      opacity: 0
+
+  &.network-tab
+    .network-icon
+      opacity: 0
+
+  &.account-tab
+    .account-icon
+      opacity: 0
         
   &.filled.circles-tab
     #tab-circles
       opacity: 1
+      a
+        &:before
+          mask-image: url(image-path("icons/circles-icon-filled.svg"))
 
   &.filled.bookmarks-tab
     #tab-bookmarks
       opacity: 1
+      a
+        &:before
+          mask-image: url(image-path("icons/bookmark-icon-filled.svg"))
 
   &.filled.expression-tab
     #tab-expression
       opacity: 1
       a
         height: 4.2rem
-        img
+        &:before
+          mask-image: url(image-path("icons/new-post-icon-filled.svg"))
           height: 4.2rem
-          margin-top: -2.1rem
+          width: 100%
         span
           display: none
 
   &.filled.network-tab
     #tab-network
       opacity: 1
+      a
+        &:before
+          mask-image: url(image-path("icons/network-icon-filled.svg"))
 
   &.filled.account-tab
     #tab-account
       opacity: 1
+      a
+        &:before
+          mask-image: url(image-path("icons/account-icon-filled.svg"))
 
   ul
     display: flex
 
   li
     flex: 1
+
+    &.circle-icon
+      a
+        &:before
+          mask-image: url(image-path("icons/circles-icon.svg"))
+
+    &.bookmark-icon
+      a
+        &:before
+          mask-image: url(image-path("icons/bookmark-icon.svg"))
+
+    &.network-icon
+      a
+        &:before
+          mask-image: url(image-path("icons/network-icon.svg"))
+
+    &.account-icon
+      a
+        &:before
+          mask-image: url(image-path("icons/account-icon.svg"))
+
+    &.expression-icon
+      a
+        &:before
+          mask-image: url(image-path("icons/new-post-icon.svg"))
 
     a
       display: flex
@@ -59,13 +117,18 @@
       height: $tab-bar-height
       opacity: 0.7
 
+      &:before
+        content: ""
+        margin-top: -1rem
+        top: 0
+        left: 0
+        height: $space-4
+        width: 100%
+        background-color: $cta
+        @extend .icon-background
+
       &.active
         opacity: 1
-
-      img
-        height: $space-4
-        width: auto
-        margin-top: -1rem
 
       span
         //display: none

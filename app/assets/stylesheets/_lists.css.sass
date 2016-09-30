@@ -21,16 +21,17 @@ ul.block-list
     text-transform: uppercase
     letter-spacing: 0.03em
     cursor: pointer
+    color: $cta
 
     a
       display: block
 
     &:not(:first-child)
-      border-left: 1px solid $blue
+      border-left: 1px solid $cta
 
     &.active
       color: white
-      background: $blue
+      background: $cta
 
 
 
@@ -54,12 +55,12 @@ ul.checkbox-list
       left: $space-3
       width: 2rem
       height: 2rem
-      border: 1px solid $blue
+      border: 1px solid $cta
       border-radius: 2px
 
     &.active
       &:after
-        background-color: $blue
+        background-color: $cta
         background-image: url(image-path("icons/tick-white.png"))
         background-position: center center
         background-size: auto $space-2
@@ -86,7 +87,7 @@ ul.radio-list
       left: $space-3
       width: 2rem
       height: 2rem
-      border: 1px solid $blue
+      border: 1px solid $cta
       border-radius: 50%
 
     &.active
@@ -99,7 +100,7 @@ ul.radio-list
         width: 1.8rem
         height: 1.8rem
         border-radius: 50%
-        background-color: $blue
+        background-color: $cta
 
 
 
@@ -135,9 +136,9 @@ ul.tabs
       border-left: 1px solid $grey-light
 
     &.active 
-      background: $blue
+      background: $cta
       color: white
 
       &:not(:first-child)
-        border-left: 1px solid $blue
+        border-left: 1px solid $cta
       

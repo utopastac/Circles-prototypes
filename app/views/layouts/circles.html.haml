@@ -23,53 +23,54 @@
 
         - if !@no_tab_bar
           //= render "shared/tab_bar"
-          #tab-bar
+          #tab-bar{:class => (@tab_highlight if @tab_highlight)}
             %ul
-              %li
+              %li.circle-icon
                 = link_to circle_path do
-                  = image_tag "tab-bar/circles-icon.png"
+                  /= image_tag "tab-bar/circles-icon.png"
                   %span Circles
-              %li
+              %li.bookmark-icon
                 = link_to bookmarks_empty_path do
-                  = image_tag "tab-bar/bookmark-icon.png"
+                  /= image_tag "tab-bar/bookmark-icon.png"
                   %span Bookmarks
-              %li
+              %li.expression-icon
                 = link_to expression_path do
-                  = image_tag "tab-bar/new-post-icon.png"
+                  /= image_tag "tab-bar/new-post-icon.png"
                   %span Expression
-              %li
+              %li.network-icon
                 = link_to network_empty_path do
-                  = image_tag "tab-bar/network-icon.png"
+                  /= image_tag "tab-bar/network-icon.png"
                   %span Network
-              %li
+              %li.account-icon
                 = link_to account_empty_path do
-                  = image_tag "tab-bar/account-icon.png"
+                  /= image_tag "tab-bar/account-icon.png"
                   %span Account
 
           #tab-bar.filled{:class => (@tab_highlight if @tab_highlight)}
             %ul
               %li#tab-circles
                 = link_to circle_path do
-                  = image_tag "tab-bar/circles-icon-filled.png"
+                  //= image_tag "tab-bar/circles-icon-filled.png"
                   %span Circles
               %li#tab-bookmarks
                 = link_to bookmarks_empty_path do
-                  = image_tag "tab-bar/bookmark-icon-filled.png"
+                  //= image_tag "tab-bar/bookmark-icon-filled.png"
                   %span Bookmarks
               %li#tab-expression
                 = link_to expression_path do
-                  = image_tag "tab-bar/new-post-icon-filled.png"
+                  //= image_tag "tab-bar/new-post-icon-filled.png"
                   %span Expression
               %li#tab-network
                 = link_to network_empty_path do
-                  = image_tag "tab-bar/network-icon-filled.png"
+                  //= image_tag "tab-bar/network-icon-filled.png"
                   %span Network
               %li#tab-account
                 = link_to account_empty_path do
-                  = image_tag "tab-bar/account-icon-filled.png"
+                  //= image_tag "tab-bar/account-icon-filled.png"
                   %span Account
 
         #bottom-sheet
+          .sheet-bg.sheet-closer
           = yield :bottom_sheet
 
         #fixed-to-base
