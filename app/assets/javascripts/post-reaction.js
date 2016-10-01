@@ -1,5 +1,7 @@
 $(function(){ 
   var reactionButton = $(".reaction-button");
+  var bookmarkButton = $(".bookmark-button");
+
   var on = false;
 
   var reactionHolder = $(".reactions-holder");
@@ -15,6 +17,7 @@ $(function(){
       hideReactions(elem);
     }
     on = !on;
+    $(this).toggleClass("active");
   });
 
   function showReactions(elem){
@@ -32,5 +35,10 @@ $(function(){
     TweenMax.to(reactionHolder, 0.25, {autoAlpha: 0, scale: 0.1, transformOrigin:"0% 50% -50", display: "none"});
     tl.staggerTo(reactions, 0.3, {autoAlpha: 0, scale: 0.1, ease:Back.easeOut}, 0.1, "+=0");
   }
+
+  bookmarkButton.on("tap", function(event){
+    var elem = $(event.currentTarget);
+    elem.toggleClass("active");
+  });
 
 });

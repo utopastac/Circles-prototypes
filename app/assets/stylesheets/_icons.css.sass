@@ -9,3 +9,31 @@
 
 .icon-network
   mask-image: url(image-path("icons/account-icon-filled.svg"))
+
+.basic-icon
+  background-color: $cta
+  @extend .icon-background
+
+.icon-dots
+  @extend .basic-icon
+  -webkit-mask-size: 100% auto
+  -webkit-mask-position: center center
+  mask-image: url(image-path("icons/dots-icon.svg"))
+
+.icon-activity
+  @extend .basic-icon
+  mask-image: url(image-path("icons/chart.svg"))
+
+.icon-bookmark
+  @extend .basic-icon
+  mask-image: url(image-path("icons/bookmark-circle.svg"))
+
+  &.active
+    mask-image: url(image-path("icons/bookmark-circle-filled.svg"))
+
+.icon-reaction
+  @extend .basic-icon
+  mask-image: url(image-path("icons/add-reaction.svg"))
+
+  &.active
+    mask-image: url(image-path("icons/add-reaction-filled.svg"))
