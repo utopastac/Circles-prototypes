@@ -11,12 +11,16 @@
 
 #home-logo
   position: absolute
-  top: 2rem
+  top: 6rem
   left: 50%
   transform: translateX(-50%)
   text-align: center
   width: 20rem
+  height: 12rem
   pointer-events: none
+  background-color: $blue
+  @extend .icon-background
+  mask-image: url(image-path("icons/circles-logo.svg"))
   // mix-blend-mode: hard-light
   // opacity: 0.9
 
