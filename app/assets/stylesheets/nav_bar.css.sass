@@ -15,7 +15,7 @@
     top: $top-offset
     left: 50%
     transform: translateX(-50%)
-    color: $blue
+    //color: $blue
 
     img
       width: 3rem
@@ -25,10 +25,14 @@
     position: absolute
     top: $top-offset
     left: 1.2rem
-    background: url(image-path("icons/navigation-arrow.png")) no-repeat
-    background-size: auto 100%
+    // background: url(image-path("icons/navigation-arrow.png")) no-repeat
+    // background-size: auto 100%
     height: $space-3
     width: 4rem
+    @extend .icon-background
+    background-color: $cta
+    mask-image: url(image-path("icons/navigation-arrow.svg"))
+    mask-position: left top
 
   .actions
     position: absolute
@@ -87,6 +91,10 @@
   padding: 0 2.4rem 0 1.2rem
   border-radius: 500px
 
+.peach #nav-bar
+  #back
+    background-color: $blue
+
 .dk-blue #nav-bar
   color: white
   background: $blue
@@ -95,7 +103,10 @@
     color: white
 
   #back
-    background-image: url(image-path("icons/navigation-arrow-white.png"))
+    background-color: $peach-ultra
+
+  .actions a
+    color: $peach-ultra
 
   #next-button
     color: $peach

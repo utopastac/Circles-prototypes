@@ -51,6 +51,9 @@
 
   h4
     margin-bottom: $space-2
+    max-width: 90%
+    margin-left: auto
+    margin-right: auto
 
   button
     margin-top: $space-2
@@ -78,8 +81,16 @@
     margin-top: $space-3
 
 #choose-a-photo
-  width: 100%
-  max-width: 13rem
+  #photo-icon
+    width: 100%
+    height: 10rem
+    background-color: $cta
+    position: relative
+    @extend .icon-background
+    mask-image: url(image-path("icons/add-photo.svg"))
+
+  p
+    color: $cta
 
 #image-list
   @extend .full-width

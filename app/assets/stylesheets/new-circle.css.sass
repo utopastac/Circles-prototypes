@@ -30,7 +30,7 @@
     position: absolute
     width: 15rem
     text-align: center
-    opacity: 0.7
+    opacity: 0.8
     color: $blue
 
   #you
@@ -66,7 +66,7 @@
 
 #new-circle-search
   position: absolute
-  border-top: 1px solid rgba($blue, 0.2)
+  border-top: 1px solid rgba($cta, 0.2)
   top: 4.8rem
   left: 0
   right: 0
@@ -86,7 +86,7 @@
   margin-bottom: $space-1
 
 #new-circle-progress
-  background: $blue
+  background: $cta
   color: white
   text-align: center
   padding: 1rem
@@ -137,12 +137,14 @@
 
     &:after
       content: "add"
+      color: $cta
+      letter-spacing: -0.5px
       position: absolute
       right: 0
       top: 50%
       transform: translateY(-50%)
       height: $space-30
-      border: 1px solid $blue
+      border: 1px solid $cta
       border-radius: 500px
       width: $space-6
       text-align: center
@@ -151,7 +153,7 @@
 
     &.active
       &:after
-        background: $blue
+        background: $cta
         color: white
         content: ""
         background-image: url(image-path("icons/tick-white.png"))
