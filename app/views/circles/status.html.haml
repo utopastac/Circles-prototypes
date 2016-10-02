@@ -16,13 +16,14 @@
 
 %h2 How are you at the moment?
 
-#status-display
-  = image_tag "icons/neutral-face.png"
+.white-panel
+  #status-display
+    = image_tag "icons/neutral-face.png"
 
-#slider
-  #track
-    #track-overlay
-  #dragger
-    #drag-center
+  #slider
+    #track
+      #track-overlay
+    #dragger
+      #drag-center
 
-= button_to "Save", link, :method => "get"
+  = button_to "Save", link, :method => "get"
