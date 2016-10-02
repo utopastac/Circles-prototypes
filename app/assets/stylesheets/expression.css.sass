@@ -243,14 +243,11 @@
   opacity: 0.4
 
 #months
-  height: calc(100% - #{$nav-bar-height} - 7rem)
-  overflow: scroll
-  -webkit-overflow-scrolling: touch
-  position: absolute
+  position: relative
   left: 0
   //width: calc(100% - 3.2rem)
   right: 0
-  padding: ($nav-bar-height + 4.5rem) $space-2 $space-2 $space-2
+  //padding: ($nav-bar-height + 4.5rem) $space-2 $space-2 $space-2
   top: 0//$nav-bar-height + 4.5rem
 
 .month
@@ -269,7 +266,7 @@
       opacity: 0.5
 
     &.active
-      background: $blue
+      background: $cta
       color: white
 
 .nav-header
