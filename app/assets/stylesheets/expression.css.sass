@@ -1,23 +1,59 @@
 #expression-home
   text-align: center
-  padding-top: 7rem
+  //padding-top: 7rem
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  height: 100%
+
+  h2
+    flex: 1 0 auto
+    align-items: center
+    display: flex
+
+  > div
+    flex: 1 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 2rem
 
   ul
-    margin-top: $space-3
+    //margin-top: $space-3
     display: flex
-    justify-content: space-between
+    width: 100%
+    justify-content: space-around
     align-items: flex-end
 
+    a
+      flex: 1 0 0
+      &:nth-child(2)
+        flex: 1.3 0 0
+        margin: 0 1rem
+
     li
-      margin: 0 $space-1
+      //margin: 0 $space-1
+      color: $cta
+      text-align: center
 
       &#meeting, &#pledge
-        flex: 1
+        // width: 9rem
       &#post
-        flex: 3
 
-      img
+      > div:not(.title)
         width: 100%
+        border: 1px solid $cta
+        border-radius: 500px
+        margin-bottom: $space-1
+        display: flex
+        align-items: center
+        justify-content: center
+
+        &:after
+          padding-top: 100%
+          display: block
+          content: ''
 
 #new-post
   @extend .full-width
@@ -63,6 +99,28 @@
       display: flex
       align-items: center
       cursor: pointer
+      @extend .icon-background
+      -webkit-mask-size: 100% auto
+      -webkit-mask-position: center center
+      background-color: $cta
+      height: 28px
+      flex-grow: 1
+
+      &#gif
+        mask-image: url(image-path("icons/expression-gif.svg"))
+        width: 34px
+
+      &#location
+        mask-image: url(image-path("icons/expression-location.svg"))
+        width: 16px
+
+      &#microphone
+        mask-image: url(image-path("icons/expression-microphone.svg"))
+        width: 15px
+
+      &#image
+        mask-image: url(image-path("icons/expression-photo.svg"))
+        width: 32px
 
     img
       height: 2.8rem

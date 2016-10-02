@@ -68,22 +68,22 @@ var Utils = {
 	},
 	
 	distanceFromVisibleEdge: function(element) {
-        var allHeight = $(window).height() + $(window).scrollTop();
-        return allHeight - element.offset().top;
-    },
+      var allHeight = $(window).height() + $(window).scrollTop();
+      return allHeight - element.offset().top;
+  },
 
-    distanceFromPoint: function(element, point) {
-    	var position = element.position();
+  distanceFromPoint: function(element, point) {
+  	var position = element.position();
 
-    	var x = position.left;
-    	var y = position.top;
+  	var x = position.left;
+  	var y = position.top;
 
-    	var xDist = x - point.x;
-    	var yDist = y - point.y;
+  	var xDist = x - point.x;
+  	var yDist = y - point.y;
 
-    	var distance = Math.sqrt((xDist*xDist) + (yDist*yDist));
-    	return distance;
-    },
+  	var distance = Math.sqrt((xDist*xDist) + (yDist*yDist));
+  	return distance;
+  },
 	
 	putInRange: function(min, max, current, addition){
 		var value = current + addition;

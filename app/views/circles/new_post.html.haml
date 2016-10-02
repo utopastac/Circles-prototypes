@@ -26,13 +26,13 @@
   #new-post-controls
     %ul
       %li#location{"data-content" => "#new-post-location-content"}
-        = image_tag "icons/post-controls/location.png"
+        //= image_tag "icons/post-controls/location.png"
       %li#microphone{"data-content" => "#new-post-microphone-content"}
-        = image_tag "icons/post-controls/microphone.png"
+        //= image_tag "icons/post-controls/microphone.png"
       %li#image{"data-content" => "#new-post-image-content"}
-        = image_tag "icons/post-controls/image.png"
+        //= image_tag "icons/post-controls/image.png"
       %li#gif{"data-content" => "#new-post-gif-content"}
-        = image_tag "icons/post-controls/gif.png"
+        //= image_tag "icons/post-controls/gif.png"
 
     = button_to "Post", circle_path, :class => "tiny", :id => "post-button", :method => "get"
     //%button.tiny#post-button Post

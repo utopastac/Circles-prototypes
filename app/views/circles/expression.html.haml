@@ -12,16 +12,20 @@
 
 #expression-home
   %h2 Post on your circle
-  %ul
-    = link_to new_meeting_path do
-      %li#meeting
-        = image_tag "icons/new-meeting.png"
-        .title Meeting
-    = link_to new_post_path do
-      %li#post
-        = image_tag "icons/new-post.png"
-        .title Expression
-    = link_to new_pledge_path do
-      %li#pledge
-        = image_tag "icons/new-pledge.png"
-        .title Goal
+  .white-panel
+    %ul
+      = link_to new_meeting_path do
+        %li#meeting
+          %div
+            .icon-meeting
+          .title Meeting
+      = link_to new_post_path do
+        %li#post
+          %div
+            .icon-expression
+          .title Expression
+      = link_to new_pledge_path do
+        %li#pledge
+          %div
+            .icon-trophy
+          .title Goal

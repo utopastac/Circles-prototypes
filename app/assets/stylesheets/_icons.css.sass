@@ -26,14 +26,37 @@
 
 .icon-bookmark
   @extend .basic-icon
+  background-color: $grey-medium
   mask-image: url(image-path("icons/bookmark-circle.svg"))
 
   &.active
+    background-color: $cta
     mask-image: url(image-path("icons/bookmark-circle-filled.svg"))
 
 .icon-reaction
   @extend .basic-icon
+  background-color: $grey-medium
   mask-image: url(image-path("icons/add-reaction.svg"))
 
   &.active
+    background-color: $cta
     mask-image: url(image-path("icons/add-reaction-filled.svg"))
+
+
+.icon-trophy
+  @extend .basic-icon
+  mask-image: url(image-path("icons/trophy.svg"))
+  width: 39px
+  height: 48px
+
+.icon-meeting
+  @extend .basic-icon
+  mask-image: url(image-path("icons/meeting.svg"))
+  width: 33px
+  height: 34px
+
+.icon-expression
+  @extend .basic-icon
+  mask-image: url(image-path("icons/expression.svg"))
+  width: 53px
+  height: 53px
