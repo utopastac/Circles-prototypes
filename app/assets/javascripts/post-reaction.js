@@ -2,7 +2,7 @@ $(function(){
   var reactionButton = $(".reaction-button");
   var bookmarkButton = $(".bookmark-button");
 
-  var on = false;
+  reactionButton.data("on", false);
 
   var reactionHolder = $(".reactions-holder");
   var reactions = $(".reactions-holder img");
@@ -11,12 +11,12 @@ $(function(){
 
   reactionButton.on("tap", function(event){
     var elem = $(event.currentTarget).closest(".reactions");
-    if(!on){
+    if(!elem.data("on")){
       showReactions(elem);
     } else {
       hideReactions(elem);
     }
-    on = !on;
+    elem.data("on", !elem.data("on"));
     $(this).toggleClass("active");
   });
 
