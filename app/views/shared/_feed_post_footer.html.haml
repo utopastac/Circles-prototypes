@@ -9,6 +9,7 @@
       = image_tag "icons/happy-face.png"
       = image_tag "icons/very-sad-face.png"
   .like-actions
-    .replies 2 replies
+    = link_to "2 replies", circle_post_path, :class => "replies"
+    //.replies 2 replies
     .bookmark-button.icon-bookmark
       //= image_tag "icons/post-bookmark-icon.png"

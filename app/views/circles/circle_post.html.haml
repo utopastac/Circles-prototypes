@@ -1,0 +1,38 @@
+- content_for :title, "Circle Post"
+- @no_tab_bar = true
+- @body_id = "circle-post"
+- @body_class = "blue"
+- @inner_class = "nav-bar"
+
+- content_for :nav_bar do
+  #nav-bar
+    = link_to :back do
+      #back
+    .title Post title
+
+#post-view.white-panel
+  = image_tag "view.jpg"
+  .content
+    %h3 The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person.
+    %p.sub place.com
+  %footer
+    .reactions
+      .reaction-button.icon-reaction
+        //= image_tag "icons/reaction-icon.png"
+      .reactions-holder
+        = image_tag "icons/neutral-face.png"
+        = image_tag "icons/thinking-face.png"
+        = image_tag "icons/very-happy-face.png"
+        = image_tag "icons/happy-face.png"
+        = image_tag "icons/very-sad-face.png"
+
+    .bookmark-button.icon-bookmark
+
+
+  #comments
+    = render "shared/chat_message_them", :image => "faces/3.jpg", :message => "What do you think we should do?", :time => "10.30", :name => "Jack"
+    = render "shared/chat_message_them", :image => "faces/2.jpg", :message => "I think we all know the answer", :time => "10.40", :name => "Beth"
+    .reply
+      %input{:type => "text", :id => "chat-input", :placeholder => "Add reply"}
+      %button.tiny
+        Post

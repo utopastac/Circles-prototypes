@@ -16,39 +16,39 @@
 #status-display
   = image_tag "icons/neutral-face.png"
 
-%h4 What do you feel like doing with others?
+.white-panel
+  %h4 What do you feel like doing with others?
+  %ul#status-setup-circles
+    %li
+      .status-setup-circle
+        .fill
+        .lines
+          %hr
+          %hr
+          %hr
+      %h6 Talking
 
-%ul#status-setup-circles
-  %li
-    .status-setup-circle
-      .fill
-      .lines
-        %hr
-        %hr
-        %hr
-    %h6 Talking
+    %li
+      .status-setup-circle
+        .fill
+        .lines
+          %hr
+          %hr
+          %hr
+      %h6 Meeting up
 
-  %li
-    .status-setup-circle
-      .fill
-      .lines
-        %hr
-        %hr
-        %hr
-    %h6 Meeting up
+    %li
+      .status-setup-circle
+        .fill
+        .lines
+          %hr
+          %hr
+          %hr
+      %h6 Activity
 
-  %li
-    .status-setup-circle
-      .fill
-      .lines
-        %hr
-        %hr
-        %hr
-    %h6 Activity
+  #status-texts
+    .status-text-element#status-talking <span>No</span> talking
+    .status-text-element#status-meeting <span>No</span> meeting up
+    .status-text-element#status-activity <span>No</span> activity
 
-#status-texts
-  .status-text-element#status-talking <span>No</span> talking
-  .status-text-element#status-meeting <span>No</span> meeting up
-  .status-text-element#status-activity <span>No</span> activity
-
-= button_to "Save", link, :method => "get"
+  = button_to "Save", link, :method => "get"

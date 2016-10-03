@@ -74,9 +74,12 @@ body
   &.green
     .outer-wrapper
       background-color: $green-bg
-  &.brand-blue
+  &.mint
     .outer-wrapper
-      background-color: $brand-blue
+      background-color: $mint
+  &.cta
+    .outer-wrapper
+      background-color: $cta
 
 .outer-wrapper
   width: 100%
@@ -159,6 +162,7 @@ body
   border-bottom: $light-border
   padding: $space-5
   text-align: center
+  position: relative
   @extend .full-width
 
   h4
@@ -166,6 +170,9 @@ body
 
   .blank
     margin-top: $space-2
+
+  .illustration
+
 
 .docked-to-base
   position: absolute
@@ -197,7 +204,15 @@ img.illustration
   top: -9.5rem
   z-index: 10000
 
+  &.base
+    top: auto
+    bottom: -1rem
+
 #sitemap
   text-align: center
-  img
-    width: 180px
+  #logo
+    width: 100%
+    height: 80px
+    margin: 3rem auto
+    background-color: white
+    @extend .icon-logo

@@ -3,11 +3,10 @@
 - @body_id = "home"
 - @body_class = "green no-nav-bar"
 
+- session[:details_link] = new_circle_path
+
 = render "shared/home_content"
 
 #home-content
   = button_to "Get started", ob_create_path, :method => "get"
   = link_to "Terms & conditions", terms_and_conditions_path, :class => "small-link"
-
-  
-

@@ -90,50 +90,7 @@ $post-padding: $space-2
       opacity: 0.5
 
   footer
-    display: flex
-    justify-content: space-between
-    padding: $space-1 $post-padding $space-1 $post-padding
-
-    .bookmark-button, .replies
-      @extend .body-small
-      display: inline-block
-      vertical-align: middle
-
-    .bookmark-button
-      width: 3rem
-      height: 3rem
-
-    .reaction-button
-      width: 3rem
-      height: 3rem
-
-    .replies
-      margin-right: $space-1
-      color: $cta
-
-    img
-      width: 3rem
-
-    .like-actions
-      margin-left: auto
-
-    .reactions
-      position: relative
-
-    .reactions-holder
-      display: flex
-      top: -7px
-      left: 35px
-      position: absolute
-      background: $cta
-      padding: 7px
-      border-radius: 200px
-
-      img
-        flex: 1
-        height: 28px
-        width: 28px
-        margin-right: 3px
+    @extend .post-footer
 
   &.event
     .content
@@ -173,3 +130,149 @@ $post-padding: $space-2
 
         button
           margin-bottom: $space-2
+
+.post-footer
+  display: flex
+  justify-content: space-between
+  padding: $space-1 $post-padding $space-1 $post-padding
+
+  .bookmark-button, .replies
+    @extend .body-small
+    display: inline-block
+    vertical-align: middle
+
+  .bookmark-button
+    width: 3rem
+    height: 3rem
+
+  .reaction-button
+    width: 3rem
+    height: 3rem
+
+  .replies
+    margin-right: $space-1
+    color: $cta
+
+  img
+    width: 3rem
+
+  .like-actions
+    margin-left: auto
+
+  .reactions
+    position: relative
+
+  .reactions-holder
+    display: flex
+    top: -7px
+    left: 35px
+    position: absolute
+    background: $cta
+    padding: 7px
+    border-radius: 200px
+
+    img
+      flex: 1
+      height: 28px
+      width: 28px
+      margin-right: 3px
+
+#post-view
+  padding: 0
+  text-align: left
+
+  img
+    width: 100%
+
+  .content
+    padding: $space-2
+
+    p
+      margin: 1rem 0 0 0
+
+  footer
+    @extend .post-footer
+    padding-bottom: $space-3
+
+    .bookmark-button
+      width: 4rem
+      height: 4rem
+
+    .reaction-button
+      width: 4rem
+      height: 4rem
+
+    .reactions-holder
+      display: flex
+      top: -7px
+      left: 55px
+      position: absolute
+      background: $cta
+      padding: 11px
+      border-radius: 200px
+
+      img
+        flex: 1
+        height: 36px
+        width: 36px
+        margin-right: 5px
+
+  #comments
+
+    .them
+      border-top: $light-border
+      clear: both
+      padding: $space-2
+      display: flex
+
+
+    .bubble
+      display: flex
+      flex-wrap: wrap
+      align-items: flex-start
+      justify-content: space-around
+      flex-grow: 1
+
+    .name, .time
+      @extend .tiny
+
+    .name
+      @extend .body-bold
+
+    .time
+      margin-left: auto
+      opacity: 0.5
+
+    p
+      margin: 0
+      width: 100%
+      text-align: left
+
+    .face
+      width: 4rem
+      height: 4rem
+      margin-right: 1rem
+      margin-top: -0.4rem
+      @extend .circle-image
+      border: none !important
+
+    .reply
+      background: lighten($blue, 65%)
+      padding: 0 $space-2
+      height: $space-6
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      box-shadow: 0px 1px 0px rgba(0,0,0,0.15)
+      border-top: $light-border
+
+      button
+        margin-left: auto
+
+      #chat-input
+        min-height: auto
+        height: $space-5
+        margin: 0 $space-2 0 0 !important
+        border: $light-border
+        border-radius: 4px
