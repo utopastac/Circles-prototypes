@@ -62,6 +62,7 @@ Rails.application.routes.draw do
   get '/circle_new_status', to: 'circles#circle_new_status', as: 'circle_new_status'
   get '/circle_inner', to: 'circles#circle_inner', as: 'circle_inner'
   get '/circle_private', to: 'circles#circle_private', as: 'circle_private'
+  get '/circle_post', to: 'circles#circle_post', as: 'circle_post'
 
   get '/terms_and_conditions', to: 'circles#terms_and_conditions', as: 'terms_and_conditions'
 

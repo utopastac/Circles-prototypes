@@ -4,13 +4,15 @@
 - @body_class = "blue"
 - @inner_class = "nav-bar"
 
+- link = session[:details_link] ? session[:details_link] : circle_first_time_path
+
 - content_for :nav_bar do
   #nav-bar
     = link_to :back do
       #back
     .title About you
     .actions
-      = button_to "Next", new_circle_path, :id => "next-button", :method => "get"
+      = button_to "Next", link, :id => "next-button", :method => "get"
 
 #question-holder
   %section{:id => "age"}

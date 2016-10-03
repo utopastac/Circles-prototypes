@@ -2,7 +2,7 @@
 - @body_id = "your-circle"
 - @body_class = "blue"
 - @inner_class = "nav-bar tab-bar"
-- @tab_highlight = "circles-tab expression-tab"
+- @tab_highlight = "circles-tab"
 
 - content_for :nav_bar do
   #nav-bar
@@ -17,6 +17,9 @@
 
       = link_to circle_switcher_path do
         .icon-dots
+
+- content_for :fixed_to_base do
+  = render "shared/private_chat_ui"
 
 #circle-nav-tabs
   %ul

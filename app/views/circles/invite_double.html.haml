@@ -5,6 +5,7 @@
 - @inner_class = "nav-bar"
 
 - session[:photo_link] = circle_first_time_inner_path
+- session[:details_link] = invite_photo_path
 
 - content_for :nav_bar do
   #nav-bar
@@ -21,6 +22,6 @@
 
 #new-circle-description
   %h4 Are you happy and willing to help Peter?
-  = button_to "Yes - join circle", invite_photo_path, :method => "get"
+  = button_to "Yes - join circle", ob_age_path, :method => "get"
 
   = link_to "Do not want to join", invite_refuse_path, :class => "link row"
