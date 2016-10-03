@@ -187,8 +187,12 @@ $post-padding: $space-2
   .content
     padding: $space-2
 
-    p
-      margin: 1rem 0 0 0
+  h3
+    @extend .title-text
+    @extend .body-medium
+
+  p
+    margin: 1rem 0 0 0
 
   footer
     @extend .post-footer
@@ -218,12 +222,13 @@ $post-padding: $space-2
         margin-right: 5px
 
   #comments
+    padding-bottom: 4.8rem
 
     .them
       border-top: $light-border
       clear: both
       padding: $space-2
-      display: flex
+      //display: flex
 
 
     .bubble
@@ -233,10 +238,11 @@ $post-padding: $space-2
       justify-content: space-around
       flex-grow: 1
 
-    .name, .time
+    .time
       @extend .tiny
 
     .name
+      @extend .caption
       @extend .body-bold
 
     .time
@@ -247,8 +253,11 @@ $post-padding: $space-2
       margin: 0
       width: 100%
       text-align: left
+      @extend .body-small
+      line-height: 1.35
 
     .face
+      float: left
       width: 4rem
       height: 4rem
       margin-right: 1rem
@@ -256,23 +265,6 @@ $post-padding: $space-2
       @extend .circle-image
       border: none !important
 
-    .reply
-      background: lighten($blue, 65%)
-      padding: 0 $space-2
-      height: $space-6
-      width: 100%
-      display: flex
-      justify-content: space-between
-      align-items: center
-      box-shadow: 0px 1px 0px rgba(0,0,0,0.15)
-      border-top: $light-border
-
-      button
-        margin-left: auto
-
-      #chat-input
-        min-height: auto
-        height: $space-5
-        margin: 0 $space-2 0 0 !important
-        border: $light-border
-        border-radius: 4px
+#circle-post
+  #private-chat-ui
+    top: -4.8rem

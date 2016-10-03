@@ -10,6 +10,9 @@
       #back
     .title Post title
 
+- content_for :fixed_to_base do
+  = render "shared/private_chat_ui", :buttonTitle => "Reply"
+
 #post-view.white-panel
   = image_tag "view.jpg"
   .content
@@ -31,8 +34,4 @@
 
   #comments
     = render "shared/chat_message_them", :image => "faces/3.jpg", :message => "What do you think we should do?", :time => "10.30", :name => "Jack"
-    = render "shared/chat_message_them", :image => "faces/2.jpg", :message => "I think we all know the answer", :time => "10.40", :name => "Beth"
-    .reply
-      %input{:type => "text", :id => "chat-input", :placeholder => "Add reply"}
-      %button.tiny
-        Post
+    = render "shared/chat_message_them", :image => "faces/2.jpg", :message => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", :time => "10.40", :name => "Beth"
