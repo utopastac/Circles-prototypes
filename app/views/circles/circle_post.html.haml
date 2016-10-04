@@ -9,6 +9,11 @@
     = link_to :back do
       #back
     .title Post title
+    .actions
+      %a
+        .icon-reaction.large
+      %a
+        .icon-bookmark.large
 
 - content_for :fixed_to_base do
   = render "shared/private_chat_ui", :buttonTitle => "Reply"
@@ -18,18 +23,18 @@
   .content
     %h3 The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person.
     %p.sub place.com
-  %footer
-    .reactions
-      .reaction-button.icon-reaction
-        //= image_tag "icons/reaction-icon.png"
-      .reactions-holder
-        = image_tag "icons/neutral-face.png"
-        = image_tag "icons/thinking-face.png"
-        = image_tag "icons/very-happy-face.png"
-        = image_tag "icons/happy-face.png"
-        = image_tag "icons/very-sad-face.png"
+  / %footer
+  /   .reactions
+  /     .reaction-button.icon-reaction
+  /       //= image_tag "icons/reaction-icon.png"
+  /     .reactions-holder
+  /       = image_tag "icons/neutral-face.png"
+  /       = image_tag "icons/thinking-face.png"
+  /       = image_tag "icons/very-happy-face.png"
+  /       = image_tag "icons/happy-face.png"
+  /       = image_tag "icons/very-sad-face.png"
 
-    .bookmark-button.icon-bookmark
+  /   .bookmark-button.icon-bookmark
 
 
   #comments
