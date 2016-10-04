@@ -10,10 +10,16 @@
       #back
     .title Post title
     .actions
+      %a.reactions
+        .icon-reaction.large.reaction-button
+        .reactions-holder
+          = image_tag "icons/neutral-face.png"
+          = image_tag "icons/thinking-face.png"
+          = image_tag "icons/very-happy-face.png"
+          = image_tag "icons/happy-face.png"
+          = image_tag "icons/very-sad-face.png"
       %a
-        .icon-reaction.large
-      %a
-        .icon-bookmark.large
+        .icon-bookmark.large.bookmark-button
 
 - content_for :fixed_to_base do
   = render "shared/private_chat_ui", :buttonTitle => "Reply"

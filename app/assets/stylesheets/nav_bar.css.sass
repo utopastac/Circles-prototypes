@@ -39,12 +39,21 @@
     right: 1.2rem
     top: $top-offset
 
+    .reactions-holder
+      top: 30px
+      left: -2px
+      flex-direction: column
+
+      img
+        margin-right: 0
+        margin-bottom: 4px
+
     a
       display: inline-block
       color: $cta
       @extend .body-semi
 
-      > div
+      > div:not(.reactions-holder)
         width: 2.5rem
         height: 2rem
         background-color: $cta
