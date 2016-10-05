@@ -12,11 +12,8 @@
       = link_to status_path do
         = image_tag "icons/neutral-face.png"
     .actions
-      = link_to circle_switcher_path do
-        .icon-activity
-
-      = link_to circle_switcher_path do
-        .icon-dots
+      = link_to expression_path do
+        .icon-new-expression.large
 
 - content_for :fixed_to_base do
   = render "shared/private_chat_ui", :buttonTitle => "Post"
@@ -29,14 +26,14 @@
       = link_to "Member chat", circle_private_path
 
 .tooltip.private-circle
-  This is a private space away from Peter for you to co-ordinate with other circle members.
+  This is a private space away from John for you to co-ordinate with other circle members.
   Important updates from the feed will also appear here.
   %br
   %br
-  %strong Peter can never read what is posted in here.
+  %strong John can never read what is posted in here.
 
 #chat
-  /.alert Peter hasn't left his house in 28 hours
+  /.alert John hasn't left his house in 28 hours
 
   .day
     %p Yesterday

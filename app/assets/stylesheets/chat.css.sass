@@ -29,7 +29,49 @@
     color: purple
     border-radius: 3px
     text-align: center
+
+  .prompt
     background: white
+    border-radius: 3px
+    //box-shadow: 0px 1px 0px rgba(0,0,0,0.15)
+    margin-bottom: 2rem
+    border: 2px solid $cta
+    clear: both
+
+    .content
+      display: flex
+      flex-align: flex-start
+      align-items: center
+      padding: $space-2
+      background-color: $cta
+      color: white
+
+      .icon-prompt
+        width: 3.2rem
+        height: 3.2rem
+        margin-right: 1rem
+        background-color: white
+
+    .prompt-actions
+      padding: 0.6rem 0
+      background: white
+      color: $cta
+      ul
+        display: flex
+        justify-content: space-around
+      li
+        flex: 1
+        text-align: center
+        @extend .body-small
+        @extend .body-semi
+
+        &:not(:last-child)
+          border-right: 1px solid $peach
+
+    p
+      @extend .title-text
+      @extend .body-semi
+
 
   .name
     @extend .caption

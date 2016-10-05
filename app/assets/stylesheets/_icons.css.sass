@@ -1,3 +1,8 @@
+.basic-icon
+  background-color: $cta
+  @extend .icon-background
+  position: relative
+
 .icon-circles
   mask-image: url(image-path("icons/circles-icon-filled.svg"))
 
@@ -10,10 +15,9 @@
 .icon-network
   mask-image: url(image-path("icons/account-icon-filled.svg"))
 
-.basic-icon
-  background-color: $cta
-  @extend .icon-background
-  position: relative
+.icon-new-expression
+  @extend .basic-icon
+  mask-image: url(image-path("icons/new-post-icon.svg"))
 
 .icon-dots
   @extend .basic-icon
@@ -65,3 +69,7 @@
 .icon-logo
   @extend .icon-background
   mask-image: url(image-path("icons/circles-logo.svg"))
+
+.icon-prompt
+  @extend .basic-icon
+  mask-image: url(image-path("icons/activity.svg"))

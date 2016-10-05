@@ -12,11 +12,13 @@
       = link_to status_path do
         = image_tag "icons/happy-face.png"
     .actions
-      = link_to circle_switcher_path do
-        .icon-activity
+      = link_to expression_path do
+        .icon-new-expression.large
+      / = link_to circle_switcher_path do
+      /   .icon-activity
 
-      = link_to circle_switcher_path do
-        .icon-dots
+      / = link_to circle_switcher_path do
+      /   .icon-dots
 
 - content_for :fixed_to_base do
   = render "shared/private_chat_ui", :buttonTitle => "Post"
@@ -29,10 +31,12 @@
       = link_to "Member chat", circle_private_path
 
 #chat
-  /.alert Peter hasn't left his house in 28 hours
+  /.alert John hasn't left his house in 28 hours
 
   .day
     %p Yesterday
+
+  = render "shared/prompt", :message => "John hasn't left the house in 3 days"
 
   = render "shared/chat_message_us", :message => "Guys i'm worried about him", :time => "2.30", :reaction => " "
   = render "shared/chat_message_us", :message => "He's becomming a bit of a problem", :time => "2.30", :reaction => " "
@@ -48,31 +52,31 @@
 
 
 / #chat
-/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Words that were said by ahuman", :time => "2.30pm 12/10", :name => "Peter Coolman"
+/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Words that were said by ahuman", :time => "2.30pm 12/10", :name => "John Coolman"
 
-/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word", :time => "2.30pm 12/10", :name => "Peter Coolman"
+/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word", :time => "2.30pm 12/10", :name => "John Coolman"
 
-/   .alert Peter hasn't left his house in 28 hours
-
-/   = render "shared/chat_message_us", :message => "woof", :time => "2.30pm 12/10", :reaction => "Aidan, Cosi & Beth agree with this"
-
-/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word not woof you strang buoy", :time => "2.30pm 12/10", :name => "Beth Bullock"
-
-/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Words that were said by ahuman", :time => "2.30pm 12/10", :name => "Peter Coolman"
-
-/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word", :time => "2.30pm 12/10", :name => "Peter Coolman"
-
-/   .alert Peter hasn't left his house in 28 hours
+/   .alert John hasn't left his house in 28 hours
 
 /   = render "shared/chat_message_us", :message => "woof", :time => "2.30pm 12/10", :reaction => "Aidan, Cosi & Beth agree with this"
 
 /   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word not woof you strang buoy", :time => "2.30pm 12/10", :name => "Beth Bullock"
 
-/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Words that were said by ahuman", :time => "2.30pm 12/10", :name => "Peter Coolman"
+/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Words that were said by ahuman", :time => "2.30pm 12/10", :name => "John Coolman"
 
-/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word", :time => "2.30pm 12/10", :name => "Peter Coolman"
+/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word", :time => "2.30pm 12/10", :name => "John Coolman"
 
-/   .alert Peter hasn't left his house in 28 hours
+/   .alert John hasn't left his house in 28 hours
+
+/   = render "shared/chat_message_us", :message => "woof", :time => "2.30pm 12/10", :reaction => "Aidan, Cosi & Beth agree with this"
+
+/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word not woof you strang buoy", :time => "2.30pm 12/10", :name => "Beth Bullock"
+
+/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Words that were said by ahuman", :time => "2.30pm 12/10", :name => "John Coolman"
+
+/   = render "shared/chat_message_them", :image => "faces/1.jpg", :message => "Human says word", :time => "2.30pm 12/10", :name => "John Coolman"
+
+/   .alert John hasn't left his house in 28 hours
 
 /   = render "shared/chat_message_us", :message => "woof", :time => "2.30pm 12/10", :reaction => "Aidan, Cosi & Beth agree with this"
 

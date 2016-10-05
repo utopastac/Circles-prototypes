@@ -14,11 +14,8 @@
       = link_to status_path do
         = image_tag "icons/thinking-face.png"
     .actions
-      = link_to circle_switcher_path do
-        .icon-activity
-
-      = link_to circle_switcher_path do
-        .icon-dots
+      = link_to expression_path do
+        .icon-new-expression.large
 
 #feed
   = render "shared/first_post_feed"
