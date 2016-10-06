@@ -16,19 +16,19 @@
 
 %h2 How are you at the moment?
 
-.white-panel
-  #status-display
-    = image_tag "icons/neutral-face.png"
 
-  #slider
-    #track
-      #track-overlay
-    #dragger
-      #drag-center
+#status-display
+  = image_tag "icons/neutral-face.png"
 
-  = button_to "Save", link, :method => "get"
+#slider
+  #track
+    #track-overlay
+  #dragger
+    #drag-center
 
-.docked-to-base
+= button_to "Save", link, :method => "get"
+
+.docked-to-base.blank
   = image_tag "illustrations/16.png", :style => "left: 85px;", :class => "illustration"
   = image_tag "illustrations/11.png", :style => "left: -10px;", :class => "illustration"
   = image_tag "illustrations/8.png", :style => "right: -35px;", :class => "illustration"

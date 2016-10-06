@@ -23,9 +23,13 @@ $(function(){
   function showReactions(elem){
     var reactionHolder = $(".reactions-holder", elem);
     var reactions = $(".reactions-holder img", elem);
+    var newReaction = $(".new-reaction", elem);
     var tl = new TimelineLite;
     TweenMax.to(reactionHolder, 0.3, {autoAlpha: 1, scale: 1, transformOrigin:"0% 50% -50", display: "flex", ease:Back.easeOut});
     tl.staggerTo(reactions, 0.3, {autoAlpha: 1, scale: 1, ease:Back.easeOut}, 0.05, "+=0");
+    reactions.on("tap", function(event){
+      TweenMax.fromTo(newReaction, 0.3, {autoAlpha: 0, scale: 0.1, display: "none"}, {autoAlpha: 1, scale: 1, display: "block"})
+    })
   }
 
   function hideReactions(elem){
