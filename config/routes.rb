@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'homepage#index'
 
   get '/test_new_user', to: 'circles#test_new_user', as: 'test_new_user'
+  get '/test_new_invite', to: 'circles#test_new_invite', as: 'test_new_invite'
   get '/test_status', to: 'circles#test_status', as: 'test_status'
   get '/test_end', to: 'circles#test_end', as: 'test_end'
 
